@@ -485,6 +485,26 @@ def test_needs_human_forced_even_if_model_says_false():
 
 
 def test_carrier_scac_mention(db: FreightProDB):
+    """JBHT resolves via FreightPro SCAC → JB Hunt row (no hardcoded pipeline tokens)."""
     hit = db.find_carrier_mention("JBHT hauled this load")
     assert hit is not None
-    assert hit.get("SCAC") == "JBHT" or "Hunt" in hit.get("LegalName", "")
+    assert hit.get("SCAC") == "JBHT"
+    assert "Hunt" in (hit.get("LegalName") or "") or hit.get("LegalName") == "JBHT"
+
+
+def test_carrier_normalized_legal_name_mention(db: FreightProDB):
+    hit = db.find_carrier_mention("J.B. Hunt hauled the freight")
+    assert hit is not None
+    assert hit.get("SCAC") == "JBHT" or "Hunt" in (hit.get("LegalName") or "")
+
+
+def test_showcase_035_jbht_resolves_via_freightpro():
+    packet = process_email(DATA / "emails" / "035.eml", use_llm=False, use_vision=False)
+    assert packet.resolution.load["LoadNumber"] == "MF-10487"
+    # Assigned load carrier and/or email mention map to JB Hunt / JBHT
+    assert packet.carrier.scac == "JBHT" or (
+        packet.carrier.legal_name and "Hunt" in packet.carrier.legal_name
+    )
+    assert packet.carrier.email_mention in ("JBHT", "JB Hunt", "JBHT") or (
+        packet.carrier.email_mention and "Hunt" in packet.carrier.email_mention
+    ) or packet.carrier.scac == "JBHT"

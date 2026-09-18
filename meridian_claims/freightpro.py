@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -146,19 +147,40 @@ class FreightProDB:
         return out
 
     def find_carrier_mention(self, text: str) -> dict[str, str] | None:
-        """Match a free-text carrier mention via SCAC, then MC, then fuzzy LegalName."""
+        """
+        Match a free-text carrier mention using FreightPro carrier rows only.
+
+        Preference order (deterministic, no AI fuzzy matching):
+        1. SCAC as a token / compact substring
+        2. MCNumber (digits or MC-prefixed form)
+        3. Normalized LegalName containment (longest match wins)
+        """
+        if not (text or "").strip():
+            return None
+
         upper = text.upper()
-        # SCACs are 4 letters; check known SCACs as whole tokens.
+        tokens = set(re.findall(r"[A-Z0-9]+", upper.replace(".", " ")))
+        compact = re.sub(r"[^A-Z0-9]", "", upper)
+
+        # 1) SCAC
         for scac, rows in self.by_scac.items():
-            if scac and scac in upper.replace(".", "").replace(" ", ""):
-                # Prefer exact token-ish presence
-                if scac in upper.replace(".", " ").split() or scac in upper.replace(".", ""):
-                    return rows[0]
-            compact = upper.replace(".", "").replace(" ", "").replace("-", "")
-            if scac and scac in compact:
+            scac_u = (scac or "").strip().upper()
+            if not scac_u or not rows:
+                continue
+            if scac_u in tokens or (len(scac_u) >= 2 and scac_u in compact):
                 return rows[0]
 
-        # Normalized name contains (e.g. JBHT already covered; "JB Hunt" / "J.B. Hunt")
+        # 2) MCNumber
+        for mc, rows in self.by_mc.items():
+            mc_u = (mc or "").strip().upper()
+            if not mc_u or not rows:
+                continue
+            if mc_u in tokens or mc_u in compact:
+                return rows[0]
+            if f"MC{mc_u}" in compact:
+                return rows[0]
+
+        # 3) Normalized LegalName (substring; longest name wins to prefer specificity)
         normalized_text = _normalize_name(text)
         best: dict[str, str] | None = None
         best_len = 0

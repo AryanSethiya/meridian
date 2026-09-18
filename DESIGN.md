@@ -15,9 +15,9 @@ Meridian brokers freight between shippers and carriers. Ops works four shared in
 
 ## Why the working slice is claims (not “all email”)
 
-We build a **claims intake + POD↔FreightPro triage assistant**: email in → resolve load → compare POD → produce a **human-review action packet** (facts, discrepancies, unknowns, draft).  
+We build a **claims intake + POD↔FreightPro triage assistant**: email in → resolve load → compare POD → produce a **human-review action packet** (facts, discrepancies, unknowns, draft).
 
-**Why claims first:** highest time ROI, naturally human-gated (Marcus), and the sample data already contains the hard wrinkles (dirty IDs, blank PODs, clean POD vs damage allegation).  
+**Why claims first:** highest time ROI, naturally human-gated (Marcus), and the sample data already contains the hard wrinkles (dirty IDs, blank PODs, clean POD vs damage allegation).
 
 **Why not 90% auto-send in week 1:** that goal conflicts with Marcus’s risk rule and with dirty/stale data. This repo demonstrates the claims slice only. It does **not** claim production readiness or 90% automation.
 
@@ -27,26 +27,28 @@ We build a **claims intake + POD↔FreightPro triage assistant**: email in → r
 
 | Conflict | Handling |
 |---|---|
-| Dana: 90%+ automation / move 8 of 14 to sales vs Marcus: no unread AI replies; fear of rubber-stamping | **HITL drafts for the full 6 weeks on claims.** Measure minutes saved and wrong-load rate. Any later auto-send is limited, metric-gated, and **not** for claims. |
-| Dana: “data is clean” vs Priya: dirty names, missing load numbers, 14h ETL lag | Design for dirty identity (MF → PO → BOL → PRO; MC/SCAC). Label FreightPro fields as snapshot/ETL, not live truth. |
-| Headcount pressure vs 20% IT engineer + keep best coordinators on ops | No FreightPro rebuild/schema change. Read-only data path. Senior coordinators remain the review layer. |
-| Legal: no PII to vendors without DPA; no DPA reviewed yet | Redact known DriverName/DriverPhone before text model calls; block POD image uploads by default. **Mitigation ≠ DPA approval.** |
+| Dana: 90%+ automation / move 8 of 14 to sales vs Marcus: no unread AI replies | **HITL drafts for the full 6 weeks on claims.** Measure minutes saved and wrong-load rate. Any later auto-send is limited, metric-gated, and **not** for claims. |
+| Dana: “data is clean” vs Priya: dirty names, missing IDs, 14h ETL lag | MF → PO → BOL → PRO; MC/SCAC for carriers; sender↔shipper domain corroboration; snapshot freshness on FreightPro facts. |
+| Headcount pressure vs 20% IT + keep best coordinators on ops | No FreightPro rebuild. Read-only data path. Coordinators remain the review layer. |
+| Legal: no PII to vendors without DPA | Redact DriverName/DriverPhone before text model calls; block POD image uploads by default; withhold raw From/To from the model payload. **Mitigation ≠ DPA.** |
 
 ---
 
-## Architecture (working slice)
+## Architecture (working slice — what this repo does)
 
 ```text
-.eml → parse → extract IDs → FreightPro read lookup
-     → POD text / blank detect → PII gate
-     → Anthropic (classify + draft) or deterministic fallback
-     → action packet (analysis + decision audit) → human review
+.eml → parse → IDs → FreightPro lookup → shipper corroboration
+     → attachment inventory → POD text/quality/blank
+     → forward + multi-intent checks → PII gate
+     → Anthropic (classify + draft) or fail-closed / dry-run fallback
+     → action packet (analysis + decision) → human review (no send)
 ```
 
-- **Deterministic first:** load resolution, POD/email comparisons, unknowns.  
-- **LLM second:** interpretation + draft only; must not invent null facts; invented IDs are scrubbed.  
-- **Never auto-sends. Never writes FreightPro.**  
-- Packet `analysis` separates: FreightPro facts · email facts · POD facts · discrepancies · unknowns · AI suggestion · draft · why HITL.
+**Deterministic first:** load resolution, sender/shipper corroboration, POD quality, attachment selection, discrepancies, unknowns, draft money/liability sanitize, forward fail-closed, multi-intent escalate.  
+**LLM second:** interpretation + draft only; must not invent null facts; invented IDs scrubbed. Model sees `sender_corroboration`, not raw mailbox addresses.  
+**Never auto-sends. Never writes FreightPro. Never executes secondary tracking/invoice/quote asks.**
+
+Packet `analysis` separates: FreightPro facts (with source/snapshot freshness) · email facts · POD facts · discrepancies · unknowns · AI suggestion · draft · why HITL. Attachments are inventoried (selected vs present-not-processed).
 
 ---
 
@@ -56,20 +58,20 @@ We build a **claims intake + POD↔FreightPro triage assistant**: email in → r
 
 | Weeks | Deliverable |
 |---|---|
-| 1–2 | Claims slice (this repo): `.eml` → packet, HITL draft, read-only FreightPro |
+| 1–2 | Claims slice (**this repo**): `.eml` → packet, HITL draft, read-only FreightPro, safety gates above |
 | 3–4 | Graph watch on `claims@`; thin accept/edit/reject queue; wrong-load logging with Marcus |
 | 5–6 | Optional HITL **tracking** status drafts; optional HITL **quote assist** — still no unsupervised send |
 
-**Explicitly not built in 6 weeks:** full 4-inbox agent; auto-send; FreightPro writes/claim-file creation; training on Meridian data; “fixing” the availability Google Sheet; FreightPro schema changes.
+**Explicitly not built in 6 weeks:** full 4-inbox agent; auto-send; FreightPro writes/claim-file creation; training on Meridian data; “fixing” the availability Google Sheet; FreightPro schema changes; per-field `as_of` timestamps (export does not provide them).
 
 ---
 
 ## Human-in-the-loop, PII, read-only, stale data
 
 - **HITL:** `needs_human` is required for claims. Drafts are suggestions. Coordinators send (or not) from their mail client / a future review queue — not this CLI.  
-- **PII:** DriverName/DriverPhone are Legal PII. Text payloads are redacted and scanned before Anthropic; residual known PII fails closed. POD **vision is off by default**. Production use of customer PII with Anthropic still needs a **Legal-approved DPA**.  
-- **Read-only:** FreightPro access is replica/export only until change board allows writes (6–8 weeks).  
-- **Stale data:** Treat Status/PODReceived as of the snapshot/ETL. Packets state the 2026-08-26 context; disputed conditions escalate rather than “trust the flag.”
+- **PII:** DriverName/DriverPhone are Legal PII. Text payloads are redacted and scanned before Anthropic; residual known PII fails closed. Forwarded mail fail-closes the model call when third-party PII cannot be guaranteed. POD **vision is off by default**. Production Anthropic use still needs a **Legal-approved DPA**.  
+- **Read-only:** FreightPro is replica/export only until change board allows writes (6–8 weeks).  
+- **Stale data:** Status/PODReceived are **recorded as of the snapshot** (2026-08-26; ~14h lag called out). Disputed conditions escalate rather than “trust the flag.”
 
 ---
 
@@ -77,7 +79,7 @@ We build a **claims intake + POD↔FreightPro triage assistant**: email in → r
 
 - Sample CSVs stand in for the read replica.  
 - Claims slice ignores rates.csv and carrier_availability (quote/dispatch concerns).  
-- Blank/placeholder POD scans are escalated, not “OCR’d into truth.”  
+- Blank/placeholder or low-quality POD text is escalated, not treated as delivery truth.  
 - Anthropic only for model calls; missing key fails clearly.
 
 ---
