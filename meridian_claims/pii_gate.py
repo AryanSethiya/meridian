@@ -18,6 +18,7 @@ from dataclasses import asdict, dataclass, field
 from typing import Any
 
 from meridian_claims.redact import (
+    EMAIL_RE,
     PHONE_RE,
     RECEIVER_RE,
     redact_text,
@@ -97,9 +98,10 @@ def build_lexicon_from_rows(*rows: dict[str, Any] | None) -> PIILexicon:
 def redact_string(text: str, lexicon: PIILexicon) -> tuple[str, dict[str, int]]:
     """Apply patterned + lexicon redaction to a single string."""
     if not text:
-        return text, {"phones": 0, "names": 0, "receivers": 0}
+        return text, {"phones": 0, "names": 0, "receivers": 0, "emails": 0}
     phones = len(PHONE_RE.findall(text))
     receivers = len(RECEIVER_RE.findall(text))
+    emails = len(EMAIL_RE.findall(text))
     out = redact_text(text, extra_names=lexicon.names)
     # Count name hits by seeing how many lexicon names disappeared.
     names = 0
@@ -108,12 +110,12 @@ def redact_string(text: str, lexicon: PIILexicon) -> tuple[str, dict[str, int]]:
     for name in lexicon.names:
         if name.lower() in lower_before and name.lower() not in lower_after:
             names += 1
-    return out, {"phones": phones, "names": names, "receivers": receivers}
+    return out, {"phones": phones, "names": names, "receivers": receivers, "emails": emails}
 
 
 def redact_structure(obj: Any, lexicon: PIILexicon) -> tuple[Any, dict[str, int]]:
     """Deep-redact all strings in a JSON-serializable structure."""
-    totals = {"phones": 0, "names": 0, "receivers": 0}
+    totals = {"phones": 0, "names": 0, "receivers": 0, "emails": 0}
     if isinstance(obj, str):
         text, counts = redact_string(obj, lexicon)
         for k, v in counts.items():
@@ -157,6 +159,11 @@ def scan_residual(serialized: str, lexicon: PIILexicon) -> tuple[int, int]:
     return name_hits, phone_hits
 
 
+def scan_residual_emails(serialized: str) -> int:
+    """Count residual email addresses after redaction (should be 0)."""
+    return len(EMAIL_RE.findall(serialized))
+
+
 def prepare_text_payload(
     context: dict[str, Any],
     lexicon: PIILexicon,
@@ -171,6 +178,7 @@ def prepare_text_payload(
     cleaned, counts = redact_structure(context, lexicon)
     serialized = json.dumps(cleaned, indent=2, default=str)
     name_hits, phone_hits = scan_residual(serialized, lexicon)
+    email_hits = scan_residual_emails(serialized)
 
     report = PIIGateReport(
         status="passed",
@@ -185,17 +193,20 @@ def prepare_text_payload(
             "Text payload passed through outbound PII gate before Anthropic.",
         ],
     )
+    if counts.get("emails"):
+        report.notes.append(f"Masked {counts['emails']} email address pattern(s).")
 
-    if name_hits or phone_hits:
+    if name_hits or phone_hits or email_hits:
         report.status = "blocked"
         report.notes.append(
-            "Residual known DriverName/DriverPhone (or phone pattern) detected "
+            "Residual known DriverName/DriverPhone (or phone/email pattern) detected "
             "after redaction — model call blocked; escalate to human."
         )
         if fail_closed:
             raise PIIGateError(
                 f"Outbound PII gate blocked Anthropic call "
-                f"(residual_names={name_hits}, residual_phones={phone_hits})."
+                f"(residual_names={name_hits}, residual_phones={phone_hits}, "
+                f"residual_emails={email_hits})."
             )
     return cleaned, serialized, report
 

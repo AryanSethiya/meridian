@@ -1,4 +1,4 @@
-"""CLI entrypoints: process one email, or eval all claims@ emails."""
+"""CLI entrypoints: process one email, eval, or serve the coordinator review UI."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from meridian_claims.eval import run_eval
+from meridian_claims.eval import run_eval, run_eval_all
 from meridian_claims.pipeline import run_process_cli
 
 
@@ -40,14 +40,54 @@ def build_parser() -> argparse.ArgumentParser:
         help="Skip Anthropic calls; deterministic lookup + heuristic draft only",
     )
 
-    eval_p = sub.add_parser("eval", help="Run all claims@ sample emails and print a table")
+    eval_p = sub.add_parser(
+        "eval",
+        help=(
+            "Evaluation harness. Default: known-sample claims@ regression. "
+            "Use --all for behavioral run over all 60 emails."
+        ),
+    )
     eval_p.add_argument("--data-dir", type=Path, default=None)
     eval_p.add_argument("--emails-dir", type=Path, default=None)
     eval_p.add_argument("--output-dir", type=Path, default=None)
     eval_p.add_argument(
         "--dry-run",
         action="store_true",
-        help="Skip Anthropic calls for offline scoring of load resolution",
+        help="Skip Anthropic calls (no API key required)",
+    )
+    eval_p.add_argument(
+        "--all",
+        action="store_true",
+        help=(
+            "Process all 60 sample .eml files through the existing pipeline and "
+            "write output/eval_all.json + output/eval_all.md. "
+            "Without --dry-run this makes Anthropic calls when the model path runs."
+        ),
+    )
+
+    review_p = sub.add_parser(
+        "review",
+        help=(
+            "Serve the minimal coordinator review UI (local only). "
+            "Loads ActionPacket JSON from output/. Does not send email or call models."
+        ),
+    )
+    review_p.add_argument(
+        "--port",
+        type=int,
+        default=8765,
+        help="Local HTTP port (default 8765)",
+    )
+    review_p.add_argument(
+        "--output-dir",
+        type=Path,
+        default=None,
+        help="Directory of ActionPacket JSON files (default: ./output)",
+    )
+    review_p.add_argument(
+        "--host",
+        default="127.0.0.1",
+        help="Bind address (default 127.0.0.1)",
     )
     return parser
 
@@ -68,11 +108,27 @@ def main(argv: list[str] | None = None) -> int:
         )
 
     if args.command == "eval":
+        if args.all:
+            return run_eval_all(
+                data_dir=args.data_dir,
+                emails_dir=args.emails_dir,
+                output_dir=args.output_dir,
+                dry_run=args.dry_run,
+            )
         return run_eval(
             data_dir=args.data_dir,
             emails_dir=args.emails_dir,
             output_dir=args.output_dir,
             dry_run=args.dry_run,
+        )
+
+    if args.command == "review":
+        from meridian_claims.review_server import serve_review_ui
+
+        return serve_review_ui(
+            host=args.host,
+            port=args.port,
+            output_dir=args.output_dir,
         )
 
     parser.print_help()

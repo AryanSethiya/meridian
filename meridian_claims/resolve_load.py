@@ -283,13 +283,15 @@ def _contact_email_parts(contact: str | None) -> tuple[str | None, str | None]:
 
 
 def _mask_email(addr: str) -> str:
-    """Avoid echoing full local-parts into evidence when only domain match matters."""
+    """Avoid echoing full local-parts into evidence (no email-shaped tokens)."""
     local, _, domain = addr.partition("@")
     if not domain:
-        return "[redacted]"
+        return "[redacted-sender]"
+    # Do not emit local@domain — JSON escaping of ellipsis can create residual
+    # email-shaped substrings that trip the outbound PII gate.
     if len(local) <= 2:
-        return f"*@{domain}"
-    return f"{local[0]}…@{domain}"
+        return f"[redacted-sender domain={domain}]"
+    return f"[redacted-sender {local[0]}… domain={domain}]"
 
 
 def _cross_check(

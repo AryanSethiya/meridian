@@ -10,6 +10,12 @@ PHONE_RE = re.compile(
     r"(?<!\w)(?:\+?1[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?)\d{3}[-.\s]?\d{4}(?!\w)"
 )
 
+# Email addresses in free text (model payloads should not carry raw mailboxes).
+# Use a trailing word-boundary so sentence punctuation (e.g. "user@x.com.") still matches.
+EMAIL_RE = re.compile(
+    r"(?<![A-Za-z0-9._%+-])[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b"
+)
+
 # Common "Driver: Name" / "driver name is X" patterns.
 DRIVER_LABEL_RE = re.compile(
     r"(?i)\b(driver(?:\s+name)?|operator)\s*[:=#-]\s*[A-Z][a-zA-Z.'\-]+(?:\s+[A-Z][a-zA-Z.'\-]+)?"
@@ -23,10 +29,11 @@ RECEIVER_RE = re.compile(
 
 
 def redact_text(text: str, extra_names: list[str] | None = None) -> str:
-    """Mask phones, labeled drivers, receiver lines, and known driver names."""
+    """Mask phones, emails, labeled drivers, receiver lines, and known driver names."""
     if not text:
         return text
     out = PHONE_RE.sub("[REDACTED_PHONE]", text)
+    out = EMAIL_RE.sub("[REDACTED_EMAIL]", out)
     out = DRIVER_LABEL_RE.sub(r"\1: [REDACTED_DRIVER]", out)
     out = RECEIVER_RE.sub(r"\1: [REDACTED_RECEIVER]", out)
     for name in extra_names or []:

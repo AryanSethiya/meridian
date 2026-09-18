@@ -45,6 +45,15 @@ class DecisionRecord:
     draft_generated: bool = False
     processing_duration_ms: int = 0
     classification_source: str = "unknown"
+    # Cost / latency observability (estimated model cost; duration via perf_counter).
+    model_called: bool = False
+    model_name: str | None = None
+    model_input_tokens: int | None = None
+    model_output_tokens: int | None = None
+    estimated_input_cost_usd: float | None = None
+    estimated_output_cost_usd: float | None = None
+    estimated_total_cost_usd: float | None = None
+    model_latency_ms: int | None = None
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -69,6 +78,7 @@ def build_decision_record(
     processing_duration_ms: int,
     llm_error: str | None = None,
     attachment_decision: dict[str, Any] | None = None,
+    usage: Any | None = None,
 ) -> DecisionRecord:
     """Assemble a PII-safe decision record from pipeline outputs."""
     resolved_load = None
@@ -119,6 +129,26 @@ def build_decision_record(
         draft_generated=bool(draft_reply and draft_reply.strip()),
         processing_duration_ms=processing_duration_ms,
         classification_source=classification_source,
+        model_called=bool(usage is not None and llm_status == "ok"),
+        model_name=(getattr(usage, "model", None) or None) if usage else None,
+        model_input_tokens=(
+            int(getattr(usage, "input_tokens", 0) or 0) if usage and llm_status == "ok" else None
+        ),
+        model_output_tokens=(
+            int(getattr(usage, "output_tokens", 0) or 0) if usage and llm_status == "ok" else None
+        ),
+        estimated_input_cost_usd=(
+            getattr(usage, "estimated_input_cost_usd", None) if usage else None
+        ),
+        estimated_output_cost_usd=(
+            getattr(usage, "estimated_output_cost_usd", None) if usage else None
+        ),
+        estimated_total_cost_usd=(
+            getattr(usage, "estimated_total_cost_usd", None) if usage else None
+        ),
+        model_latency_ms=(
+            int(getattr(usage, "latency_ms", 0) or 0) if usage and llm_status == "ok" else None
+        ),
     )
     _assert_no_forbidden_payload(record.to_dict())
     return record

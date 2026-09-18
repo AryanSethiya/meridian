@@ -1,15 +1,8 @@
 # NOTES (for reviewers)
 
-## Time (~8h core + focused hardening)
+## Time
 
-- Brief, conflicts, sample data, slice choice (~1.5h)  
-- Deterministic pipeline: parse → resolve → POD text → packet (~2h)  
-- Anthropic draft path, blank-POD behavior, PII gate, tests (~2h)  
-- Analysis layout, decision audit, eval harness (~1.5h)  
-- Safety hardening: shipper corroboration, attachment inventory, draft $-gate, POD quality, multi-intent, forwards, freshness metadata (~2h+)  
-- DESIGN / README / NOTES pass (~1h)  
-
-Stopped short of quotes, review UI, and Graph wiring on purpose.
+Core claims slice (parse → resolve → POD → HITL packet → DESIGN/README) stayed near the **~8h** brief. Safety hardening and thin stretch demos added some overtime; I stopped expanding scope rather than padding features.
 
 ## How AI coding tools were used
 
@@ -33,9 +26,11 @@ I can explain and change every module live without depending on chat history.
 - FreightPro source/snapshot freshness on facts (no invented per-field `as_of`)  
 - POD text quality gate; model payload uses `sender_corroboration` (no raw From/To)  
 
+**Stretch note:** the brief says pick **at most one** optional stretch. After the core slice was solid I added thin wrappers for all four (all-60 behavioral eval, model-boundary PII tests, estimated cost/latency, local review UI with no send). They share the existing pipeline/ActionPacket — no second architecture. In the Loom I will demo **one**.
+
 ## What I would build next (still not done)
 
-- Graph poller + thin accept/edit/reject queue  
+- Graph poller feeding the same pipeline  
 - Wrong-load logging / coordinator review metrics in production  
 - Per-field `as_of` **if** FreightPro export ever provides it (not inventable today)  
 

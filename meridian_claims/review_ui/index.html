@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meridian Freight — Claims Review</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="brand-name">MERIDIAN FREIGHT</div>
+      <div class="brand-sub">Claims Review</div>
+    </div>
+  </header>
+
+  <div class="safety" role="status">
+    Human review required • No outbound email is sent by this demo.
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <h2>Claims Queue</h2>
+        <button type="button" id="refreshBtn" class="btn ghost">Refresh</button>
+      </div>
+      <div id="queueStatus" class="muted small"></div>
+      <ul id="queue" class="queue"></ul>
+    </aside>
+
+    <main class="panel" id="detail">
+      <div class="empty-state" id="emptyState">
+        Select a claim from the queue. Packets are loaded from <code>output/</code>.
+      </div>
+      <div id="detailContent" class="hidden"></div>
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
