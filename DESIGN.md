@@ -89,10 +89,12 @@ Packet `analysis` separates: FreightPro facts (with source/snapshot freshness) �
 | Metric | Target | Why |
 |---|---|---|
 | Minutes per claim (email → decision-ready packet) | Toward **under 5** from ~20 | ROI |
-| Load resolution accuracy (when an ID exists) | **≥95%** | Wrong load is expensive |
+| Correct email-to-load association on a labeled validation set | **≥95%** | Wrong load is expensive |
 | Draft accepted with ≤1 edit | **≥70%** | Assist quality |
 | Wrong-load / false-send | **≈0** | Marcus |
 | Review completion (opened/edited, not rubber-stamp) | Tracked | Safety |
+
+Association is evaluated against labeled historical claims. The current 8/8 fixture result is a known-sample regression check, not a production accuracy estimate.
 
 If wrong-load rate is non-zero, we tighten — we do not expand automation.
 
