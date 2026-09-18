@@ -1,0 +1,29 @@
+From: procurement@shipper2.example
+To: quotes@meridianfreight.example
+Subject: Quote request Memphis to Houston
+Date: Tue, 25 Aug 2026 15:00:00 -0500
+Message-ID: <eml-018@meridianfreight.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============2924398091172329621=="
+
+--===============2924398091172329621==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Please quote a Reefer Memphis, TN to Houston, TX for next Tuesday, 42k lbs.
+Need linehaul plus fuel surcharge.
+
+Regards
+Procurement
+
+--===============2924398091172329621==
+Content-Type: application/vnd.ms-excel
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="fuel_surcharge.xls"
+MIME-Version: 1.0
+
+PGh0bWw+PGJvZHk+PHRhYmxlPjx0cj48dGQ+V2VlazwvdGQ+PHRkPkZTQ19wY3Q8L3RkPjwvdHI+
+PHRyPjx0ZD4yMDI2LTA4LTE3PC90ZD48dGQ+MTEuNTwvdGQ+PC90cj48dHI+PHRkPjIwMjYtMDgt
+MjQ8L3RkPjx0ZD4xMi4yPC90ZD48L3RyPjwvdGFibGU+PC9ib2R5PjwvaHRtbD4=
+
+--===============2924398091172329621==--

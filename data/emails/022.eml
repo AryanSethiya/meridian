@@ -1,0 +1,14 @@
+From: procurement@shipper6.example
+To: quotes@meridianfreight.example
+Subject: Quote request Dallas to Atlanta
+Date: Tue, 25 Aug 2026 11:00:00 -0500
+Message-ID: <eml-022@meridianfreight.example>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Please quote a Van Dallas, TX to Atlanta, GA for next Tuesday, 42k lbs.
+Need linehaul plus fuel surcharge.
+
+Regards
+Procurement
