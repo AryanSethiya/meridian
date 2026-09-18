@@ -1,0 +1,44 @@
+# Virtualenvs / local Python
+.venv/
+venv/
+env/
+.env/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Secrets — never commit API keys
+.env
+.env.*
+!.env.example
+
+# Runtime / generated artifacts
+output/
+*.log
+*.tmp
+
+# Caches / tooling
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.cache/
+.tox/
+.nox/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Cursor / local agent scratch (if present)
+.cursor/

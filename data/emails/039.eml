@@ -1,0 +1,11 @@
+From: shipping@freshlinedairy.example
+To: claims@meridianfreight.example
+Subject: Refused freight MF-10027
+Date: Mon, 24 Aug 2026 18:00:00 -0500
+Message-ID: <eml-039@meridianfreight.example>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+MF-10027 was refused at delivery, Electronics.
+Need OS&D and a claim file. Pickup was 2026-06-28.

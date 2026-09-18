@@ -1,0 +1,91 @@
+carrier_name,mc_number,equipment,available_trucks,current_location,last_updated,notes
+Dupre Logistics,475190,Van,0,"Phoenix, AZ",2026-08-08,
+Swift Trans,129914,Reefer,4,"Dallas, TX",2026-08-13,
+J B Hunt Transport,023401,Reefer,1,"Seattle, WA",2026-08-16,
+USA Truck,783823,Flatbed,2,"Kansas City, MO",2026-08-16,
+Swift,129914,Van,4,"Kansas City, MO",2026-08-10,no NYC
+New England Motor Freight,958179,Flatbed,2,"Dallas, TX",2026-08-21,needs layover
+ODFL,107915,Flatbed,3,"Chicago, IL",2026-08-14,
+Mesilla Valley Transportation,576786,Flatbed,0,"Indianapolis, IN",2026-08-19,
+Ward Transport,640490,Van,0,"Baltimore, MD",2026-08-12,prefers live load
+Bluegrace Contract,879779,Van,1,"Baltimore, MD",2026-08-13,
+J&R Schugel,330914,Van,1,"Los Angeles, CA",2026-08-09,
+Werner Enterprises,139889,Van,3,"Kansas City, MO",2026-08-09,
+Milan Express,395442,Flatbed,0,"St. Louis, MO",2026-08-18,
+C.R. England,413921,Van,4,"Baltimore, MD",2026-08-17,needs layover
+CRST Expedited,149225,Reefer,4,"Baltimore, MD",2026-08-16,prefers live load
+Lakeville Motor Express,596171,Van,0,"Chicago, IL",2026-08-08,needs layover
+Ziegler Trucking,922733,Flatbed,0,"Louisville, KY",2026-08-17,no NYC
+Interstate Van Lines,941204,Van,0,"Detroit, MI",2026-08-18,
+Shaffer Trucking,352572,Van,6,"Houston, TX",2026-08-10,no NYC
+G&P Trucking,373432,Reefer,1,"St. Louis, MO",2026-08-12,prefers live load
+Midwest Motor Express,300896,Flatbed,4,"Dallas, TX",2026-08-14,
+YRC Freight,970914,Reefer,2,"Detroit, MI",2026-08-16,
+Marten Transport,593554,Reefer,1,"El Paso, TX",2026-08-21,
+Keystone Freight,102260,Van,1,"Kansas City, MO",2026-08-18,
+Circle Logistics Carrier,377312,Van,1,"Phoenix, AZ",2026-08-08,
+Prime Incorporated,133805,Van,2,"Kansas City, MO",2026-08-19,
+Mercer Transportation,867460,Reefer,1,"Atlanta, GA",2026-08-21,needs layover
+Schneider National Carriers,133655,Van,0,"Baltimore, MD",2026-08-18,prefers live load
+Western Express,945742,Flatbed,0,"Minneapolis, MN",2026-08-11,
+Swift Transportation,129914,Reefer,1,"El Paso, TX",2026-08-15,no NYC
+SWIFT TRANSPORTATION,129914,Flatbed,2,"El Paso, TX",2026-08-24,needs layover
+Pinnacle Freight,684482,Van,1,"St. Louis, MO",2026-08-24,needs layover
+Landstar,166960,Van,0,"Indianapolis, IN",2026-08-24,
+Roehl Transport,531071,Reefer,4,"Phoenix, AZ",2026-08-26,
+Pitt Ohio,452457,Flatbed,0,"Kansas City, MO",2026-08-24,
+Schneider,133655,Van,1,"Chicago, IL",2026-08-26,needs layover
+Landstar Ranger,166960,Flatbed,4,"Indianapolis, IN",2026-08-25,
+AAA Cooper,519093,Reefer,0,"Chicago, IL",2026-08-26,prefers live load
+WERN,139889,Van,1,"Louisville, KY",2026-08-26,needs layover
+Dart Transit,452161,Reefer,1,"Chicago, IL",2026-08-24,no NYC
+Knight Transportation,191142,Flatbed,0,"Kansas City, MO",2026-08-24,
+Crete Carrier,773971,Flatbed,4,"Houston, TX",2026-08-25,
+Dayton Freight,513160,Van,1,"Phoenix, AZ",2026-08-25,
+Roadrunner,172132,Flatbed,4,"Indianapolis, IN",2026-08-24,
+Schneider National,133655,Reefer,4,"Indianapolis, IN",2026-08-26,
+C.H. Robinson Carrier,498858,Reefer,0,"St. Louis, MO",2026-08-26,
+Tyson Fresh Logistics,871476,Van,4,"Houston, TX",2026-08-24,no NYC
+JB Hunt Transport Services,023401,Reefer,2,"Seattle, WA",2026-08-26,
+Midwest Coast Transport,887443,Van,1,"Los Angeles, CA",2026-08-26,
+Peninsula Truck Lines,543555,Van,1,"Kansas City, MO",2026-08-24,
+Lynden Transport,152727,Van,1,"Memphis, TN",2026-08-24,prefers live load
+A. Duie Pyle,888539,Flatbed,0,"Charlotte, NC",2026-08-26,needs layover
+New Penn,831076,Flatbed,0,"Dallas, TX",2026-08-25,no NYC
+Blackhawk Transport,665427,Reefer,0,"Minneapolis, MN",2026-08-25,
+Reddaway,885884,Flatbed,3,"Phoenix, AZ",2026-08-26,needs layover
+Hirschbach Motor Lines,938722,Flatbed,0,"Chicago, IL",2026-08-26,
+Oak Harbor Freight,265080,Van,1,"Seattle, WA",2026-08-25,no NYC
+Paper Transport,945687,Reefer,0,"Charlotte, NC",2026-08-24,no NYC
+Werner,139889,Reefer,4,"Newark, NJ",2026-08-24,needs layover
+Southeastern Silk,274389,Flatbed,2,"Seattle, WA",2026-08-24,prefers live load
+R+L Carriers,233636,Van,0,"Minneapolis, MN",2026-08-24,
+CRST,149225,Flatbed,4,"Memphis, TN",2026-08-24,no NYC
+Knight-Swift,191142,Flatbed,4,"Houston, TX",2026-08-25,
+J.B. Hunt,023401,Flatbed,0,"Chicago, IL",2026-08-24,
+Anderson Trucking Service,639131,Van,2,"Charlotte, NC",2026-08-25,needs layover
+US Xpress,593152,Flatbed,1,"Salt Lake City, UT",2026-08-24,prefers live load
+Wabash National Carrier,908577,Flatbed,2,"Seattle, WA",2026-08-25,
+Oakley Transport,573417,Reefer,2,"Chicago, IL",2026-08-25,
+Celadon,258157,Van,6,"El Paso, TX",2026-08-24,prefers live load
+Boyd Bros,789305,Van,4,"Minneapolis, MN",2026-08-24,no NYC
+Hub Group Carrier,653306,Van,6,"Detroit, MI",2026-08-24,needs layover
+System Transport,792094,Reefer,0,"Houston, TX",2026-08-24,needs layover
+Southeastern Freight Lines,181247,Flatbed,6,"Baltimore, MD",2026-08-26,prefers live load
+Maertens Transportation,378361,Reefer,3,"Minneapolis, MN",2026-08-24,
+XPO Logistics Inc,357167,Reefer,4,"Salt Lake City, UT",2026-08-24,prefers live load
+Interstate Distributor,925622,Van,2,"St. Louis, MO",2026-08-26,
+JB Hunt,023401,Van,2,"Charlotte, NC",2026-08-25,no NYC
+Epes Transport,696750,Van,4,"Dallas, TX",2026-08-24,
+XPO,357167,Flatbed,0,"Baltimore, MD",2026-08-24,no NYC
+Grammer Industries,618392,Flatbed,0,"Salt Lake City, UT",2026-08-25,prefers live load
+Hogan Transports,636265,Van,1,"Dallas, TX",2026-08-25,
+Prime,133805,Reefer,0,"St. Louis, MO",2026-08-24,prefers live load
+National Carriers,170674,Van,1,"Newark, NJ",2026-08-26,no NYC
+Sutton Transport,284430,Van,4,"Charlotte, NC",2026-08-26,no NYC
+Old Dominion Freight Line,107915,Flatbed,0,"Baltimore, MD",2026-08-25,
+Midland Transport,542374,Reefer,2,"Kansas City, MO",2026-08-24,prefers live load
+SCHN,133655,Van,0,"Newark, NJ",2026-08-24,needs layover
+Knight,191142,Flatbed,1,"Salt Lake City, UT",2026-08-24,
+Knight Trans,191142,Reefer,2,"Dallas, TX",2026-08-26,
+Roehl Tank,234628,Van,6,"Baltimore, MD",2026-08-24,prefers live load

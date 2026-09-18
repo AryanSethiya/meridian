@@ -1,0 +1,32 @@
+From: shipping@cascadelumberco.example
+To: claims@meridianfreight.example
+Subject: Shortage claim MF-10005
+Date: Mon, 24 Aug 2026 21:00:00 -0500
+Message-ID: <eml-036@meridianfreight.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============1847394331437619868=="
+
+--===============1847394331437619868==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Shortage on MF-10005. Counted short at Columbus consignee.
+Scanned POD attached (photo of the paper). Please open a claim.
+BOL BOL591465.
+
+--===============1847394331437619868==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="POD_scan_a.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2Jq
+CjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4KZW5kb2Jq
+CjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA2MTIg
+NzkyXSAvQ29udGVudHMgNCAwIFIgPj4KZW5kb2JqCjQgMCBvYmoKPDwgL0xlbmd0aCA0MSA+Pgpz
+dHJlYW0KcSAwLjg1IDAuODUgMC44NSByZyA3MiA3MiA0NjggNjQ4IHJlIGYgUQoKZW5kc3RyZWFt
+CmVuZG9iagp4cmVmCjAgNQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMDkgMDAwMDAgbiAK
+MDAwMDAwMDA1OCAwMDAwMCBuIAowMDAwMDAwMTE1IDAwMDAwIG4gCjAwMDAwMDAyMDIgMDAwMDAg
+biAKdHJhaWxlcgo8PCAvU2l6ZSA1IC9Sb290IDEgMCBSID4+CnN0YXJ0eHJlZgoyOTMKJSVFT0YK
+
+--===============1847394331437619868==--

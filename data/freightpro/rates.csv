@@ -1,0 +1,901 @@
+RateID,OriginCity,OriginState,DestCity,DestState,EquipmentType,CarrierID,LinehaulRate,FuelSurchargePct,EffectiveDate,ExpiryDate,RateType
+1,Detroit,MI,Cleveland,OH,Reefer,129,5189,16.1,2025-12-23,2026-12-23,Contract
+2,Memphis,TN,Houston,TX,Reefer,,2735,21.1,2025-09-12,2025-11-11,Spot
+3,Houston,TX,Los Angeles,CA,Flatbed,7,4453,16.9,2026-05-07,2026-07-06,Spot
+4,Kansas City,MO,Denver,CO,Reefer,45,1247,12.8,2025-10-28,2026-04-26,Contract
+5,Charlotte,NC,Jacksonville,FL,Van,72,3744,18.4,2026-04-04,2027-04-04,Contract
+6,Dallas,TX,Atlanta,GA,Van,33,2596,9.4,2025-12-10,2026-12-10,Contract
+7,St. Louis,MO,Kansas City,MO,Reefer,,4402,21.5,2026-02-10,2026-08-09,Spot
+8,Newark,NJ,Charlotte,NC,Van,,4599,12.1,2026-06-21,2026-07-21,Contract
+9,Detroit,MI,Cleveland,OH,Reefer,63,3466,19.5,2026-07-05,2027-07-05,Spot
+10,Memphis,TN,Houston,TX,Flatbed,,4378,13.0,2026-08-08,2026-10-07,Spot
+11,Salt Lake City,UT,Boise,ID,Flatbed,89,1392,17.7,2025-11-17,2026-02-15,Spot
+12,Chicago,IL,Newark,NJ,Van,13,3986,21.0,2026-05-24,2027-05-24,Spot
+13,Baltimore,MD,Philadelphia,PA,Flatbed,61,4715,21.6,2026-05-05,2026-08-03,Contract
+14,Detroit,MI,Cleveland,OH,Reefer,87,5181,9.9,2026-01-13,2026-07-12,Contract
+15,Chicago,IL,Dallas,TX,Van,33,4101,18.3,2025-11-05,2026-02-03,Spot
+16,Atlanta,GA,Miami,FL,Reefer,,1788,19.3,2025-12-13,2026-02-11,Spot
+17,Houston,TX,Los Angeles,CA,Van,115,2916,19.7,2026-01-28,2027-01-28,Spot
+18,Seattle,WA,Portland,OR,Reefer,,4856,16.2,2026-01-23,2026-02-22,Spot
+19,Indianapolis,IN,Columbus,OH,Reefer,19,3953,9.6,2026-03-28,2026-06-26,Contract
+20,St. Louis,MO,Kansas City,MO,Van,142,3774,14.1,2025-10-14,2026-04-12,Spot
+21,Baltimore,MD,Philadelphia,PA,Flatbed,,3061,18.6,2026-05-30,2026-06-29,Contract
+22,Louisville,KY,Nashville,TN,Van,,4632,14.0,2026-04-08,2026-05-08,Spot
+23,Minneapolis,MN,Chicago,IL,Reefer,,3341,16.4,2026-06-25,2026-07-25,Contract
+24,Seattle,WA,Portland,OR,Flatbed,81,4627,16.9,2025-08-22,2026-02-18,Contract
+25,Louisville,KY,Nashville,TN,Reefer,,3280,11.5,2026-03-01,2026-08-28,Contract
+26,Los Angeles,CA,Phoenix,AZ,Van,,4120,11.1,2025-12-11,2026-02-09,Contract
+27,Louisville,KY,Nashville,TN,Van,,4584,19.7,2025-08-19,2026-02-15,Contract
+28,El Paso,TX,Albuquerque,NM,Flatbed,120,2767,19.7,2026-07-26,2027-07-26,Spot
+29,Salt Lake City,UT,Boise,ID,Van,,5159,17.9,2026-04-16,2026-07-15,Contract
+30,Houston,TX,Los Angeles,CA,Flatbed,,1363,16.0,2026-02-20,2026-08-19,Spot
+31,Houston,TX,Los Angeles,CA,Flatbed,139,4385,10.5,2026-01-07,2026-02-06,Contract
+32,Newark,NJ,Charlotte,NC,Reefer,,4484,11.5,2026-08-02,2027-01-29,Contract
+33,Chicago,IL,Newark,NJ,Van,36,3026,21.9,2026-07-23,2026-10-21,Contract
+34,Kansas City,MO,Denver,CO,Van,,4357,18.5,2025-11-09,2026-02-07,Spot
+35,Minneapolis,MN,Chicago,IL,Van,,2640,19.7,2025-10-05,2026-10-05,Spot
+36,Dallas,TX,Atlanta,GA,Reefer,,4944,12.4,2025-08-12,2025-09-11,Contract
+37,Kansas City,MO,Denver,CO,Reefer,26,2284,19.3,2025-08-19,2026-02-15,Contract
+38,Kansas City,MO,Denver,CO,Van,,1265,20.7,2026-06-20,2026-08-19,Contract
+39,Baltimore,MD,Philadelphia,PA,Flatbed,23,2830,9.3,2025-10-04,2025-11-03,Contract
+40,Louisville,KY,Nashville,TN,Van,130,2593,20.9,2025-11-17,2026-02-15,Spot
+41,Detroit,MI,Cleveland,OH,Flatbed,,5176,14.2,2026-07-05,2026-10-03,Spot
+42,Seattle,WA,Portland,OR,Flatbed,20,3934,19.7,2026-03-29,2026-04-28,Spot
+43,Seattle,WA,Portland,OR,Van,67,3853,11.4,2026-04-28,2026-06-27,Spot
+44,El Paso,TX,Albuquerque,NM,Reefer,,2897,10.7,2025-11-05,2026-11-05,Spot
+45,St. Louis,MO,Kansas City,MO,Flatbed,,3769,17.9,2025-10-26,2026-04-24,Contract
+46,Louisville,KY,Nashville,TN,Reefer,52,2693,9.1,2026-04-18,2026-07-17,Spot
+47,Dallas,TX,Atlanta,GA,Flatbed,32,4458,21.7,2025-11-14,2026-11-14,Contract
+48,Baltimore,MD,Philadelphia,PA,Reefer,,4506,18.0,2025-10-11,2025-12-10,Spot
+49,Charlotte,NC,Jacksonville,FL,Reefer,,4626,15.0,2026-07-20,2027-01-16,Contract
+50,Los Angeles,CA,Phoenix,AZ,Van,,3493,20.5,2025-12-30,2026-12-30,Contract
+51,Memphis,TN,Houston,TX,Van,,2651,21.3,2026-07-14,2026-10-12,Spot
+52,El Paso,TX,Albuquerque,NM,Reefer,63,4084,14.3,2026-06-09,2026-12-06,Contract
+53,Dallas,TX,Atlanta,GA,Van,95,4470,15.6,2025-11-29,2026-05-28,Contract
+54,Chicago,IL,Dallas,TX,Flatbed,,4116,18.8,2025-07-26,2025-10-24,Spot
+55,El Paso,TX,Albuquerque,NM,Van,,2894,11.5,2025-08-08,2025-10-07,Spot
+56,Kansas City,MO,Denver,CO,Van,118,5004,9.3,2025-12-06,2026-01-05,Contract
+57,Salt Lake City,UT,Boise,ID,Flatbed,,2786,9.9,2026-01-20,2026-07-19,Contract
+58,Kansas City,MO,Denver,CO,Van,,2654,15.0,2026-05-18,2026-11-14,Spot
+59,Louisville,KY,Nashville,TN,Reefer,26,2128,18.5,2026-02-18,2026-03-20,Contract
+60,Chicago,IL,Dallas,TX,Flatbed,8,3481,8.0,2026-07-17,2026-10-15,Spot
+61,Chicago,IL,Dallas,TX,Reefer,,2454,20.0,2026-08-02,2027-08-02,Spot
+62,Indianapolis,IN,Columbus,OH,Flatbed,112,3240,12.8,2026-05-15,2027-05-15,Spot
+63,El Paso,TX,Albuquerque,NM,Reefer,97,1924,19.4,2026-01-03,2026-03-04,Contract
+64,Chicago,IL,Dallas,TX,Flatbed,,5030,12.4,2025-11-14,2025-12-14,Contract
+65,Newark,NJ,Charlotte,NC,Reefer,124,1938,9.4,2025-10-18,2026-10-18,Spot
+66,El Paso,TX,Albuquerque,NM,Van,,4968,15.7,2026-02-25,2026-08-24,Contract
+67,Charlotte,NC,Jacksonville,FL,Van,120,3471,10.0,2026-07-14,2026-10-12,Contract
+68,Indianapolis,IN,Columbus,OH,Reefer,,2667,20.7,2026-07-17,2027-01-13,Spot
+69,St. Louis,MO,Kansas City,MO,Van,,3882,17.8,2026-03-05,2027-03-05,Contract
+70,Baltimore,MD,Philadelphia,PA,Flatbed,26,2357,10.8,2026-03-05,2026-05-04,Contract
+71,Houston,TX,Los Angeles,CA,Reefer,53,1537,12.5,2025-12-08,2026-01-07,Contract
+72,El Paso,TX,Albuquerque,NM,Reefer,42,3238,8.6,2026-03-22,2026-04-21,Spot
+73,Detroit,MI,Cleveland,OH,Flatbed,139,4887,12.4,2025-10-28,2026-10-28,Spot
+74,Baltimore,MD,Philadelphia,PA,Van,7,5159,21.5,2026-03-14,2026-09-10,Spot
+75,Phoenix,AZ,Denver,CO,Flatbed,86,3346,17.8,2026-05-17,2027-05-17,Spot
+76,Newark,NJ,Charlotte,NC,Reefer,24,4855,10.9,2026-04-25,2026-07-24,Spot
+77,Salt Lake City,UT,Boise,ID,Flatbed,109,1263,17.7,2026-07-24,2027-01-20,Contract
+78,Chicago,IL,Dallas,TX,Van,,4532,19.6,2026-02-28,2026-04-29,Contract
+79,Houston,TX,Los Angeles,CA,Van,,1780,11.6,2025-10-14,2025-12-13,Contract
+80,Salt Lake City,UT,Boise,ID,Flatbed,113,2468,8.1,2026-05-04,2026-08-02,Contract
+81,Houston,TX,Los Angeles,CA,Reefer,,4545,16.8,2025-12-10,2026-03-10,Contract
+82,Atlanta,GA,Miami,FL,Flatbed,142,3039,9.6,2026-06-12,2026-08-11,Spot
+83,Minneapolis,MN,Chicago,IL,Van,,3399,11.6,2026-03-02,2026-05-01,Contract
+84,Detroit,MI,Cleveland,OH,Flatbed,37,2366,9.7,2025-10-29,2026-01-27,Spot
+85,Los Angeles,CA,Phoenix,AZ,Flatbed,,2022,14.6,2026-06-12,2027-06-12,Spot
+86,Newark,NJ,Charlotte,NC,Van,5,4612,17.7,2026-01-30,2026-03-31,Spot
+87,Seattle,WA,Portland,OR,Reefer,109,2719,18.8,2026-01-04,2026-03-05,Spot
+88,Indianapolis,IN,Columbus,OH,Flatbed,,1379,12.8,2025-10-29,2025-11-28,Contract
+89,Kansas City,MO,Denver,CO,Reefer,73,2021,10.1,2025-09-21,2025-10-21,Contract
+90,St. Louis,MO,Kansas City,MO,Van,29,1953,18.1,2025-09-29,2025-11-28,Spot
+91,Charlotte,NC,Jacksonville,FL,Van,,3664,10.0,2025-11-19,2026-02-17,Contract
+92,Atlanta,GA,Miami,FL,Van,124,1466,16.7,2026-01-19,2027-01-19,Spot
+93,Dallas,TX,Atlanta,GA,Reefer,5,1787,8.0,2026-06-24,2026-08-23,Spot
+94,Houston,TX,Los Angeles,CA,Flatbed,,4710,9.0,2026-04-24,2026-05-24,Contract
+95,Salt Lake City,UT,Boise,ID,Flatbed,54,2356,20.7,2025-08-30,2026-08-30,Spot
+96,Minneapolis,MN,Chicago,IL,Flatbed,33,2613,20.6,2025-09-25,2026-03-24,Contract
+97,Baltimore,MD,Philadelphia,PA,Reefer,,1791,13.4,2026-03-23,2026-05-22,Contract
+98,Kansas City,MO,Denver,CO,Reefer,138,1285,14.4,2026-01-07,2026-04-07,Spot
+99,Houston,TX,Los Angeles,CA,Van,113,2645,13.8,2026-05-02,2026-10-29,Contract
+100,Charlotte,NC,Jacksonville,FL,Reefer,,2689,9.9,2026-02-25,2026-05-26,Spot
+101,Seattle,WA,Portland,OR,Van,,1982,18.2,2025-10-29,2025-12-28,Contract
+102,Charlotte,NC,Jacksonville,FL,Flatbed,,4444,11.0,2026-01-19,2026-04-19,Spot
+103,Minneapolis,MN,Chicago,IL,Van,,3871,21.4,2025-12-28,2026-03-28,Contract
+104,Atlanta,GA,Miami,FL,Van,,2583,21.1,2025-11-07,2026-01-06,Contract
+105,Kansas City,MO,Denver,CO,Reefer,,4042,10.4,2026-05-03,2026-10-30,Spot
+106,Houston,TX,Los Angeles,CA,Flatbed,144,4480,14.6,2026-05-07,2026-07-06,Spot
+107,Minneapolis,MN,Chicago,IL,Reefer,109,5021,16.8,2025-07-22,2026-07-22,Spot
+108,Newark,NJ,Charlotte,NC,Van,11,1287,9.3,2026-08-12,2026-09-11,Contract
+109,Indianapolis,IN,Columbus,OH,Flatbed,,5123,13.1,2026-04-29,2026-07-28,Contract
+110,Salt Lake City,UT,Boise,ID,Reefer,76,2586,9.4,2025-08-21,2025-10-20,Spot
+111,Memphis,TN,Houston,TX,Van,59,1685,15.9,2025-11-17,2026-11-17,Contract
+112,Louisville,KY,Nashville,TN,Flatbed,,5198,9.4,2026-06-19,2026-08-18,Spot
+113,Memphis,TN,Houston,TX,Reefer,,2753,16.2,2025-12-15,2026-02-13,Contract
+114,Charlotte,NC,Jacksonville,FL,Flatbed,,1944,21.3,2025-12-30,2026-01-29,Contract
+115,Dallas,TX,Atlanta,GA,Van,,1482,17.5,2026-05-18,2026-07-17,Spot
+116,Newark,NJ,Charlotte,NC,Flatbed,26,5138,19.1,2025-09-26,2025-12-25,Spot
+117,Chicago,IL,Newark,NJ,Flatbed,81,1265,10.4,2025-10-02,2026-10-02,Contract
+118,Indianapolis,IN,Columbus,OH,Flatbed,36,3331,10.3,2026-08-04,2027-01-31,Spot
+119,Detroit,MI,Cleveland,OH,Reefer,68,2973,21.9,2026-02-25,2026-03-27,Contract
+120,Los Angeles,CA,Phoenix,AZ,Reefer,93,1328,16.0,2026-06-11,2027-06-11,Contract
+121,Houston,TX,Los Angeles,CA,Van,,2756,11.8,2026-01-30,2026-03-01,Contract
+122,Dallas,TX,Atlanta,GA,Reefer,,4696,9.9,2026-01-11,2026-07-10,Contract
+123,Louisville,KY,Nashville,TN,Flatbed,25,3202,14.3,2026-03-25,2026-06-23,Spot
+124,Dallas,TX,Atlanta,GA,Flatbed,15,1294,10.5,2026-06-12,2026-07-12,Spot
+125,Memphis,TN,Houston,TX,Flatbed,31,4390,8.2,2026-07-03,2026-08-02,Contract
+126,El Paso,TX,Albuquerque,NM,Van,,3586,12.6,2025-09-30,2026-03-29,Spot
+127,El Paso,TX,Albuquerque,NM,Van,,4084,21.0,2026-06-06,2026-08-05,Spot
+128,Los Angeles,CA,Phoenix,AZ,Flatbed,12,1215,18.0,2026-01-07,2026-03-08,Contract
+129,Dallas,TX,Atlanta,GA,Flatbed,,1989,14.9,2025-12-16,2026-02-14,Spot
+130,Minneapolis,MN,Chicago,IL,Reefer,136,3969,15.1,2025-10-17,2025-11-16,Spot
+131,Kansas City,MO,Denver,CO,Van,,1789,17.8,2025-11-12,2026-11-12,Spot
+132,Indianapolis,IN,Columbus,OH,Van,45,4297,19.7,2026-04-22,2026-06-21,Contract
+133,El Paso,TX,Albuquerque,NM,Reefer,82,3823,19.5,2026-03-23,2026-05-22,Spot
+134,St. Louis,MO,Kansas City,MO,Van,118,4847,10.3,2025-09-01,2025-11-30,Spot
+135,Los Angeles,CA,Phoenix,AZ,Reefer,,4897,19.4,2025-08-06,2025-09-05,Spot
+136,Charlotte,NC,Jacksonville,FL,Van,,3962,20.8,2026-07-02,2026-09-30,Contract
+137,El Paso,TX,Albuquerque,NM,Flatbed,9,3531,18.4,2026-04-04,2026-07-03,Contract
+138,Chicago,IL,Newark,NJ,Reefer,39,4326,18.4,2025-12-09,2026-03-09,Spot
+139,Salt Lake City,UT,Boise,ID,Van,6,4029,14.5,2026-02-17,2026-08-16,Contract
+140,Charlotte,NC,Jacksonville,FL,Reefer,68,1825,8.3,2026-06-05,2026-12-02,Spot
+141,Dallas,TX,Atlanta,GA,Reefer,113,1811,19.1,2026-01-24,2026-04-24,Spot
+142,Memphis,TN,Houston,TX,Flatbed,24,2088,10.1,2026-06-29,2026-07-29,Contract
+143,Indianapolis,IN,Columbus,OH,Van,,2806,20.0,2026-05-27,2026-08-25,Contract
+144,Seattle,WA,Portland,OR,Van,78,3685,21.3,2025-08-11,2026-02-07,Spot
+145,Minneapolis,MN,Chicago,IL,Flatbed,,2647,17.9,2026-06-23,2026-07-23,Contract
+146,Memphis,TN,Houston,TX,Van,87,5063,8.2,2025-12-06,2026-02-04,Contract
+147,Kansas City,MO,Denver,CO,Reefer,113,2472,9.7,2025-08-31,2026-08-31,Spot
+148,St. Louis,MO,Kansas City,MO,Reefer,47,4168,21.6,2026-02-06,2026-04-07,Spot
+149,Chicago,IL,Dallas,TX,Reefer,,2908,17.6,2026-04-12,2026-06-11,Contract
+150,Minneapolis,MN,Chicago,IL,Reefer,,2595,20.6,2025-10-25,2026-01-23,Contract
+151,Salt Lake City,UT,Boise,ID,Van,,3628,11.5,2025-10-08,2025-12-07,Contract
+152,Chicago,IL,Dallas,TX,Reefer,,4807,16.7,2026-06-29,2026-12-26,Spot
+153,St. Louis,MO,Kansas City,MO,Reefer,73,3668,13.5,2025-08-09,2025-11-07,Spot
+154,Louisville,KY,Nashville,TN,Flatbed,19,2690,16.9,2026-07-17,2027-01-13,Contract
+155,Chicago,IL,Newark,NJ,Flatbed,,3501,14.8,2026-06-03,2026-09-01,Contract
+156,El Paso,TX,Albuquerque,NM,Flatbed,,4575,16.4,2025-09-20,2025-11-19,Spot
+157,Detroit,MI,Cleveland,OH,Flatbed,,4212,12.0,2026-05-09,2027-05-09,Contract
+158,Phoenix,AZ,Denver,CO,Flatbed,2,2421,8.4,2026-04-05,2026-06-04,Contract
+159,Los Angeles,CA,Phoenix,AZ,Reefer,,4377,15.8,2026-06-02,2026-11-29,Contract
+160,Dallas,TX,Atlanta,GA,Van,,3067,14.3,2026-03-28,2026-05-27,Spot
+161,Salt Lake City,UT,Boise,ID,Van,45,5116,12.6,2026-08-08,2026-09-07,Contract
+162,Chicago,IL,Newark,NJ,Van,,4607,16.8,2025-08-13,2026-02-09,Contract
+163,Houston,TX,Los Angeles,CA,Van,,3711,12.5,2025-07-23,2025-08-22,Spot
+164,St. Louis,MO,Kansas City,MO,Van,134,4137,21.0,2025-08-16,2025-10-15,Spot
+165,Memphis,TN,Houston,TX,Van,87,1869,13.0,2025-08-16,2025-10-15,Contract
+166,Dallas,TX,Atlanta,GA,Van,58,2607,15.6,2025-07-28,2025-08-27,Contract
+167,Houston,TX,Los Angeles,CA,Flatbed,20,3445,9.6,2026-07-02,2026-08-31,Contract
+168,Seattle,WA,Portland,OR,Van,8,3840,17.0,2025-09-01,2026-09-01,Spot
+169,Minneapolis,MN,Chicago,IL,Van,,2097,21.4,2025-07-24,2025-09-22,Spot
+170,St. Louis,MO,Kansas City,MO,Reefer,45,2787,18.7,2025-07-25,2026-01-21,Contract
+171,Chicago,IL,Dallas,TX,Flatbed,130,4055,10.8,2026-01-16,2027-01-16,Spot
+172,Indianapolis,IN,Columbus,OH,Van,,3213,16.1,2026-08-13,2026-11-11,Contract
+173,St. Louis,MO,Kansas City,MO,Van,55,2071,16.8,2026-05-31,2027-05-31,Contract
+174,Louisville,KY,Nashville,TN,Flatbed,,3292,18.6,2026-01-30,2026-03-31,Contract
+175,Dallas,TX,Atlanta,GA,Van,45,4877,12.0,2026-04-05,2026-10-02,Spot
+176,Charlotte,NC,Jacksonville,FL,Flatbed,118,3951,9.6,2025-11-27,2026-05-26,Contract
+177,Newark,NJ,Charlotte,NC,Flatbed,,2019,12.2,2025-07-24,2026-07-24,Spot
+178,Salt Lake City,UT,Boise,ID,Reefer,,3099,20.4,2026-07-20,2026-09-18,Contract
+179,Indianapolis,IN,Columbus,OH,Flatbed,,2469,20.0,2026-08-10,2026-10-09,Spot
+180,Minneapolis,MN,Chicago,IL,Flatbed,,4148,16.4,2026-03-02,2026-08-29,Spot
+181,Minneapolis,MN,Chicago,IL,Reefer,94,3644,9.5,2026-03-23,2026-05-22,Spot
+182,Chicago,IL,Dallas,TX,Flatbed,,4710,12.2,2026-08-11,2026-11-09,Contract
+183,Salt Lake City,UT,Boise,ID,Van,,1419,21.6,2026-02-09,2026-04-10,Contract
+184,Los Angeles,CA,Phoenix,AZ,Reefer,,3877,20.6,2026-08-05,2026-11-03,Contract
+185,Memphis,TN,Houston,TX,Reefer,,5009,18.4,2026-05-04,2026-06-03,Spot
+186,Minneapolis,MN,Chicago,IL,Van,2,1661,20.4,2026-07-03,2026-09-01,Contract
+187,Louisville,KY,Nashville,TN,Van,,3506,10.1,2025-12-14,2026-01-13,Spot
+188,Houston,TX,Los Angeles,CA,Flatbed,53,1322,14.5,2026-07-28,2027-01-24,Spot
+189,Chicago,IL,Dallas,TX,Flatbed,,3889,18.1,2026-07-15,2026-10-13,Spot
+190,Louisville,KY,Nashville,TN,Van,,2313,19.3,2026-05-12,2026-07-11,Spot
+191,Salt Lake City,UT,Boise,ID,Reefer,,5099,18.0,2025-08-22,2026-02-18,Spot
+192,Detroit,MI,Cleveland,OH,Reefer,,3649,15.6,2026-02-09,2026-08-08,Contract
+193,Chicago,IL,Newark,NJ,Flatbed,,3414,12.9,2026-06-03,2026-09-01,Spot
+194,Salt Lake City,UT,Boise,ID,Reefer,52,3114,17.4,2026-02-20,2026-05-21,Contract
+195,Baltimore,MD,Philadelphia,PA,Reefer,,5137,20.4,2026-01-07,2026-02-06,Contract
+196,Chicago,IL,Newark,NJ,Flatbed,,3046,10.3,2025-07-27,2026-07-27,Spot
+197,Dallas,TX,Atlanta,GA,Flatbed,113,1794,19.6,2025-10-14,2026-01-12,Spot
+198,Salt Lake City,UT,Boise,ID,Van,145,2043,13.9,2025-08-27,2026-02-23,Spot
+199,St. Louis,MO,Kansas City,MO,Flatbed,6,3328,21.1,2026-06-24,2027-06-24,Spot
+200,Seattle,WA,Portland,OR,Flatbed,129,4426,18.2,2026-02-26,2026-08-25,Contract
+201,Baltimore,MD,Philadelphia,PA,Reefer,,3890,18.5,2026-01-27,2026-03-28,Spot
+202,Seattle,WA,Portland,OR,Flatbed,,3058,20.5,2026-05-29,2026-07-28,Spot
+203,Minneapolis,MN,Chicago,IL,Van,,4046,12.2,2026-03-13,2026-05-12,Spot
+204,Baltimore,MD,Philadelphia,PA,Flatbed,13,5097,12.1,2026-05-11,2026-06-10,Spot
+205,Kansas City,MO,Denver,CO,Flatbed,,1474,13.9,2026-04-09,2026-10-06,Contract
+206,Houston,TX,Los Angeles,CA,Van,128,3647,10.9,2026-03-16,2026-06-14,Contract
+207,El Paso,TX,Albuquerque,NM,Flatbed,77,3801,14.9,2025-10-06,2026-10-06,Spot
+208,Minneapolis,MN,Chicago,IL,Reefer,,1327,13.4,2026-04-08,2026-10-05,Spot
+209,Phoenix,AZ,Denver,CO,Flatbed,,3740,13.3,2026-02-18,2026-08-17,Contract
+210,Los Angeles,CA,Phoenix,AZ,Reefer,33,3427,19.6,2026-06-30,2026-07-30,Spot
+211,Charlotte,NC,Jacksonville,FL,Reefer,,2581,8.5,2026-04-15,2027-04-15,Contract
+212,Baltimore,MD,Philadelphia,PA,Flatbed,68,2087,17.6,2025-10-06,2026-04-04,Spot
+213,St. Louis,MO,Kansas City,MO,Reefer,9,3256,15.9,2026-05-16,2026-11-12,Spot
+214,Louisville,KY,Nashville,TN,Flatbed,16,4059,14.3,2025-11-25,2026-05-24,Spot
+215,Atlanta,GA,Miami,FL,Reefer,,2557,21.6,2026-01-10,2026-02-09,Spot
+216,Indianapolis,IN,Columbus,OH,Reefer,,2220,19.3,2026-08-14,2027-02-10,Spot
+217,Houston,TX,Los Angeles,CA,Van,,1948,16.2,2026-04-24,2026-07-23,Contract
+218,Seattle,WA,Portland,OR,Flatbed,67,4511,9.9,2025-08-23,2025-09-22,Spot
+219,Charlotte,NC,Jacksonville,FL,Reefer,51,4453,15.4,2025-08-24,2026-02-20,Contract
+220,Baltimore,MD,Philadelphia,PA,Van,59,3140,17.8,2026-07-30,2026-10-28,Spot
+221,Los Angeles,CA,Phoenix,AZ,Van,34,4795,15.1,2025-09-10,2025-12-09,Spot
+222,Memphis,TN,Houston,TX,Van,4,1863,10.8,2026-07-03,2027-07-03,Contract
+223,Baltimore,MD,Philadelphia,PA,Reefer,,1473,9.6,2025-09-14,2025-11-13,Spot
+224,Seattle,WA,Portland,OR,Van,19,2430,8.8,2026-06-09,2026-12-06,Spot
+225,Newark,NJ,Charlotte,NC,Flatbed,120,2289,20.3,2025-10-21,2026-10-21,Spot
+226,Dallas,TX,Atlanta,GA,Van,,4481,14.7,2026-04-29,2026-06-28,Spot
+227,Newark,NJ,Charlotte,NC,Van,,3465,9.0,2025-09-26,2026-09-26,Spot
+228,St. Louis,MO,Kansas City,MO,Van,,1478,9.0,2025-12-15,2026-12-15,Spot
+229,Seattle,WA,Portland,OR,Flatbed,,2893,19.6,2025-09-30,2025-12-29,Contract
+230,Atlanta,GA,Miami,FL,Reefer,6,4766,17.4,2026-03-05,2026-09-01,Contract
+231,Houston,TX,Los Angeles,CA,Reefer,107,4625,21.3,2026-04-23,2026-06-22,Contract
+232,Kansas City,MO,Denver,CO,Van,,3335,14.1,2026-03-22,2026-09-18,Spot
+233,Phoenix,AZ,Denver,CO,Van,,1547,8.6,2025-08-21,2025-10-20,Contract
+234,Houston,TX,Los Angeles,CA,Reefer,,3863,16.5,2026-02-23,2026-05-24,Contract
+235,Minneapolis,MN,Chicago,IL,Flatbed,,2781,20.9,2025-07-25,2026-07-25,Spot
+236,Minneapolis,MN,Chicago,IL,Reefer,12,4032,16.6,2025-12-09,2026-03-09,Spot
+237,Louisville,KY,Nashville,TN,Flatbed,,5026,11.2,2026-03-31,2026-06-29,Contract
+238,Seattle,WA,Portland,OR,Flatbed,,2627,15.2,2026-03-13,2026-05-12,Contract
+239,Louisville,KY,Nashville,TN,Reefer,,2936,20.5,2025-09-08,2025-11-07,Spot
+240,Detroit,MI,Cleveland,OH,Van,,4009,10.9,2026-02-12,2027-02-12,Contract
+241,Salt Lake City,UT,Boise,ID,Flatbed,,1680,10.9,2025-08-11,2025-11-09,Contract
+242,Kansas City,MO,Denver,CO,Flatbed,81,2735,11.8,2026-04-13,2026-10-10,Contract
+243,Baltimore,MD,Philadelphia,PA,Reefer,19,2243,21.5,2025-10-10,2025-11-09,Contract
+244,Chicago,IL,Dallas,TX,Van,25,4525,21.9,2026-04-08,2026-10-05,Contract
+245,St. Louis,MO,Kansas City,MO,Flatbed,,2015,16.8,2026-04-02,2026-05-02,Contract
+246,El Paso,TX,Albuquerque,NM,Van,76,2990,10.5,2026-01-30,2026-04-30,Contract
+247,Atlanta,GA,Miami,FL,Van,9,2336,9.8,2026-06-22,2027-06-22,Spot
+248,Phoenix,AZ,Denver,CO,Van,6,4850,9.6,2025-09-12,2026-09-12,Contract
+249,Detroit,MI,Cleveland,OH,Reefer,,2144,18.5,2026-04-26,2027-04-26,Contract
+250,Seattle,WA,Portland,OR,Van,,3467,10.4,2025-10-21,2026-01-19,Contract
+251,Indianapolis,IN,Columbus,OH,Flatbed,,1271,16.6,2026-05-26,2026-06-25,Contract
+252,Minneapolis,MN,Chicago,IL,Van,13,2208,16.5,2026-01-20,2026-03-21,Spot
+253,Seattle,WA,Portland,OR,Reefer,14,1212,20.1,2026-04-16,2026-07-15,Contract
+254,Charlotte,NC,Jacksonville,FL,Van,,1611,14.2,2026-07-06,2027-01-02,Contract
+255,El Paso,TX,Albuquerque,NM,Reefer,,3417,14.9,2026-03-30,2026-05-29,Contract
+256,Dallas,TX,Atlanta,GA,Van,,3278,16.5,2025-10-05,2026-04-03,Contract
+257,Memphis,TN,Houston,TX,Flatbed,10,3661,13.7,2025-08-24,2026-02-20,Spot
+258,Dallas,TX,Atlanta,GA,Reefer,,2322,13.3,2026-04-11,2026-07-10,Contract
+259,Chicago,IL,Dallas,TX,Flatbed,95,2199,19.2,2025-09-20,2025-10-20,Contract
+260,Salt Lake City,UT,Boise,ID,Reefer,51,2760,14.2,2026-08-06,2027-02-02,Contract
+261,Los Angeles,CA,Phoenix,AZ,Reefer,33,2626,22.0,2026-04-21,2026-07-20,Contract
+262,Kansas City,MO,Denver,CO,Van,,4696,19.3,2025-10-21,2026-10-21,Spot
+263,Houston,TX,Los Angeles,CA,Reefer,,4315,10.2,2026-04-21,2026-05-21,Spot
+264,Louisville,KY,Nashville,TN,Van,89,5017,10.0,2026-04-08,2026-10-05,Contract
+265,Louisville,KY,Nashville,TN,Van,30,2877,11.2,2026-03-10,2026-05-09,Spot
+266,El Paso,TX,Albuquerque,NM,Van,97,3881,14.6,2025-08-02,2025-10-01,Contract
+267,Kansas City,MO,Denver,CO,Van,,4508,8.9,2026-05-08,2027-05-08,Spot
+268,Louisville,KY,Nashville,TN,Van,,1708,18.1,2025-12-23,2026-12-23,Spot
+269,Baltimore,MD,Philadelphia,PA,Van,,4423,18.7,2026-08-12,2026-11-10,Spot
+270,St. Louis,MO,Kansas City,MO,Flatbed,8,2813,10.2,2026-06-08,2026-08-07,Spot
+271,Seattle,WA,Portland,OR,Flatbed,52,3550,10.5,2026-03-27,2026-09-23,Spot
+272,Seattle,WA,Portland,OR,Van,114,3682,13.3,2025-07-26,2025-08-25,Spot
+273,Detroit,MI,Cleveland,OH,Reefer,,4472,18.2,2025-12-09,2026-06-07,Contract
+274,St. Louis,MO,Kansas City,MO,Reefer,,3680,15.3,2025-10-25,2026-04-23,Contract
+275,Kansas City,MO,Denver,CO,Flatbed,81,1717,21.9,2026-07-29,2026-09-27,Contract
+276,Newark,NJ,Charlotte,NC,Flatbed,58,2767,12.4,2026-02-05,2026-05-06,Spot
+277,Chicago,IL,Dallas,TX,Van,63,4374,16.3,2025-09-24,2025-11-23,Spot
+278,Detroit,MI,Cleveland,OH,Reefer,,1782,11.5,2026-08-08,2026-10-07,Contract
+279,Charlotte,NC,Jacksonville,FL,Flatbed,73,2721,21.4,2026-05-04,2026-10-31,Spot
+280,Memphis,TN,Houston,TX,Flatbed,13,2410,20.7,2026-02-06,2026-03-08,Contract
+281,Los Angeles,CA,Phoenix,AZ,Flatbed,38,2653,21.1,2025-11-27,2026-11-27,Contract
+282,Los Angeles,CA,Phoenix,AZ,Reefer,46,1992,21.9,2026-03-11,2027-03-11,Spot
+283,Baltimore,MD,Philadelphia,PA,Reefer,,1301,13.2,2025-11-29,2026-01-28,Contract
+284,Houston,TX,Los Angeles,CA,Reefer,109,3085,13.2,2026-02-20,2027-02-20,Spot
+285,Charlotte,NC,Jacksonville,FL,Reefer,,4327,15.7,2025-11-26,2025-12-26,Spot
+286,Memphis,TN,Houston,TX,Reefer,,3905,16.9,2025-08-16,2026-02-12,Spot
+287,Memphis,TN,Houston,TX,Van,12,3726,8.6,2026-02-01,2026-05-02,Contract
+288,Chicago,IL,Dallas,TX,Van,25,2913,19.6,2025-10-29,2025-12-28,Spot
+289,Phoenix,AZ,Denver,CO,Flatbed,,2245,10.3,2026-05-01,2026-05-31,Spot
+290,Louisville,KY,Nashville,TN,Flatbed,77,4423,21.7,2026-07-14,2026-09-12,Contract
+291,Newark,NJ,Charlotte,NC,Van,,3082,13.2,2026-02-22,2027-02-22,Contract
+292,Louisville,KY,Nashville,TN,Flatbed,,3444,12.6,2025-08-02,2025-10-31,Spot
+293,Salt Lake City,UT,Boise,ID,Flatbed,124,2342,8.3,2025-10-16,2025-12-15,Contract
+294,Louisville,KY,Nashville,TN,Reefer,86,2431,16.3,2025-12-04,2026-06-02,Contract
+295,Newark,NJ,Charlotte,NC,Van,94,2115,10.1,2026-04-26,2026-06-25,Spot
+296,Baltimore,MD,Philadelphia,PA,Flatbed,51,2890,12.6,2025-08-01,2026-01-28,Spot
+297,Seattle,WA,Portland,OR,Van,,3170,21.0,2025-09-11,2025-10-11,Spot
+298,Phoenix,AZ,Denver,CO,Reefer,,1830,12.7,2026-01-16,2026-07-15,Contract
+299,Newark,NJ,Charlotte,NC,Reefer,,3192,13.7,2025-12-08,2026-06-06,Spot
+300,Detroit,MI,Cleveland,OH,Van,109,4495,12.6,2026-05-24,2026-08-22,Contract
+301,Los Angeles,CA,Phoenix,AZ,Van,11,1537,14.0,2025-08-04,2025-09-03,Spot
+302,Memphis,TN,Houston,TX,Van,1,3130,21.8,2026-05-18,2026-06-17,Contract
+303,Chicago,IL,Newark,NJ,Flatbed,,1558,12.6,2026-07-27,2026-09-25,Spot
+304,Salt Lake City,UT,Boise,ID,Van,,3716,20.6,2026-08-16,2026-10-15,Contract
+305,Newark,NJ,Charlotte,NC,Reefer,101,2393,16.6,2025-10-05,2026-10-05,Spot
+306,Los Angeles,CA,Phoenix,AZ,Reefer,,4691,17.8,2026-04-05,2026-06-04,Spot
+307,Minneapolis,MN,Chicago,IL,Flatbed,29,4022,12.7,2026-03-24,2026-04-23,Spot
+308,Minneapolis,MN,Chicago,IL,Reefer,50,5098,17.9,2025-11-29,2026-02-27,Contract
+309,Phoenix,AZ,Denver,CO,Van,145,4669,14.5,2026-03-11,2026-06-09,Spot
+310,Atlanta,GA,Miami,FL,Van,8,3607,14.3,2026-06-17,2026-08-16,Spot
+311,Los Angeles,CA,Phoenix,AZ,Reefer,,2562,18.1,2025-08-29,2025-11-27,Contract
+312,Phoenix,AZ,Denver,CO,Van,,3937,12.2,2025-09-07,2026-09-07,Spot
+313,Minneapolis,MN,Chicago,IL,Flatbed,5,2691,8.9,2026-05-28,2026-11-24,Spot
+314,Louisville,KY,Nashville,TN,Reefer,,4528,13.6,2025-12-05,2026-06-03,Contract
+315,Charlotte,NC,Jacksonville,FL,Van,,4252,21.4,2025-08-19,2026-02-15,Spot
+316,Chicago,IL,Dallas,TX,Van,,2903,12.7,2026-06-30,2026-12-27,Spot
+317,Memphis,TN,Houston,TX,Van,,3673,18.1,2025-12-06,2026-03-06,Contract
+318,Atlanta,GA,Miami,FL,Van,,2677,13.2,2025-08-17,2025-11-15,Spot
+319,Newark,NJ,Charlotte,NC,Reefer,142,4576,12.7,2025-12-03,2026-02-01,Contract
+320,St. Louis,MO,Kansas City,MO,Reefer,89,3618,18.8,2025-10-07,2026-10-07,Spot
+321,Charlotte,NC,Jacksonville,FL,Flatbed,,3441,14.4,2026-03-21,2027-03-21,Contract
+322,Dallas,TX,Atlanta,GA,Van,58,3613,20.3,2025-09-29,2025-10-29,Contract
+323,El Paso,TX,Albuquerque,NM,Flatbed,30,4980,11.7,2026-03-08,2027-03-08,Spot
+324,Seattle,WA,Portland,OR,Flatbed,99,2240,11.2,2026-01-26,2026-04-26,Spot
+325,Charlotte,NC,Jacksonville,FL,Van,,1209,19.2,2026-01-08,2026-02-07,Contract
+326,Baltimore,MD,Philadelphia,PA,Flatbed,,1266,17.3,2025-12-03,2026-03-03,Contract
+327,Salt Lake City,UT,Boise,ID,Van,,3908,20.0,2025-11-07,2026-02-05,Contract
+328,Baltimore,MD,Philadelphia,PA,Flatbed,46,1925,14.0,2025-11-10,2026-01-09,Contract
+329,Seattle,WA,Portland,OR,Reefer,3,1607,12.1,2026-06-11,2026-09-09,Contract
+330,Phoenix,AZ,Denver,CO,Van,61,2035,18.7,2025-08-08,2025-10-07,Contract
+331,Detroit,MI,Cleveland,OH,Flatbed,125,3447,10.2,2025-09-23,2025-10-23,Spot
+332,Chicago,IL,Dallas,TX,Van,,4389,9.6,2025-07-24,2025-10-22,Contract
+333,Dallas,TX,Atlanta,GA,Van,82,4337,14.7,2025-11-16,2026-05-15,Contract
+334,Los Angeles,CA,Phoenix,AZ,Reefer,144,1576,10.7,2026-02-17,2026-04-18,Contract
+335,Chicago,IL,Dallas,TX,Flatbed,145,4339,12.8,2026-07-03,2026-08-02,Spot
+336,Minneapolis,MN,Chicago,IL,Flatbed,,1322,14.1,2026-02-23,2026-08-22,Contract
+337,Indianapolis,IN,Columbus,OH,Van,,3743,18.5,2025-09-24,2026-03-23,Spot
+338,Seattle,WA,Portland,OR,Flatbed,143,3224,17.0,2025-11-04,2026-05-03,Spot
+339,Atlanta,GA,Miami,FL,Van,68,1970,21.8,2026-08-15,2027-08-15,Contract
+340,Dallas,TX,Atlanta,GA,Reefer,,4630,9.2,2026-08-13,2026-11-11,Spot
+341,El Paso,TX,Albuquerque,NM,Flatbed,94,4338,14.9,2026-06-18,2027-06-18,Contract
+342,Newark,NJ,Charlotte,NC,Flatbed,5,4420,15.5,2025-09-24,2025-12-23,Contract
+343,Detroit,MI,Cleveland,OH,Van,,1424,19.4,2026-03-16,2026-05-15,Spot
+344,Louisville,KY,Nashville,TN,Reefer,58,1504,12.3,2025-11-18,2026-02-16,Contract
+345,Phoenix,AZ,Denver,CO,Van,,2367,20.2,2026-03-02,2026-05-01,Spot
+346,Chicago,IL,Newark,NJ,Van,13,5192,9.7,2026-04-03,2026-07-02,Spot
+347,Salt Lake City,UT,Boise,ID,Van,,1401,15.7,2026-03-28,2026-06-26,Spot
+348,Baltimore,MD,Philadelphia,PA,Flatbed,,3436,9.4,2026-03-17,2027-03-17,Contract
+349,Atlanta,GA,Miami,FL,Reefer,59,1580,8.7,2025-09-14,2025-12-13,Spot
+350,Newark,NJ,Charlotte,NC,Flatbed,1,1637,13.1,2025-12-15,2026-01-14,Spot
+351,Louisville,KY,Nashville,TN,Van,101,5048,10.4,2025-11-02,2026-01-01,Spot
+352,Chicago,IL,Dallas,TX,Reefer,28,4184,21.4,2025-08-19,2025-10-18,Spot
+353,Phoenix,AZ,Denver,CO,Van,,3342,18.9,2026-03-30,2027-03-30,Spot
+354,Minneapolis,MN,Chicago,IL,Flatbed,,1443,13.4,2026-01-08,2026-03-09,Contract
+355,Chicago,IL,Newark,NJ,Van,,5188,12.0,2025-10-18,2026-04-16,Spot
+356,El Paso,TX,Albuquerque,NM,Van,129,2921,21.7,2026-04-08,2027-04-08,Contract
+357,Salt Lake City,UT,Boise,ID,Van,,2236,19.4,2025-08-28,2025-10-27,Spot
+358,Seattle,WA,Portland,OR,Van,,1364,18.2,2026-04-20,2026-06-19,Contract
+359,Memphis,TN,Houston,TX,Van,36,5129,10.9,2026-06-20,2027-06-20,Spot
+360,Chicago,IL,Dallas,TX,Reefer,14,2598,18.1,2026-05-03,2026-10-30,Spot
+361,Chicago,IL,Newark,NJ,Reefer,,2751,14.2,2025-09-13,2026-09-13,Spot
+362,Memphis,TN,Houston,TX,Van,54,2646,21.3,2026-05-12,2026-07-11,Contract
+363,Atlanta,GA,Miami,FL,Reefer,1,2974,20.4,2025-12-22,2026-02-20,Spot
+364,Charlotte,NC,Jacksonville,FL,Flatbed,,2034,10.0,2026-01-17,2026-02-16,Contract
+365,Kansas City,MO,Denver,CO,Reefer,142,1256,14.4,2025-12-17,2026-12-17,Contract
+366,Seattle,WA,Portland,OR,Reefer,,4019,11.8,2026-03-28,2026-09-24,Contract
+367,Seattle,WA,Portland,OR,Reefer,18,1270,21.8,2026-04-18,2026-10-15,Spot
+368,Newark,NJ,Charlotte,NC,Reefer,,2718,11.8,2025-11-22,2026-02-20,Contract
+369,Houston,TX,Los Angeles,CA,Van,,3523,11.5,2026-06-23,2026-08-22,Spot
+370,Baltimore,MD,Philadelphia,PA,Flatbed,,4472,21.7,2025-11-18,2026-01-17,Spot
+371,Memphis,TN,Houston,TX,Van,45,4347,12.8,2025-08-28,2026-08-28,Contract
+372,Indianapolis,IN,Columbus,OH,Van,14,4200,19.3,2026-03-13,2026-09-09,Spot
+373,Houston,TX,Los Angeles,CA,Flatbed,107,3515,14.6,2025-11-01,2026-01-30,Spot
+374,Seattle,WA,Portland,OR,Reefer,6,4713,11.4,2026-02-25,2026-05-26,Contract
+375,Minneapolis,MN,Chicago,IL,Van,,5121,9.4,2025-11-02,2025-12-02,Spot
+376,Seattle,WA,Portland,OR,Reefer,6,2039,18.3,2025-12-20,2026-06-18,Spot
+377,Baltimore,MD,Philadelphia,PA,Reefer,130,1755,9.4,2026-04-25,2026-06-24,Contract
+378,Chicago,IL,Dallas,TX,Flatbed,,1692,20.5,2026-03-26,2027-03-26,Spot
+379,Dallas,TX,Atlanta,GA,Van,,1686,15.5,2026-06-30,2026-09-28,Spot
+380,Atlanta,GA,Miami,FL,Reefer,,2334,17.7,2025-11-12,2026-01-11,Spot
+381,Minneapolis,MN,Chicago,IL,Van,145,2886,16.2,2026-02-28,2026-03-30,Contract
+382,Chicago,IL,Dallas,TX,Reefer,,2629,10.3,2026-02-15,2026-08-14,Spot
+383,Salt Lake City,UT,Boise,ID,Van,,2327,11.3,2026-05-10,2026-07-09,Spot
+384,Kansas City,MO,Denver,CO,Van,27,2009,17.3,2026-06-10,2026-09-08,Spot
+385,El Paso,TX,Albuquerque,NM,Van,5,1682,18.6,2025-08-10,2025-10-09,Contract
+386,Phoenix,AZ,Denver,CO,Van,125,1459,10.4,2026-05-27,2026-11-23,Spot
+387,Baltimore,MD,Philadelphia,PA,Van,124,4652,10.2,2026-01-13,2026-02-12,Spot
+388,Memphis,TN,Houston,TX,Reefer,14,2980,15.3,2026-04-21,2026-06-20,Contract
+389,Charlotte,NC,Jacksonville,FL,Van,103,3382,14.3,2025-09-12,2026-09-12,Spot
+390,El Paso,TX,Albuquerque,NM,Reefer,36,2493,18.3,2026-04-05,2027-04-05,Spot
+391,Indianapolis,IN,Columbus,OH,Reefer,,2738,20.2,2025-11-15,2026-05-14,Spot
+392,Memphis,TN,Houston,TX,Van,,4218,9.6,2025-08-23,2026-08-23,Contract
+393,Houston,TX,Los Angeles,CA,Flatbed,99,4118,10.5,2025-08-04,2025-10-03,Spot
+394,Memphis,TN,Houston,TX,Van,,3282,11.4,2025-10-10,2026-10-10,Spot
+395,Dallas,TX,Atlanta,GA,Flatbed,91,1583,9.9,2026-04-06,2026-07-05,Spot
+396,Atlanta,GA,Miami,FL,Reefer,,4682,11.1,2026-05-03,2026-07-02,Spot
+397,St. Louis,MO,Kansas City,MO,Van,,3011,15.7,2026-07-11,2027-01-07,Contract
+398,Charlotte,NC,Jacksonville,FL,Van,124,2331,8.2,2026-02-25,2026-03-27,Spot
+399,Chicago,IL,Dallas,TX,Flatbed,,1542,19.3,2026-03-04,2026-05-03,Spot
+400,Los Angeles,CA,Phoenix,AZ,Flatbed,,3169,15.5,2026-06-27,2026-12-24,Contract
+401,Atlanta,GA,Miami,FL,Flatbed,,5167,21.8,2025-10-11,2025-11-10,Contract
+402,Houston,TX,Los Angeles,CA,Flatbed,,4455,11.7,2025-12-01,2026-03-01,Spot
+403,Baltimore,MD,Philadelphia,PA,Van,103,3936,14.9,2025-10-25,2026-10-25,Spot
+404,Memphis,TN,Houston,TX,Van,,2383,12.4,2025-12-03,2026-12-03,Contract
+405,Atlanta,GA,Miami,FL,Flatbed,,3114,8.0,2026-08-03,2026-09-02,Contract
+406,Seattle,WA,Portland,OR,Reefer,48,3807,15.2,2026-02-23,2026-03-25,Spot
+407,Houston,TX,Los Angeles,CA,Reefer,95,1703,11.8,2026-04-18,2026-10-15,Spot
+408,Dallas,TX,Atlanta,GA,Reefer,,1400,19.0,2026-02-10,2026-05-11,Contract
+409,Atlanta,GA,Miami,FL,Flatbed,130,1361,10.9,2025-09-30,2026-03-29,Contract
+410,El Paso,TX,Albuquerque,NM,Flatbed,,3084,8.2,2025-10-04,2026-01-02,Spot
+411,Memphis,TN,Houston,TX,Van,,2296,11.5,2026-07-23,2026-08-22,Spot
+412,Baltimore,MD,Philadelphia,PA,Flatbed,,1220,17.0,2026-04-05,2026-07-04,Contract
+413,Minneapolis,MN,Chicago,IL,Van,87,1994,8.9,2026-02-04,2026-04-05,Contract
+414,Seattle,WA,Portland,OR,Van,,1468,12.1,2026-06-05,2026-12-02,Spot
+415,St. Louis,MO,Kansas City,MO,Flatbed,115,3942,10.2,2025-09-09,2025-12-08,Spot
+416,Phoenix,AZ,Denver,CO,Flatbed,17,2708,9.5,2025-08-12,2026-08-12,Contract
+417,Los Angeles,CA,Phoenix,AZ,Reefer,,4567,16.8,2026-01-29,2026-04-29,Spot
+418,Chicago,IL,Newark,NJ,Reefer,140,2390,11.2,2026-07-26,2026-09-24,Contract
+419,Dallas,TX,Atlanta,GA,Flatbed,,1965,20.8,2026-03-19,2026-05-18,Spot
+420,Los Angeles,CA,Phoenix,AZ,Reefer,,2460,15.2,2026-01-18,2026-04-18,Spot
+421,Seattle,WA,Portland,OR,Flatbed,,2708,15.3,2026-04-15,2027-04-15,Contract
+422,Dallas,TX,Atlanta,GA,Flatbed,,3107,12.8,2025-10-08,2025-11-07,Contract
+423,Atlanta,GA,Miami,FL,Reefer,,2038,19.5,2026-04-28,2026-06-27,Spot
+424,St. Louis,MO,Kansas City,MO,Reefer,101,2490,11.1,2025-08-19,2025-09-18,Spot
+425,Newark,NJ,Charlotte,NC,Van,13,4113,18.1,2025-10-13,2026-04-11,Spot
+426,Baltimore,MD,Philadelphia,PA,Van,,5196,16.8,2026-05-07,2026-07-06,Spot
+427,Minneapolis,MN,Chicago,IL,Van,,2858,8.5,2025-09-21,2025-12-20,Contract
+428,Atlanta,GA,Miami,FL,Flatbed,,5116,15.0,2026-07-05,2027-07-05,Contract
+429,Houston,TX,Los Angeles,CA,Van,,5135,18.1,2025-12-03,2026-06-01,Spot
+430,Chicago,IL,Dallas,TX,Van,,4560,12.7,2026-08-03,2026-09-02,Contract
+431,Newark,NJ,Charlotte,NC,Flatbed,,4630,11.4,2025-10-15,2026-10-15,Contract
+432,Dallas,TX,Atlanta,GA,Reefer,,4078,19.5,2025-12-05,2026-03-05,Spot
+433,Phoenix,AZ,Denver,CO,Van,112,3985,19.1,2026-04-29,2026-10-26,Spot
+434,Atlanta,GA,Miami,FL,Van,,3672,17.0,2026-07-11,2026-08-10,Contract
+435,Newark,NJ,Charlotte,NC,Flatbed,38,2125,12.8,2026-04-20,2026-10-17,Spot
+436,Salt Lake City,UT,Boise,ID,Van,,2868,10.2,2026-05-09,2026-07-08,Spot
+437,El Paso,TX,Albuquerque,NM,Flatbed,82,1805,12.7,2026-07-10,2026-09-08,Contract
+438,Los Angeles,CA,Phoenix,AZ,Van,33,5024,15.5,2026-07-29,2026-10-27,Spot
+439,Chicago,IL,Newark,NJ,Flatbed,3,4386,13.5,2026-02-25,2026-04-26,Contract
+440,Atlanta,GA,Miami,FL,Flatbed,125,1593,19.9,2026-06-18,2026-08-17,Spot
+441,Indianapolis,IN,Columbus,OH,Van,87,4824,20.4,2026-05-04,2026-08-02,Spot
+442,Chicago,IL,Dallas,TX,Reefer,20,4005,18.4,2025-12-26,2026-01-25,Spot
+443,Kansas City,MO,Denver,CO,Van,33,4876,14.0,2026-02-23,2026-05-24,Spot
+444,Phoenix,AZ,Denver,CO,Flatbed,14,3188,15.9,2025-09-30,2026-03-29,Spot
+445,El Paso,TX,Albuquerque,NM,Van,,4605,8.6,2026-04-03,2026-07-02,Spot
+446,Detroit,MI,Cleveland,OH,Flatbed,,4451,12.8,2025-11-19,2026-05-18,Spot
+447,Minneapolis,MN,Chicago,IL,Flatbed,93,4217,11.0,2025-11-19,2026-01-18,Contract
+448,El Paso,TX,Albuquerque,NM,Flatbed,16,1418,17.7,2026-06-25,2026-09-23,Spot
+449,St. Louis,MO,Kansas City,MO,Reefer,,3579,12.0,2025-08-19,2025-09-18,Spot
+450,Chicago,IL,Dallas,TX,Flatbed,68,2245,16.4,2025-10-22,2025-12-21,Contract
+451,El Paso,TX,Albuquerque,NM,Flatbed,,4761,17.0,2025-09-14,2025-12-13,Contract
+452,Los Angeles,CA,Phoenix,AZ,Flatbed,,1794,16.9,2025-11-15,2026-02-13,Spot
+453,Memphis,TN,Houston,TX,Reefer,,1621,20.4,2026-03-19,2026-04-18,Spot
+454,Kansas City,MO,Denver,CO,Van,,1957,18.9,2026-04-24,2026-07-23,Contract
+455,Houston,TX,Los Angeles,CA,Flatbed,,5134,8.3,2026-07-19,2027-01-15,Contract
+456,Memphis,TN,Houston,TX,Reefer,,1682,8.4,2025-12-25,2026-06-23,Contract
+457,Kansas City,MO,Denver,CO,Flatbed,28,2467,11.1,2025-11-02,2026-01-01,Contract
+458,Seattle,WA,Portland,OR,Flatbed,,3892,21.7,2025-11-02,2025-12-02,Spot
+459,Chicago,IL,Newark,NJ,Reefer,,1682,12.8,2026-06-05,2027-06-05,Spot
+460,Houston,TX,Los Angeles,CA,Flatbed,141,2669,11.7,2025-11-11,2026-01-10,Contract
+461,Salt Lake City,UT,Boise,ID,Reefer,,2866,11.0,2025-09-28,2025-10-28,Contract
+462,Phoenix,AZ,Denver,CO,Van,,4602,19.3,2025-08-30,2025-10-29,Contract
+463,Salt Lake City,UT,Boise,ID,Reefer,,1692,13.6,2026-04-10,2026-06-09,Spot
+464,Seattle,WA,Portland,OR,Flatbed,145,4366,20.6,2026-03-10,2027-03-10,Spot
+465,Kansas City,MO,Denver,CO,Reefer,,2116,15.2,2026-08-16,2026-09-15,Contract
+466,Houston,TX,Los Angeles,CA,Van,8,1678,9.1,2025-07-22,2026-01-18,Spot
+467,El Paso,TX,Albuquerque,NM,Reefer,4,1396,16.6,2026-07-14,2027-01-10,Contract
+468,Los Angeles,CA,Phoenix,AZ,Reefer,113,3684,13.7,2026-07-10,2026-10-08,Spot
+469,St. Louis,MO,Kansas City,MO,Van,,5088,8.7,2026-01-02,2026-07-01,Contract
+470,Seattle,WA,Portland,OR,Flatbed,36,2306,16.4,2026-08-08,2027-02-04,Contract
+471,Kansas City,MO,Denver,CO,Van,,5062,18.7,2025-12-30,2026-02-28,Contract
+472,Memphis,TN,Houston,TX,Flatbed,,2611,18.4,2026-08-07,2027-08-07,Contract
+473,Minneapolis,MN,Chicago,IL,Reefer,7,1859,18.9,2025-10-31,2026-10-31,Spot
+474,Houston,TX,Los Angeles,CA,Flatbed,,3385,10.8,2026-04-04,2026-05-04,Contract
+475,Seattle,WA,Portland,OR,Van,,5108,10.4,2026-03-09,2026-06-07,Contract
+476,Houston,TX,Los Angeles,CA,Van,73,3431,19.9,2026-07-07,2027-01-03,Spot
+477,Newark,NJ,Charlotte,NC,Van,107,1869,18.5,2026-08-16,2027-02-12,Spot
+478,St. Louis,MO,Kansas City,MO,Flatbed,44,1742,21.7,2025-12-20,2026-06-18,Contract
+479,Newark,NJ,Charlotte,NC,Van,28,3032,11.7,2026-07-09,2027-07-09,Spot
+480,Kansas City,MO,Denver,CO,Flatbed,45,1395,8.6,2026-06-05,2026-12-02,Spot
+481,Phoenix,AZ,Denver,CO,Reefer,37,1416,11.5,2026-04-17,2026-10-14,Spot
+482,Houston,TX,Los Angeles,CA,Reefer,,1643,15.0,2026-06-05,2026-12-02,Spot
+483,Kansas City,MO,Denver,CO,Van,,4615,20.5,2026-05-26,2026-06-25,Spot
+484,Newark,NJ,Charlotte,NC,Flatbed,25,2269,15.6,2025-11-24,2026-05-23,Contract
+485,El Paso,TX,Albuquerque,NM,Reefer,,4304,15.6,2026-01-10,2026-03-11,Spot
+486,St. Louis,MO,Kansas City,MO,Van,92,3991,11.2,2026-03-06,2026-09-02,Contract
+487,Chicago,IL,Dallas,TX,Reefer,,4078,14.0,2025-10-19,2026-10-19,Spot
+488,Charlotte,NC,Jacksonville,FL,Reefer,128,1450,13.7,2026-01-22,2026-07-21,Spot
+489,Chicago,IL,Dallas,TX,Reefer,141,1209,17.2,2026-02-05,2027-02-05,Spot
+490,Kansas City,MO,Denver,CO,Van,113,2630,13.5,2026-03-02,2026-05-01,Contract
+491,Chicago,IL,Dallas,TX,Reefer,92,3032,10.1,2026-06-24,2026-09-22,Spot
+492,St. Louis,MO,Kansas City,MO,Flatbed,,5038,9.9,2026-05-19,2026-06-18,Contract
+493,Charlotte,NC,Jacksonville,FL,Flatbed,,3483,11.8,2025-10-18,2026-10-18,Contract
+494,El Paso,TX,Albuquerque,NM,Flatbed,,2382,9.8,2025-11-10,2025-12-10,Spot
+495,Dallas,TX,Atlanta,GA,Van,,4033,15.6,2025-08-08,2025-10-07,Contract
+496,St. Louis,MO,Kansas City,MO,Reefer,115,1732,18.3,2026-03-17,2027-03-17,Spot
+497,Los Angeles,CA,Phoenix,AZ,Reefer,48,3050,21.5,2025-09-30,2026-09-30,Spot
+498,Charlotte,NC,Jacksonville,FL,Van,,4983,13.6,2026-05-17,2026-07-16,Contract
+499,Minneapolis,MN,Chicago,IL,Van,92,4350,16.6,2025-09-14,2025-11-13,Contract
+500,Houston,TX,Los Angeles,CA,Van,109,1460,15.5,2025-08-13,2026-02-09,Contract
+501,Baltimore,MD,Philadelphia,PA,Van,112,3553,19.8,2026-01-05,2027-01-05,Spot
+502,Dallas,TX,Atlanta,GA,Flatbed,,2003,15.4,2025-12-07,2026-01-06,Spot
+503,Houston,TX,Los Angeles,CA,Flatbed,24,3994,17.7,2025-09-30,2025-11-29,Spot
+504,Chicago,IL,Newark,NJ,Reefer,,4180,16.0,2025-10-03,2026-01-01,Spot
+505,Newark,NJ,Charlotte,NC,Van,,4885,12.8,2025-11-12,2026-01-11,Contract
+506,Louisville,KY,Nashville,TN,Reefer,24,5026,13.5,2025-11-21,2026-05-20,Spot
+507,Chicago,IL,Newark,NJ,Flatbed,,1960,9.9,2025-09-24,2025-11-23,Contract
+508,Houston,TX,Los Angeles,CA,Van,25,3437,10.3,2025-10-27,2025-11-26,Spot
+509,Dallas,TX,Atlanta,GA,Van,91,4319,21.2,2026-02-25,2026-08-24,Contract
+510,Kansas City,MO,Denver,CO,Flatbed,,2853,11.1,2025-10-19,2025-12-18,Contract
+511,Newark,NJ,Charlotte,NC,Van,82,1635,8.4,2025-11-03,2026-05-02,Contract
+512,St. Louis,MO,Kansas City,MO,Reefer,54,5089,12.5,2025-11-03,2026-02-01,Contract
+513,Detroit,MI,Cleveland,OH,Reefer,,1231,9.7,2026-05-09,2026-08-07,Spot
+514,Newark,NJ,Charlotte,NC,Reefer,103,3183,19.7,2026-05-24,2026-06-23,Contract
+515,Salt Lake City,UT,Boise,ID,Van,,4449,10.9,2026-07-28,2026-08-27,Contract
+516,Los Angeles,CA,Phoenix,AZ,Reefer,,3058,10.8,2026-06-22,2026-09-20,Spot
+517,Kansas City,MO,Denver,CO,Reefer,112,4829,19.8,2026-04-29,2026-10-26,Spot
+518,Seattle,WA,Portland,OR,Reefer,68,4687,16.7,2026-03-07,2026-04-06,Spot
+519,Newark,NJ,Charlotte,NC,Reefer,,4445,10.5,2026-07-03,2026-08-02,Contract
+520,El Paso,TX,Albuquerque,NM,Flatbed,16,4051,8.8,2025-10-18,2026-10-18,Spot
+521,Minneapolis,MN,Chicago,IL,Van,,2678,15.4,2026-06-11,2026-08-10,Contract
+522,Houston,TX,Los Angeles,CA,Van,,5030,19.3,2026-02-28,2027-02-28,Contract
+523,Phoenix,AZ,Denver,CO,Van,45,4739,18.6,2025-10-22,2026-10-22,Contract
+524,Louisville,KY,Nashville,TN,Reefer,22,1766,21.8,2025-12-07,2026-03-07,Contract
+525,Baltimore,MD,Philadelphia,PA,Flatbed,,4201,19.2,2025-10-19,2026-04-17,Contract
+526,El Paso,TX,Albuquerque,NM,Reefer,,3256,20.7,2026-06-12,2026-09-10,Spot
+527,Phoenix,AZ,Denver,CO,Reefer,4,1757,19.2,2026-08-13,2026-09-12,Contract
+528,Seattle,WA,Portland,OR,Flatbed,,4797,9.8,2026-04-20,2026-05-20,Spot
+529,Dallas,TX,Atlanta,GA,Reefer,9,2053,8.5,2026-08-14,2026-11-12,Spot
+530,Phoenix,AZ,Denver,CO,Flatbed,138,1946,12.0,2025-09-01,2025-10-01,Contract
+531,Houston,TX,Los Angeles,CA,Flatbed,112,4135,19.9,2025-12-08,2026-02-06,Spot
+532,Phoenix,AZ,Denver,CO,Reefer,,4431,10.1,2026-01-03,2026-04-03,Spot
+533,Memphis,TN,Houston,TX,Reefer,,4225,12.0,2025-08-21,2025-10-20,Spot
+534,St. Louis,MO,Kansas City,MO,Van,,4098,10.7,2025-11-11,2025-12-11,Spot
+535,Memphis,TN,Houston,TX,Van,,1786,16.7,2025-09-20,2025-10-20,Spot
+536,Houston,TX,Los Angeles,CA,Flatbed,2,4826,11.7,2026-07-01,2027-07-01,Spot
+537,Indianapolis,IN,Columbus,OH,Flatbed,93,3097,18.7,2026-02-21,2026-03-23,Contract
+538,St. Louis,MO,Kansas City,MO,Flatbed,,3924,20.6,2025-12-26,2026-02-24,Contract
+539,Charlotte,NC,Jacksonville,FL,Reefer,,4259,14.8,2026-02-12,2027-02-12,Contract
+540,Memphis,TN,Houston,TX,Flatbed,5,2532,19.4,2026-06-05,2027-06-05,Contract
+541,Houston,TX,Los Angeles,CA,Flatbed,93,2187,15.7,2025-08-08,2025-09-07,Spot
+542,Charlotte,NC,Jacksonville,FL,Van,115,3120,11.0,2026-05-19,2026-06-18,Contract
+543,Indianapolis,IN,Columbus,OH,Flatbed,118,3586,10.4,2026-05-13,2026-06-12,Spot
+544,Phoenix,AZ,Denver,CO,Van,,4201,16.2,2026-01-10,2026-04-10,Contract
+545,Seattle,WA,Portland,OR,Flatbed,93,1789,13.1,2026-04-17,2026-06-16,Spot
+546,Salt Lake City,UT,Boise,ID,Flatbed,27,2511,9.7,2025-11-05,2026-02-03,Contract
+547,Minneapolis,MN,Chicago,IL,Van,21,4510,8.3,2026-01-27,2026-04-27,Contract
+548,Louisville,KY,Nashville,TN,Reefer,,4520,9.6,2025-12-04,2026-12-04,Contract
+549,El Paso,TX,Albuquerque,NM,Flatbed,67,1211,9.0,2026-05-13,2027-05-13,Spot
+550,Dallas,TX,Atlanta,GA,Van,,4890,20.7,2025-10-15,2026-04-13,Spot
+551,Indianapolis,IN,Columbus,OH,Reefer,,4867,15.8,2026-03-02,2026-05-01,Spot
+552,Memphis,TN,Houston,TX,Van,4,4527,13.1,2025-09-05,2025-10-05,Spot
+553,Baltimore,MD,Philadelphia,PA,Van,,1354,14.8,2026-07-25,2026-10-23,Contract
+554,St. Louis,MO,Kansas City,MO,Flatbed,82,4737,10.9,2025-10-29,2026-04-27,Contract
+555,St. Louis,MO,Kansas City,MO,Reefer,24,2169,8.9,2025-09-24,2026-09-24,Spot
+556,Indianapolis,IN,Columbus,OH,Van,,2437,19.4,2026-04-18,2026-10-15,Contract
+557,Newark,NJ,Charlotte,NC,Reefer,,2620,16.0,2026-05-25,2026-07-24,Spot
+558,Chicago,IL,Dallas,TX,Van,,3564,17.3,2026-05-23,2027-05-23,Spot
+559,Detroit,MI,Cleveland,OH,Van,77,2335,16.6,2025-09-16,2026-09-16,Spot
+560,Chicago,IL,Dallas,TX,Flatbed,,3125,15.0,2026-07-05,2026-09-03,Spot
+561,Memphis,TN,Houston,TX,Reefer,7,3793,10.2,2026-05-31,2026-07-30,Contract
+562,Phoenix,AZ,Denver,CO,Reefer,140,3904,18.8,2026-06-06,2026-07-06,Spot
+563,Newark,NJ,Charlotte,NC,Van,,2849,8.6,2026-06-24,2026-08-23,Spot
+564,Charlotte,NC,Jacksonville,FL,Van,,2604,21.1,2025-09-12,2026-09-12,Spot
+565,El Paso,TX,Albuquerque,NM,Flatbed,,2076,14.0,2026-07-29,2026-10-27,Contract
+566,Indianapolis,IN,Columbus,OH,Flatbed,,3904,17.3,2026-05-17,2026-11-13,Contract
+567,St. Louis,MO,Kansas City,MO,Van,20,4330,12.0,2026-03-25,2026-05-24,Contract
+568,St. Louis,MO,Kansas City,MO,Van,,4721,21.7,2026-08-12,2027-08-12,Spot
+569,El Paso,TX,Albuquerque,NM,Reefer,53,1727,19.9,2026-08-08,2027-08-08,Contract
+570,Houston,TX,Los Angeles,CA,Van,,4214,11.0,2025-09-15,2025-10-15,Contract
+571,Memphis,TN,Houston,TX,Flatbed,99,3233,14.4,2026-08-08,2026-09-07,Spot
+572,Louisville,KY,Nashville,TN,Van,61,5030,13.1,2026-02-14,2027-02-14,Contract
+573,Memphis,TN,Houston,TX,Van,4,2262,21.9,2026-07-09,2026-09-07,Spot
+574,Phoenix,AZ,Denver,CO,Van,51,3715,14.9,2026-05-26,2026-11-22,Spot
+575,Kansas City,MO,Denver,CO,Flatbed,112,1451,20.1,2026-01-02,2026-02-01,Spot
+576,Phoenix,AZ,Denver,CO,Van,,1718,20.6,2026-03-25,2027-03-25,Contract
+577,Dallas,TX,Atlanta,GA,Reefer,21,4590,17.9,2025-08-31,2025-09-30,Contract
+578,Atlanta,GA,Miami,FL,Van,8,1710,20.7,2026-08-08,2027-08-08,Contract
+579,Salt Lake City,UT,Boise,ID,Flatbed,,2709,13.2,2026-01-12,2026-04-12,Contract
+580,Chicago,IL,Newark,NJ,Reefer,61,4654,19.8,2026-05-20,2026-07-19,Spot
+581,Louisville,KY,Nashville,TN,Reefer,,1211,18.8,2026-06-21,2026-07-21,Spot
+582,Atlanta,GA,Miami,FL,Van,,4501,9.4,2025-08-04,2026-01-31,Contract
+583,Louisville,KY,Nashville,TN,Van,78,1863,8.2,2026-01-12,2027-01-12,Spot
+584,Chicago,IL,Newark,NJ,Reefer,,1806,9.5,2025-10-17,2025-11-16,Contract
+585,Atlanta,GA,Miami,FL,Reefer,11,2000,9.4,2025-11-29,2025-12-29,Spot
+586,Charlotte,NC,Jacksonville,FL,Flatbed,,2560,12.0,2026-07-07,2026-08-06,Contract
+587,Minneapolis,MN,Chicago,IL,Reefer,26,4481,10.8,2026-01-23,2026-03-24,Spot
+588,Salt Lake City,UT,Boise,ID,Reefer,,2629,14.3,2025-11-17,2026-11-17,Contract
+589,El Paso,TX,Albuquerque,NM,Reefer,,1321,12.7,2026-05-04,2026-06-03,Spot
+590,El Paso,TX,Albuquerque,NM,Reefer,,4569,20.5,2026-01-03,2026-04-03,Contract
+591,Memphis,TN,Houston,TX,Van,50,3596,9.9,2026-07-15,2027-07-15,Contract
+592,Chicago,IL,Dallas,TX,Van,8,2289,12.3,2026-01-22,2026-07-21,Contract
+593,Salt Lake City,UT,Boise,ID,Van,140,1477,14.8,2026-06-18,2026-07-18,Contract
+594,Newark,NJ,Charlotte,NC,Reefer,,1280,15.6,2025-07-29,2025-10-27,Spot
+595,Salt Lake City,UT,Boise,ID,Flatbed,,3784,12.4,2025-08-25,2025-11-23,Spot
+596,Dallas,TX,Atlanta,GA,Van,6,2246,19.3,2025-10-08,2026-10-08,Contract
+597,El Paso,TX,Albuquerque,NM,Reefer,,4408,16.9,2025-10-10,2026-10-10,Spot
+598,Indianapolis,IN,Columbus,OH,Reefer,,2998,13.4,2025-08-31,2025-09-30,Contract
+599,Newark,NJ,Charlotte,NC,Reefer,53,5113,12.0,2026-06-27,2026-08-26,Spot
+600,Minneapolis,MN,Chicago,IL,Reefer,,2290,18.7,2026-04-11,2026-06-10,Contract
+601,Kansas City,MO,Denver,CO,Van,,4021,16.2,2025-11-26,2026-11-26,Spot
+602,El Paso,TX,Albuquerque,NM,Reefer,2,1474,14.0,2025-08-17,2025-11-15,Spot
+603,Chicago,IL,Dallas,TX,Van,,1408,15.6,2025-11-26,2026-05-25,Spot
+604,Newark,NJ,Charlotte,NC,Van,,1424,17.2,2026-05-27,2026-06-26,Contract
+605,Newark,NJ,Charlotte,NC,Flatbed,,2163,16.3,2026-02-08,2027-02-08,Contract
+606,Memphis,TN,Houston,TX,Van,,5197,15.5,2026-01-01,2026-01-31,Contract
+607,St. Louis,MO,Kansas City,MO,Van,,5175,12.3,2025-11-10,2026-05-09,Spot
+608,Kansas City,MO,Denver,CO,Van,68,5078,21.0,2026-02-15,2027-02-15,Contract
+609,St. Louis,MO,Kansas City,MO,Reefer,67,5019,19.4,2026-08-11,2027-08-11,Contract
+610,Baltimore,MD,Philadelphia,PA,Van,,3142,19.6,2026-03-06,2026-09-02,Spot
+611,Indianapolis,IN,Columbus,OH,Reefer,95,1548,18.7,2026-03-16,2027-03-16,Spot
+612,Kansas City,MO,Denver,CO,Flatbed,,3962,16.4,2025-10-18,2026-01-16,Contract
+613,Baltimore,MD,Philadelphia,PA,Flatbed,,3097,22.0,2025-08-10,2026-02-06,Contract
+614,Atlanta,GA,Miami,FL,Reefer,,3611,11.6,2026-02-16,2026-04-17,Spot
+615,Salt Lake City,UT,Boise,ID,Reefer,15,2652,15.7,2026-01-10,2026-02-09,Spot
+616,Kansas City,MO,Denver,CO,Reefer,,3961,12.7,2025-08-28,2026-08-28,Contract
+617,Chicago,IL,Newark,NJ,Van,,5013,19.3,2025-12-24,2026-12-24,Contract
+618,Kansas City,MO,Denver,CO,Reefer,,1385,12.0,2025-10-11,2026-04-09,Contract
+619,Houston,TX,Los Angeles,CA,Flatbed,32,4150,11.7,2026-04-03,2027-04-03,Contract
+620,Memphis,TN,Houston,TX,Van,67,1247,13.4,2026-05-30,2027-05-30,Spot
+621,Chicago,IL,Newark,NJ,Flatbed,141,2195,15.7,2025-09-28,2026-03-27,Spot
+622,St. Louis,MO,Kansas City,MO,Flatbed,145,4389,15.5,2026-04-25,2026-07-24,Spot
+623,El Paso,TX,Albuquerque,NM,Van,63,1763,21.9,2026-04-06,2026-10-03,Contract
+624,El Paso,TX,Albuquerque,NM,Flatbed,,2940,9.2,2026-08-05,2027-08-05,Spot
+625,Indianapolis,IN,Columbus,OH,Van,101,4870,18.6,2025-07-25,2025-09-23,Spot
+626,Indianapolis,IN,Columbus,OH,Flatbed,58,1642,13.7,2026-04-19,2026-06-18,Spot
+627,Dallas,TX,Atlanta,GA,Van,,1379,9.3,2026-04-08,2026-07-07,Contract
+628,Chicago,IL,Dallas,TX,Van,51,4912,11.7,2026-03-27,2026-06-25,Spot
+629,Phoenix,AZ,Denver,CO,Reefer,118,1329,19.0,2026-05-10,2026-08-08,Contract
+630,Houston,TX,Los Angeles,CA,Van,,4294,21.0,2025-08-02,2026-01-29,Spot
+631,St. Louis,MO,Kansas City,MO,Van,,2259,15.7,2025-10-16,2026-10-16,Spot
+632,Baltimore,MD,Philadelphia,PA,Flatbed,,1211,10.0,2026-01-23,2026-07-22,Contract
+633,Los Angeles,CA,Phoenix,AZ,Reefer,,2894,19.8,2025-11-25,2025-12-25,Spot
+634,Houston,TX,Los Angeles,CA,Flatbed,53,5079,17.3,2026-04-03,2027-04-03,Spot
+635,Salt Lake City,UT,Boise,ID,Reefer,128,3733,15.1,2025-11-08,2026-05-07,Contract
+636,Los Angeles,CA,Phoenix,AZ,Reefer,,3609,8.7,2026-04-05,2026-07-04,Spot
+637,El Paso,TX,Albuquerque,NM,Van,134,3653,17.6,2025-09-03,2025-11-02,Contract
+638,Chicago,IL,Newark,NJ,Van,128,5004,9.0,2026-02-02,2026-03-04,Spot
+639,Phoenix,AZ,Denver,CO,Flatbed,136,1453,18.8,2026-04-22,2027-04-22,Contract
+640,Indianapolis,IN,Columbus,OH,Reefer,44,2218,16.1,2026-01-18,2026-03-19,Contract
+641,Chicago,IL,Newark,NJ,Flatbed,8,2752,16.3,2025-12-11,2026-01-10,Contract
+642,Memphis,TN,Houston,TX,Reefer,89,5178,12.1,2025-10-23,2026-01-21,Contract
+643,Houston,TX,Los Angeles,CA,Flatbed,,4417,14.0,2025-08-02,2026-08-02,Contract
+644,Atlanta,GA,Miami,FL,Reefer,145,2985,19.1,2026-04-04,2026-06-03,Contract
+645,Dallas,TX,Atlanta,GA,Reefer,51,3207,20.5,2025-07-25,2026-01-21,Contract
+646,Detroit,MI,Cleveland,OH,Reefer,29,1987,9.8,2025-11-30,2026-11-30,Contract
+647,Louisville,KY,Nashville,TN,Reefer,,4408,12.7,2026-06-11,2026-08-10,Contract
+648,Atlanta,GA,Miami,FL,Van,,3791,11.2,2026-02-26,2027-02-26,Spot
+649,Chicago,IL,Dallas,TX,Flatbed,121,2942,10.1,2026-05-26,2026-07-25,Spot
+650,Charlotte,NC,Jacksonville,FL,Reefer,77,4042,9.9,2025-09-14,2026-03-13,Contract
+651,El Paso,TX,Albuquerque,NM,Van,54,1313,17.9,2026-06-24,2026-07-24,Spot
+652,Los Angeles,CA,Phoenix,AZ,Reefer,,4539,17.0,2026-04-10,2027-04-10,Spot
+653,Chicago,IL,Dallas,TX,Flatbed,2,1643,13.5,2025-12-17,2026-12-17,Contract
+654,Baltimore,MD,Philadelphia,PA,Van,,4782,20.4,2026-07-07,2026-09-05,Contract
+655,Charlotte,NC,Jacksonville,FL,Van,,3027,19.9,2026-06-08,2026-12-05,Contract
+656,Los Angeles,CA,Phoenix,AZ,Van,136,1654,11.5,2026-05-24,2026-06-23,Contract
+657,Dallas,TX,Atlanta,GA,Van,,2616,20.1,2025-08-25,2026-08-25,Spot
+658,Charlotte,NC,Jacksonville,FL,Flatbed,48,5188,11.7,2025-09-25,2025-11-24,Spot
+659,Detroit,MI,Cleveland,OH,Van,16,3951,20.3,2025-11-04,2026-01-03,Contract
+660,Louisville,KY,Nashville,TN,Van,5,3968,13.1,2026-01-09,2026-04-09,Contract
+661,Dallas,TX,Atlanta,GA,Flatbed,19,4762,21.2,2026-05-08,2026-06-07,Spot
+662,Charlotte,NC,Jacksonville,FL,Reefer,,3400,16.7,2025-10-06,2026-04-04,Spot
+663,Charlotte,NC,Jacksonville,FL,Reefer,,2830,17.0,2026-05-03,2026-07-02,Spot
+664,Minneapolis,MN,Chicago,IL,Van,4,1984,10.4,2025-11-05,2026-11-05,Spot
+665,Minneapolis,MN,Chicago,IL,Reefer,130,1251,19.9,2025-09-15,2026-09-15,Contract
+666,Seattle,WA,Portland,OR,Van,33,2547,16.5,2025-08-16,2025-10-15,Spot
+667,Dallas,TX,Atlanta,GA,Flatbed,,3260,11.2,2026-06-03,2026-09-01,Spot
+668,Detroit,MI,Cleveland,OH,Van,5,4713,18.0,2025-08-23,2025-09-22,Contract
+669,Charlotte,NC,Jacksonville,FL,Reefer,,2373,12.8,2025-11-26,2025-12-26,Spot
+670,Louisville,KY,Nashville,TN,Reefer,33,4955,14.0,2025-09-07,2025-12-06,Spot
+671,Baltimore,MD,Philadelphia,PA,Reefer,,1470,14.3,2025-12-16,2026-12-16,Spot
+672,Chicago,IL,Dallas,TX,Flatbed,124,3866,16.3,2025-07-26,2025-10-24,Spot
+673,Baltimore,MD,Philadelphia,PA,Reefer,,3299,18.3,2025-09-12,2025-12-11,Contract
+674,Salt Lake City,UT,Boise,ID,Flatbed,86,4380,21.9,2026-05-29,2027-05-29,Contract
+675,Minneapolis,MN,Chicago,IL,Flatbed,128,1744,14.3,2025-12-14,2026-01-13,Spot
+676,Louisville,KY,Nashville,TN,Reefer,30,1349,21.5,2026-07-02,2027-07-02,Contract
+677,Kansas City,MO,Denver,CO,Reefer,,4905,16.3,2026-05-04,2027-05-04,Spot
+678,St. Louis,MO,Kansas City,MO,Van,,3526,21.8,2026-06-25,2026-08-24,Contract
+679,Chicago,IL,Dallas,TX,Reefer,,5065,15.2,2025-10-30,2025-12-29,Spot
+680,Salt Lake City,UT,Boise,ID,Flatbed,28,1887,9.6,2026-06-03,2026-07-03,Spot
+681,Seattle,WA,Portland,OR,Van,1,1266,14.1,2026-07-15,2027-07-15,Spot
+682,Atlanta,GA,Miami,FL,Van,,4645,15.8,2025-09-27,2026-09-27,Contract
+683,Houston,TX,Los Angeles,CA,Van,2,3443,13.4,2026-07-05,2026-10-03,Spot
+684,Detroit,MI,Cleveland,OH,Van,,2163,17.1,2025-11-06,2026-02-04,Spot
+685,Salt Lake City,UT,Boise,ID,Flatbed,140,1394,18.5,2025-12-12,2026-03-12,Spot
+686,Indianapolis,IN,Columbus,OH,Reefer,,2873,19.1,2025-10-19,2026-01-17,Spot
+687,Chicago,IL,Dallas,TX,Van,,4366,13.7,2026-08-08,2027-02-04,Spot
+688,Chicago,IL,Dallas,TX,Reefer,36,5064,19.7,2026-03-01,2027-03-01,Contract
+689,Chicago,IL,Dallas,TX,Flatbed,6,2985,9.3,2026-01-07,2026-07-06,Spot
+690,Houston,TX,Los Angeles,CA,Reefer,,4753,20.5,2026-07-03,2026-08-02,Spot
+691,Detroit,MI,Cleveland,OH,Van,68,3418,19.5,2026-03-04,2026-04-03,Contract
+692,El Paso,TX,Albuquerque,NM,Reefer,6,3341,15.9,2025-10-06,2025-11-05,Spot
+693,Phoenix,AZ,Denver,CO,Reefer,93,2028,15.5,2026-03-19,2027-03-19,Contract
+694,Kansas City,MO,Denver,CO,Reefer,107,3080,14.1,2026-08-09,2027-08-09,Spot
+695,Minneapolis,MN,Chicago,IL,Flatbed,,3905,9.0,2025-09-22,2026-03-21,Spot
+696,Chicago,IL,Newark,NJ,Flatbed,,1939,16.0,2026-02-12,2026-08-11,Contract
+697,Chicago,IL,Dallas,TX,Flatbed,,2169,9.9,2026-06-13,2026-07-13,Contract
+698,Charlotte,NC,Jacksonville,FL,Flatbed,87,3564,12.2,2025-11-03,2026-01-02,Spot
+699,Baltimore,MD,Philadelphia,PA,Van,,5065,21.2,2025-10-28,2026-01-26,Contract
+700,Chicago,IL,Newark,NJ,Reefer,86,2487,12.1,2026-06-17,2026-12-14,Spot
+701,Memphis,TN,Houston,TX,Reefer,,2777,9.4,2025-10-12,2025-12-11,Spot
+702,Louisville,KY,Nashville,TN,Van,,4119,14.1,2025-10-17,2026-04-15,Spot
+703,Kansas City,MO,Denver,CO,Van,107,5062,9.0,2025-12-15,2026-03-15,Spot
+704,Louisville,KY,Nashville,TN,Flatbed,136,2700,15.7,2026-04-02,2026-06-01,Contract
+705,Chicago,IL,Newark,NJ,Reefer,6,2506,19.8,2026-01-06,2027-01-06,Spot
+706,Memphis,TN,Houston,TX,Reefer,81,4601,18.3,2026-08-16,2027-08-16,Spot
+707,Houston,TX,Los Angeles,CA,Van,129,4880,8.7,2026-02-22,2026-08-21,Spot
+708,Indianapolis,IN,Columbus,OH,Van,36,4671,20.9,2025-12-19,2026-02-17,Contract
+709,Louisville,KY,Nashville,TN,Van,,1564,20.8,2025-12-11,2026-12-11,Spot
+710,Kansas City,MO,Denver,CO,Flatbed,34,4137,21.9,2025-12-28,2026-02-26,Spot
+711,Houston,TX,Los Angeles,CA,Flatbed,145,4363,8.8,2026-02-06,2026-03-08,Contract
+712,Baltimore,MD,Philadelphia,PA,Flatbed,128,4284,13.2,2026-07-17,2026-08-16,Spot
+713,El Paso,TX,Albuquerque,NM,Van,73,4828,14.0,2026-06-22,2026-07-22,Spot
+714,Chicago,IL,Newark,NJ,Van,145,3004,8.6,2026-07-20,2027-07-20,Contract
+715,Los Angeles,CA,Phoenix,AZ,Reefer,101,2485,14.8,2025-09-02,2025-10-02,Spot
+716,St. Louis,MO,Kansas City,MO,Flatbed,,2479,11.2,2025-11-02,2026-01-31,Spot
+717,Salt Lake City,UT,Boise,ID,Flatbed,,2892,20.1,2025-10-17,2026-10-17,Contract
+718,Chicago,IL,Newark,NJ,Van,,2253,13.8,2026-03-27,2026-09-23,Spot
+719,El Paso,TX,Albuquerque,NM,Flatbed,86,4991,12.4,2026-06-05,2026-12-02,Spot
+720,Indianapolis,IN,Columbus,OH,Flatbed,143,1489,10.2,2026-07-29,2026-10-27,Contract
+721,Seattle,WA,Portland,OR,Flatbed,24,1481,20.3,2025-12-20,2026-03-20,Contract
+722,Charlotte,NC,Jacksonville,FL,Reefer,,4329,10.1,2026-04-15,2026-07-14,Spot
+723,Houston,TX,Los Angeles,CA,Reefer,92,2983,16.2,2026-07-28,2027-01-24,Spot
+724,Louisville,KY,Nashville,TN,Reefer,92,3261,10.5,2026-05-09,2027-05-09,Spot
+725,Houston,TX,Los Angeles,CA,Flatbed,39,2862,12.7,2026-06-07,2027-06-07,Contract
+726,Charlotte,NC,Jacksonville,FL,Reefer,129,1405,12.7,2026-01-27,2026-04-27,Spot
+727,Chicago,IL,Newark,NJ,Reefer,,2043,8.1,2025-10-31,2025-12-30,Spot
+728,Baltimore,MD,Philadelphia,PA,Reefer,142,2529,17.8,2026-06-23,2026-07-23,Spot
+729,El Paso,TX,Albuquerque,NM,Van,30,1608,15.1,2026-07-05,2026-08-04,Contract
+730,Newark,NJ,Charlotte,NC,Flatbed,,1278,17.9,2026-06-05,2026-09-03,Contract
+731,Houston,TX,Los Angeles,CA,Van,,4078,13.7,2026-05-18,2026-07-17,Contract
+732,Seattle,WA,Portland,OR,Reefer,,4061,20.5,2026-07-05,2026-09-03,Spot
+733,Kansas City,MO,Denver,CO,Reefer,,4415,8.8,2025-10-31,2026-01-29,Spot
+734,Phoenix,AZ,Denver,CO,Flatbed,7,1523,20.1,2026-03-06,2026-04-05,Spot
+735,Chicago,IL,Newark,NJ,Flatbed,124,4011,20.5,2025-10-19,2026-01-17,Contract
+736,Atlanta,GA,Miami,FL,Reefer,,1379,17.9,2025-12-07,2026-01-06,Spot
+737,Charlotte,NC,Jacksonville,FL,Flatbed,,1402,17.0,2026-02-16,2027-02-16,Spot
+738,Los Angeles,CA,Phoenix,AZ,Van,2,2808,12.3,2026-03-22,2027-03-22,Spot
+739,Indianapolis,IN,Columbus,OH,Flatbed,99,1685,21.1,2026-08-15,2026-11-13,Spot
+740,Phoenix,AZ,Denver,CO,Van,82,3705,15.6,2025-08-24,2025-11-22,Spot
+741,Seattle,WA,Portland,OR,Flatbed,,4806,21.4,2025-10-05,2026-10-05,Contract
+742,Chicago,IL,Newark,NJ,Van,52,4009,13.1,2025-10-30,2026-01-28,Spot
+743,Atlanta,GA,Miami,FL,Van,,5147,8.2,2025-12-10,2026-12-10,Spot
+744,Houston,TX,Los Angeles,CA,Flatbed,61,5062,13.4,2025-11-09,2025-12-09,Contract
+745,Minneapolis,MN,Chicago,IL,Reefer,,4387,15.0,2025-08-25,2025-10-24,Spot
+746,Indianapolis,IN,Columbus,OH,Flatbed,,3535,21.5,2026-03-22,2026-06-20,Contract
+747,Seattle,WA,Portland,OR,Van,1,2808,19.9,2025-12-08,2026-06-06,Spot
+748,Dallas,TX,Atlanta,GA,Reefer,,2092,9.0,2026-05-26,2026-08-24,Spot
+749,Houston,TX,Los Angeles,CA,Reefer,33,1732,14.4,2026-01-28,2026-03-29,Contract
+750,Kansas City,MO,Denver,CO,Flatbed,,3771,10.1,2026-05-13,2027-05-13,Spot
+751,Detroit,MI,Cleveland,OH,Reefer,,1485,17.0,2026-08-09,2026-09-08,Contract
+752,Atlanta,GA,Miami,FL,Reefer,,1223,13.8,2025-09-24,2026-09-24,Contract
+753,Seattle,WA,Portland,OR,Van,20,4830,14.2,2026-06-18,2026-07-18,Spot
+754,El Paso,TX,Albuquerque,NM,Van,,4871,20.9,2025-09-03,2025-12-02,Contract
+755,Dallas,TX,Atlanta,GA,Flatbed,94,4435,15.9,2025-11-11,2026-05-10,Spot
+756,Los Angeles,CA,Phoenix,AZ,Van,101,4218,13.5,2025-10-17,2026-04-15,Spot
+757,Seattle,WA,Portland,OR,Reefer,,4493,10.0,2026-05-17,2026-06-16,Contract
+758,Chicago,IL,Newark,NJ,Flatbed,,1518,20.5,2026-04-08,2026-10-05,Spot
+759,Chicago,IL,Dallas,TX,Reefer,15,1572,18.5,2026-02-21,2026-04-22,Spot
+760,Kansas City,MO,Denver,CO,Van,,4068,16.5,2026-05-22,2026-06-21,Spot
+761,Los Angeles,CA,Phoenix,AZ,Reefer,,4418,14.8,2026-06-14,2027-06-14,Spot
+762,Chicago,IL,Newark,NJ,Flatbed,13,2976,11.0,2026-06-23,2026-07-23,Contract
+763,Dallas,TX,Atlanta,GA,Flatbed,,1534,16.0,2025-08-08,2026-08-08,Contract
+764,Minneapolis,MN,Chicago,IL,Van,,4029,8.6,2026-06-29,2026-12-26,Spot
+765,Dallas,TX,Atlanta,GA,Van,,3391,8.9,2025-08-23,2026-08-23,Contract
+766,El Paso,TX,Albuquerque,NM,Van,,4921,19.3,2025-10-23,2026-04-21,Contract
+767,Dallas,TX,Atlanta,GA,Reefer,7,3892,18.1,2026-06-28,2027-06-28,Contract
+768,Kansas City,MO,Denver,CO,Van,,1927,15.5,2025-11-07,2026-01-06,Spot
+769,Memphis,TN,Houston,TX,Flatbed,20,1442,14.8,2026-04-09,2026-05-09,Contract
+770,Indianapolis,IN,Columbus,OH,Flatbed,,4986,8.9,2025-07-29,2026-07-29,Contract
+771,Salt Lake City,UT,Boise,ID,Flatbed,,2003,18.3,2025-08-23,2025-09-22,Spot
+772,Memphis,TN,Houston,TX,Van,,2051,17.7,2026-07-22,2026-10-20,Spot
+773,Memphis,TN,Houston,TX,Van,,2997,9.8,2025-12-05,2026-03-05,Spot
+774,Seattle,WA,Portland,OR,Reefer,130,1994,13.9,2026-07-26,2026-09-24,Spot
+775,Phoenix,AZ,Denver,CO,Reefer,55,2007,19.1,2026-08-15,2026-09-14,Spot
+776,Charlotte,NC,Jacksonville,FL,Reefer,72,2657,15.5,2026-01-25,2027-01-25,Spot
+777,Los Angeles,CA,Phoenix,AZ,Flatbed,3,3869,17.6,2026-05-26,2027-05-26,Spot
+778,Minneapolis,MN,Chicago,IL,Reefer,,4743,10.2,2025-10-09,2025-11-08,Spot
+779,Newark,NJ,Charlotte,NC,Van,,2215,8.9,2025-08-02,2026-08-02,Contract
+780,Houston,TX,Los Angeles,CA,Van,,3524,13.9,2026-07-06,2026-09-04,Spot
+781,St. Louis,MO,Kansas City,MO,Van,,2862,13.8,2025-11-04,2026-02-02,Contract
+782,Charlotte,NC,Jacksonville,FL,Van,,2157,9.2,2025-08-23,2026-02-19,Contract
+783,Chicago,IL,Newark,NJ,Reefer,,2441,19.0,2025-10-23,2026-01-21,Contract
+784,Atlanta,GA,Miami,FL,Reefer,,2803,10.6,2026-05-08,2026-08-06,Spot
+785,Salt Lake City,UT,Boise,ID,Reefer,48,1234,14.4,2026-03-15,2027-03-15,Spot
+786,Kansas City,MO,Denver,CO,Reefer,18,2977,10.1,2026-06-17,2026-07-17,Spot
+787,Phoenix,AZ,Denver,CO,Flatbed,,4966,15.8,2025-08-03,2025-11-01,Contract
+788,Louisville,KY,Nashville,TN,Flatbed,,1615,16.9,2025-09-03,2026-09-03,Spot
+789,Baltimore,MD,Philadelphia,PA,Flatbed,81,5087,16.7,2025-10-16,2026-10-16,Contract
+790,Memphis,TN,Houston,TX,Flatbed,,4166,16.0,2026-03-10,2026-04-09,Contract
+791,Louisville,KY,Nashville,TN,Van,,3492,18.1,2026-02-24,2026-04-25,Contract
+792,Charlotte,NC,Jacksonville,FL,Van,51,3930,11.1,2026-07-18,2026-10-16,Contract
+793,Indianapolis,IN,Columbus,OH,Van,,2186,13.1,2026-07-08,2026-08-07,Contract
+794,Houston,TX,Los Angeles,CA,Van,,4144,18.9,2026-04-02,2026-07-01,Contract
+795,Salt Lake City,UT,Boise,ID,Flatbed,35,3245,18.0,2026-02-28,2026-08-27,Contract
+796,Dallas,TX,Atlanta,GA,Van,51,5161,14.6,2026-04-16,2026-10-13,Contract
+797,Houston,TX,Los Angeles,CA,Reefer,,3635,8.9,2025-12-02,2026-05-31,Spot
+798,Louisville,KY,Nashville,TN,Van,11,1925,15.5,2026-02-22,2026-05-23,Spot
+799,Salt Lake City,UT,Boise,ID,Reefer,112,4956,12.8,2026-03-13,2027-03-13,Contract
+800,El Paso,TX,Albuquerque,NM,Van,45,4421,12.2,2026-02-07,2027-02-07,Contract
+801,Kansas City,MO,Denver,CO,Van,31,1255,13.2,2025-12-27,2026-03-27,Spot
+802,Louisville,KY,Nashville,TN,Van,,1701,21.4,2026-03-23,2026-04-22,Spot
+803,Seattle,WA,Portland,OR,Van,,4544,20.4,2026-06-18,2026-09-16,Spot
+804,Atlanta,GA,Miami,FL,Reefer,95,2890,21.5,2026-04-26,2026-10-23,Spot
+805,Chicago,IL,Dallas,TX,Flatbed,115,4010,15.4,2025-08-07,2025-09-06,Contract
+806,Kansas City,MO,Denver,CO,Van,16,1525,20.8,2026-02-09,2027-02-09,Contract
+807,Dallas,TX,Atlanta,GA,Van,,2685,10.5,2025-09-14,2025-12-13,Contract
+808,Louisville,KY,Nashville,TN,Reefer,124,3864,15.0,2025-09-03,2026-03-02,Spot
+809,Chicago,IL,Dallas,TX,Flatbed,89,2883,14.2,2026-02-23,2026-04-24,Contract
+810,Memphis,TN,Houston,TX,Flatbed,63,2839,10.7,2025-09-01,2025-11-30,Spot
+811,Newark,NJ,Charlotte,NC,Reefer,,3844,19.4,2026-07-24,2026-10-22,Spot
+812,Chicago,IL,Dallas,TX,Reefer,45,3858,20.9,2025-11-24,2025-12-24,Contract
+813,Kansas City,MO,Denver,CO,Flatbed,17,1469,17.3,2026-03-11,2026-05-10,Spot
+814,Newark,NJ,Charlotte,NC,Reefer,,3674,17.7,2026-03-15,2026-05-14,Spot
+815,Indianapolis,IN,Columbus,OH,Reefer,89,4501,10.3,2025-09-29,2025-10-29,Spot
+816,Indianapolis,IN,Columbus,OH,Van,26,2748,10.2,2025-10-02,2025-12-31,Contract
+817,Kansas City,MO,Denver,CO,Flatbed,,3661,16.8,2025-09-20,2025-11-19,Contract
+818,Seattle,WA,Portland,OR,Reefer,17,4145,20.5,2026-02-06,2027-02-06,Spot
+819,Seattle,WA,Portland,OR,Van,22,1817,16.6,2025-09-23,2026-03-22,Spot
+820,Chicago,IL,Dallas,TX,Reefer,,4693,11.2,2025-12-17,2026-02-15,Spot
+821,Phoenix,AZ,Denver,CO,Reefer,12,3277,9.3,2026-02-18,2026-03-20,Spot
+822,Baltimore,MD,Philadelphia,PA,Reefer,,3294,19.0,2026-05-13,2026-11-09,Spot
+823,St. Louis,MO,Kansas City,MO,Van,26,2761,9.7,2026-07-28,2026-08-27,Contract
+824,Newark,NJ,Charlotte,NC,Reefer,,4662,15.8,2025-11-06,2026-01-05,Spot
+825,Los Angeles,CA,Phoenix,AZ,Reefer,,4451,18.7,2025-09-28,2026-03-27,Contract
+826,Houston,TX,Los Angeles,CA,Reefer,26,2528,10.9,2026-01-02,2026-04-02,Spot
+827,Memphis,TN,Houston,TX,Van,21,4966,9.5,2025-08-17,2026-08-17,Contract
+828,Louisville,KY,Nashville,TN,Van,48,3494,19.4,2025-09-07,2026-09-07,Spot
+829,Kansas City,MO,Denver,CO,Flatbed,50,2858,20.4,2026-07-18,2027-01-14,Contract
+830,Indianapolis,IN,Columbus,OH,Reefer,,1401,16.9,2026-01-29,2026-03-30,Contract
+831,Seattle,WA,Portland,OR,Van,115,1669,17.6,2025-11-17,2025-12-17,Contract
+832,Louisville,KY,Nashville,TN,Van,31,1225,15.8,2025-12-11,2026-03-11,Contract
+833,Newark,NJ,Charlotte,NC,Flatbed,,2526,9.0,2026-06-01,2026-07-01,Contract
+834,Kansas City,MO,Denver,CO,Reefer,,1434,11.2,2025-11-29,2026-02-27,Contract
+835,Chicago,IL,Newark,NJ,Reefer,,2485,8.6,2025-08-07,2025-11-05,Contract
+836,Louisville,KY,Nashville,TN,Flatbed,10,4473,14.0,2026-05-19,2026-06-18,Contract
+837,Los Angeles,CA,Phoenix,AZ,Van,95,4339,11.8,2025-09-06,2025-12-05,Spot
+838,Salt Lake City,UT,Boise,ID,Flatbed,53,3626,15.7,2026-04-30,2027-04-30,Contract
+839,Kansas City,MO,Denver,CO,Van,77,4490,10.4,2026-08-16,2026-10-15,Spot
+840,Chicago,IL,Dallas,TX,Van,112,4750,18.2,2025-09-17,2026-03-16,Spot
+841,Memphis,TN,Houston,TX,Reefer,10,5053,18.0,2026-05-05,2027-05-05,Contract
+842,Charlotte,NC,Jacksonville,FL,Flatbed,95,3851,21.4,2025-12-27,2026-06-25,Contract
+843,Indianapolis,IN,Columbus,OH,Van,22,2946,19.2,2025-12-08,2026-06-06,Spot
+844,Memphis,TN,Houston,TX,Reefer,118,2794,12.7,2025-09-05,2025-10-05,Contract
+845,Baltimore,MD,Philadelphia,PA,Reefer,,2171,17.6,2025-09-24,2025-11-23,Contract
+846,Indianapolis,IN,Columbus,OH,Van,107,1575,10.6,2025-09-28,2026-03-27,Contract
+847,Kansas City,MO,Denver,CO,Van,16,1792,9.0,2026-07-24,2026-09-22,Spot
+848,Chicago,IL,Newark,NJ,Reefer,,2315,19.2,2026-03-25,2027-03-25,Contract
+849,Minneapolis,MN,Chicago,IL,Van,130,1404,15.9,2026-08-16,2026-10-15,Contract
+850,Detroit,MI,Cleveland,OH,Reefer,92,3925,12.2,2025-07-22,2026-01-18,Contract
+851,Salt Lake City,UT,Boise,ID,Reefer,,4824,13.4,2026-07-02,2026-12-29,Contract
+852,Phoenix,AZ,Denver,CO,Flatbed,5,2252,11.4,2026-02-28,2026-03-30,Contract
+853,Seattle,WA,Portland,OR,Reefer,,1354,15.9,2025-10-19,2026-04-17,Spot
+854,Charlotte,NC,Jacksonville,FL,Reefer,,1650,9.9,2025-09-25,2026-09-25,Contract
+855,Seattle,WA,Portland,OR,Reefer,,1402,18.1,2025-08-26,2025-11-24,Spot
+856,Chicago,IL,Newark,NJ,Reefer,15,1861,17.4,2025-11-19,2026-01-18,Contract
+857,Detroit,MI,Cleveland,OH,Van,11,4695,15.3,2026-03-09,2027-03-09,Contract
+858,El Paso,TX,Albuquerque,NM,Reefer,,4978,11.5,2026-03-25,2026-09-21,Contract
+859,Louisville,KY,Nashville,TN,Reefer,,2106,19.1,2026-03-12,2026-06-10,Contract
+860,El Paso,TX,Albuquerque,NM,Van,55,3532,16.5,2025-10-12,2026-10-12,Contract
+861,Louisville,KY,Nashville,TN,Flatbed,,2367,20.3,2026-04-23,2027-04-23,Contract
+862,Chicago,IL,Dallas,TX,Flatbed,141,3968,11.1,2025-09-14,2026-09-14,Contract
+863,St. Louis,MO,Kansas City,MO,Reefer,,3679,11.1,2025-08-11,2026-02-07,Contract
+864,Newark,NJ,Charlotte,NC,Van,21,1624,8.9,2026-08-12,2027-08-12,Spot
+865,Newark,NJ,Charlotte,NC,Reefer,141,1377,19.9,2025-12-14,2026-03-14,Contract
+866,Indianapolis,IN,Columbus,OH,Reefer,113,4107,19.2,2026-01-17,2026-04-17,Spot
+867,Memphis,TN,Houston,TX,Van,32,1241,14.1,2026-07-26,2026-10-24,Contract
+868,Houston,TX,Los Angeles,CA,Van,,4163,19.5,2025-10-08,2025-12-07,Spot
+869,Chicago,IL,Newark,NJ,Van,,4389,14.5,2026-06-19,2026-08-18,Contract
+870,Chicago,IL,Newark,NJ,Flatbed,129,3636,12.7,2026-01-28,2026-03-29,Contract
+871,Chicago,IL,Dallas,TX,Flatbed,,5176,21.2,2026-07-07,2027-07-07,Contract
+872,Chicago,IL,Newark,NJ,Flatbed,39,1974,11.1,2026-04-06,2026-07-05,Spot
+873,Seattle,WA,Portland,OR,Flatbed,93,2719,10.6,2026-07-23,2026-09-21,Contract
+874,Kansas City,MO,Denver,CO,Flatbed,138,1755,14.4,2026-07-30,2026-09-28,Spot
+875,Louisville,KY,Nashville,TN,Reefer,27,3887,17.3,2026-06-22,2026-07-22,Contract
+876,St. Louis,MO,Kansas City,MO,Flatbed,,3963,15.6,2025-09-14,2026-03-13,Spot
+877,Atlanta,GA,Miami,FL,Flatbed,,4892,20.6,2025-09-17,2025-12-16,Contract
+878,Houston,TX,Los Angeles,CA,Flatbed,,1826,21.6,2025-09-16,2025-10-16,Contract
+879,Detroit,MI,Cleveland,OH,Van,73,2279,19.8,2026-05-12,2026-06-11,Spot
+880,Memphis,TN,Houston,TX,Van,91,4451,19.4,2026-02-10,2026-03-12,Contract
+881,Phoenix,AZ,Denver,CO,Reefer,,1942,18.6,2025-12-30,2026-03-30,Spot
+882,Indianapolis,IN,Columbus,OH,Van,,3331,8.1,2026-05-30,2027-05-30,Spot
+883,Memphis,TN,Houston,TX,Reefer,56,3549,8.1,2026-06-22,2026-08-21,Spot
+884,Seattle,WA,Portland,OR,Van,33,2872,17.7,2025-12-20,2026-06-18,Contract
+885,Charlotte,NC,Jacksonville,FL,Reefer,,2992,16.5,2026-01-10,2026-03-11,Contract
+886,Dallas,TX,Atlanta,GA,Van,,1432,10.9,2026-05-20,2026-08-18,Spot
+887,Kansas City,MO,Denver,CO,Van,,3582,10.4,2025-11-05,2026-02-03,Spot
+888,Indianapolis,IN,Columbus,OH,Reefer,130,4959,12.1,2026-06-10,2026-07-10,Spot
+889,Salt Lake City,UT,Boise,ID,Flatbed,,1267,21.4,2026-07-01,2026-12-28,Spot
+890,Detroit,MI,Cleveland,OH,Van,,1439,11.6,2026-01-04,2026-07-03,Contract
+891,Newark,NJ,Charlotte,NC,Reefer,115,3805,11.6,2025-08-28,2026-02-24,Spot
+892,El Paso,TX,Albuquerque,NM,Flatbed,24,4991,17.0,2026-04-03,2026-05-03,Spot
+893,Baltimore,MD,Philadelphia,PA,Reefer,,4430,12.8,2025-09-04,2026-03-03,Spot
+894,Kansas City,MO,Denver,CO,Van,,3652,12.8,2026-07-27,2027-07-27,Contract
+895,Baltimore,MD,Philadelphia,PA,Reefer,,2243,14.8,2025-11-30,2026-01-29,Spot
+896,Charlotte,NC,Jacksonville,FL,Flatbed,142,5052,9.2,2026-07-08,2026-09-06,Spot
+897,Newark,NJ,Charlotte,NC,Flatbed,72,5156,12.9,2025-11-27,2025-12-27,Contract
+898,El Paso,TX,Albuquerque,NM,Van,,4953,20.1,2026-07-10,2027-01-06,Contract
+899,Detroit,MI,Cleveland,OH,Flatbed,,4468,12.9,2025-09-28,2025-11-27,Contract
+900,Chicago,IL,Newark,NJ,Van,103,2503,10.4,2025-08-05,2025-09-04,Spot

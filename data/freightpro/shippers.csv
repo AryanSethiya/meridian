@@ -1,0 +1,121 @@
+ShipperID,Name,City,State,Zip,ContactEmail,CreditStatus
+1,Northstar Foods,Chicago,IL,60608,shipping@northstarfoods.example,OK
+2,Pinnacle Retail Group,Atlanta,GA,30318,shipping@pinnacleretailgrou.example,OK
+3,Heartland Packaging,Los Angeles,CA,90021,shipping@heartlandpackaging.example,OK
+4,Gulf Coast Petrochem,Newark,NJ,07105,shipping@gulfcoastpetrochem.example,OK
+5,Cascade Lumber Co,Memphis,TN,38118,shipping@cascadelumberco.example,OK
+6,Ironclad Steel,Kansas City,MO,64120,shipping@ironcladsteel.example,OK
+7,Prairie Grain Cooperative,Indianapolis,IN,46225,shipping@prairiegraincooper.example,OK
+8,Summit Auto Parts,Seattle,WA,98134,shipping@summitautoparts.example,OK
+9,Blue Ridge Beverages,Louisville,KY,40210,shipping@blueridgebeverages.example,OK
+10,Lakeside Frozen,Detroit,MI,48209,shipping@lakesidefrozen.example,OK
+11,Metro Home Goods,Dallas,TX,75212,shipping@metrohomegoods.example,Hold
+12,Sunbelt Produce,Chicago,IL,60608,shipping@sunbeltproduce.example,OK
+13,Atlas Building Supply,Houston,TX,77029,shipping@atlasbuildingsuppl.example,OK
+14,Redwood Paper Mills,Phoenix,AZ,85043,shipping@redwoodpapermills.example,Hold
+15,Valley Plastics,Charlotte,NC,28208,shipping@valleyplastics.example,OK
+16,Harbor Electronics,Minneapolis,MN,55401,shipping@harborelectronics.example,OK
+17,Midwest Appliance Dist,St. Louis,MO,63102,shipping@midwestappliancedi.example,OK
+18,Citrus Belt Growers,Baltimore,MD,21224,shipping@citrusbeltgrowers.example,OK
+19,Keystone Chemicals,Salt Lake City,UT,84104,shipping@keystonechemicals.example,OK
+20,Great Lakes Foundry,El Paso,TX,79901,shipping@greatlakesfoundry.example,OK
+21,Pacific Rim Imports,Dallas,TX,75212,shipping@pacificrimimports.example,OK
+22,Southern Comfort Mattresses,Miami,FL,33142,shipping@southerncomfortmat.example,OK
+23,High Plains Energy,Phoenix,AZ,85043,shipping@highplainsenergy.example,OK
+24,Urban Outfit DC,Charlotte,NC,28208,shipping@urbanoutfitdc.example,Hold
+25,National Tire Wholesale,Houston,TX,77029,shipping@nationaltirewholes.example,Hold
+26,Oak & Pine Furniture,Denver,CO,80216,shipping@oakpinefurniture.example,OK
+27,Freshline Dairy,Columbus,OH,43215,shipping@freshlinedairy.example,OK
+28,Arrowhead Mining Supply,Portland,OR,97210,shipping@arrowheadminingsup.example,OK
+29,Capitol Office Products,Nashville,TN,37210,shipping@capitolofficeprodu.example,OK
+30,Riverbend Distillery,Cleveland,OH,44113,shipping@riverbenddistiller.example,OK
+31,Eastgate Pharma Dist,Atlanta,GA,30318,shipping@eastgatepharmadist.example,OK
+32,Westwind Textiles,Newark,NJ,07105,shipping@westwindtextiles.example,OK
+33,Cornerstone Cement,Los Angeles,CA,90021,shipping@cornerstonecement.example,OK
+34,Bayside Seafood,Denver,CO,80216,shipping@baysideseafood.example,Hold
+35,Trailhead Outdoor,Jacksonville,FL,32218,shipping@trailheadoutdoor.example,OK
+36,Nova Medical Devices,Chicago,IL,60608,shipping@novamedicaldevices.example,OK
+37,Greenfield Seed Co,Kansas City,MO,64120,shipping@greenfieldseedco.example,OK
+38,Copperhead Wire,Philadelphia,PA,19148,shipping@copperheadwire.example,OK
+39,Skyline HVAC,Boise,ID,83702,shipping@skylinehvac.example,Hold
+40,Farmstead Meats,Albuquerque,NM,87102,shipping@farmsteadmeats.example,Hold
+41,Delta Cotton,Chicago,IL,60608,shipping@deltacotton.example,OK
+42,Northern Lights Glass,Atlanta,GA,30318,shipping@northernlightsglas.example,Hold
+43,Bridgeway Construction,Los Angeles,CA,90021,shipping@bridgewayconstruct.example,OK
+44,Silverline Cosmetics,Newark,NJ,07105,shipping@silverlinecosmetic.example,Hold
+45,Tundra Refrigeration,Memphis,TN,38118,shipping@tundrarefrigeratio.example,OK
+46,Maple Leaf Maple,Kansas City,MO,64120,shipping@mapleleafmaple.example,Hold
+47,Canyon Pet Food,Indianapolis,IN,46225,shipping@canyonpetfood.example,OK
+48,Liberty Fasteners,Seattle,WA,98134,shipping@libertyfasteners.example,OK
+49,Horizon Solar,Louisville,KY,40210,shipping@horizonsolar.example,Hold
+50,Pioneer Rail Supply,Detroit,MI,48209,shipping@pioneerrailsupply.example,Hold
+51,Coastal Salt Co,Dallas,TX,75212,shipping@coastalsaltco.example,Hold
+52,Foothill Vineyards,Chicago,IL,60608,shipping@foothillvineyards.example,OK
+53,Empire State Apparel,Houston,TX,77029,shipping@empirestateapparel.example,OK
+54,Badger State Cheese,Phoenix,AZ,85043,shipping@badgerstatecheese.example,OK
+55,Lone Star Pipe,Charlotte,NC,28208,shipping@lonestarpipe.example,OK
+56,Evergreen Nursery Freight,Minneapolis,MN,55401,shipping@evergreennurseryfr.example,OK
+57,Thunderbird Ammunition,St. Louis,MO,63102,shipping@thunderbirdammunit.example,Hold
+58,Quiet Harbor Books,Baltimore,MD,21224,shipping@quietharborbooks.example,OK
+59,Rapid City Tools,Salt Lake City,UT,84104,shipping@rapidcitytools.example,Hold
+60,Stonebridge Tile,El Paso,TX,79901,shipping@stonebridgetile.example,Hold
+61,Apex Industrial Gases,Dallas,TX,75212,shipping@apexindustrialgase.example,OK
+62,Brighton Bicycle Co,Miami,FL,33142,shipping@brightonbicycleco.example,OK
+63,Cedar Creek Cabinets,Phoenix,AZ,85043,shipping@cedarcreekcabinets.example,Hold
+64,Driftwood Marine,Charlotte,NC,28208,shipping@driftwoodmarine.example,OK
+65,Elmwood Flooring,Houston,TX,77029,shipping@elmwoodflooring.example,OK
+66,Fox River Paper,Denver,CO,80216,shipping@foxriverpaper.example,Hold
+67,Granite Peak Quarry,Columbus,OH,43215,shipping@granitepeakquarry.example,OK
+68,Hilltop Hatchery,Portland,OR,97210,shipping@hilltophatchery.example,OK
+69,Ivory Coast Cocoa US,Nashville,TN,37210,shipping@ivorycoastcocoaus.example,OK
+70,Juniper Wellness,Cleveland,OH,44113,shipping@juniperwellness.example,OK
+71,Kodiak Outdoor Gear,Atlanta,GA,30318,shipping@kodiakoutdoorgear.example,OK
+72,Lumen Lighting Dist,Newark,NJ,07105,shipping@lumenlightingdist.example,OK
+73,Mossy Oak Apparel,Los Angeles,CA,90021,shipping@mossyoakapparel.example,OK
+74,Nickel City Plating,Denver,CO,80216,shipping@nickelcityplating.example,OK
+75,Orchard Gate Cider,Jacksonville,FL,32218,shipping@orchardgatecider.example,OK
+76,Peak Performance Nutrition,Chicago,IL,60608,shipping@peakperformancenut.example,OK
+77,Quarry Lane Stone,Kansas City,MO,64120,shipping@quarrylanestone.example,Hold
+78,Redhawk Safety,Philadelphia,PA,19148,shipping@redhawksafety.example,Hold
+79,Sierra Coffee Roasters,Boise,ID,83702,shipping@sierracoffeeroaste.example,OK
+80,Tidal Wave Surf Retail,Albuquerque,NM,87102,shipping@tidalwavesurfretai.example,Hold
+81,Upland Game Feed,Chicago,IL,60608,shipping@uplandgamefeed.example,Hold
+82,Vista Window Co,Atlanta,GA,30318,shipping@vistawindowco.example,Hold
+83,Willow Creek Winery,Los Angeles,CA,90021,shipping@willowcreekwinery.example,OK
+84,Yarrow Health Labs,Newark,NJ,07105,shipping@yarrowhealthlabs.example,OK
+85,Zephyr Fans,Memphis,TN,38118,shipping@zephyrfans.example,OK
+86,Anchor Bolt Inc,Kansas City,MO,64120,shipping@anchorboltinc.example,OK
+87,Birchwood Toys,Indianapolis,IN,46225,shipping@birchwoodtoys.example,Hold
+88,Cinder Block Co,Seattle,WA,98134,shipping@cinderblockco.example,OK
+89,Dune Buggy Parts,Louisville,KY,40210,shipping@dunebuggyparts.example,OK
+90,Echo Valley Honey,Detroit,MI,48209,shipping@echovalleyhoney.example,OK
+91,Flint River Tiles,Dallas,TX,75212,shipping@flintrivertiles.example,Hold
+92,Goldleaf Jewelry Dist,Chicago,IL,60608,shipping@goldleafjewelrydis.example,OK
+93,Hawk Ridge Timber,Houston,TX,77029,shipping@hawkridgetimber.example,Hold
+94,Inlet Fisheries,Phoenix,AZ,85043,shipping@inletfisheries.example,OK
+95,Jade Garden Produce,Charlotte,NC,28208,shipping@jadegardenproduce.example,OK
+96,Kelp Coast Supplements,Minneapolis,MN,55401,shipping@kelpcoastsupplemen.example,Hold
+97,Lantern Oil Co,St. Louis,MO,63102,shipping@lanternoilco.example,OK
+98,Mesa Verde Pottery,Baltimore,MD,21224,shipping@mesaverdepottery.example,OK
+99,Northgate Batteries,Salt Lake City,UT,84104,shipping@northgatebatteries.example,OK
+100,Oxbow Leather,El Paso,TX,79901,shipping@oxbowleather.example,OK
+101,Pinecrest Doors,Dallas,TX,75212,shipping@pinecrestdoors.example,OK
+102,Quill Ink Supplies,Miami,FL,33142,shipping@quillinksupplies.example,OK
+103,Ravenna Glassworks,Phoenix,AZ,85043,shipping@ravennaglassworks.example,OK
+104,Sagebrush Spices,Charlotte,NC,28208,shipping@sagebrushspices.example,OK
+105,Timberline Roofing Dist,Houston,TX,77029,shipping@timberlineroofingd.example,OK
+106,Umber Paints,Denver,CO,80216,shipping@umberpaints.example,OK
+107,Vesper Candles,Columbus,OH,43215,shipping@vespercandles.example,OK
+108,Wren & Co Home,Portland,OR,97210,shipping@wrencohome.example,Hold
+109,Xylem Irrigation,Nashville,TN,37210,shipping@xylemirrigation.example,OK
+110,Yellowbird Hot Sauce,Cleveland,OH,44113,shipping@yellowbirdhotsauce.example,OK
+111,Zinc Coatings Midwest,Atlanta,GA,30318,shipping@zinccoatingsmidwes.example,OK
+112,Alabaster Lighting,Newark,NJ,07105,shipping@alabasterlighting.example,OK
+113,Boreal Furs Replica,Los Angeles,CA,90021,shipping@borealfursreplica.example,OK
+114,Cobalt Machine Parts,Denver,CO,80216,shipping@cobaltmachineparts.example,OK
+115,Dovetail Joinery,Jacksonville,FL,32218,shipping@dovetailjoinery.example,OK
+116,Ember Stoves,Chicago,IL,60608,shipping@emberstoves.example,OK
+117,Ferris Wheel Candy,Kansas City,MO,64120,shipping@ferriswheelcandy.example,OK
+118,Gable Roofing Supply,Philadelphia,PA,19148,shipping@gableroofingsupply.example,OK
+119,Hawthorn Tea Co,Boise,ID,83702,shipping@hawthornteaco.example,OK
+120,Iris Botanical,Albuquerque,NM,87102,shipping@irisbotanical.example,OK

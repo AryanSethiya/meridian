@@ -1,0 +1,29 @@
+From: procurement@shipper1.example
+To: quotes@meridianfreight.example
+Subject: Detroit / Cleveland Tuesday
+Date: Tue, 25 Aug 2026 16:00:00 -0500
+Message-ID: <eml-017@meridianfreight.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============4615780094869494092=="
+
+--===============4615780094869494092==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Need pricing on a Reefer Detroit, MI to Cleveland, OH for next Tuesday, 42k l=
+bs. Linehaul and FSC please.
+
+
+--===============4615780094869494092==
+Content-Type: application/vnd.ms-excel
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="lane_history_chi_dal.xls"
+MIME-Version: 1.0
+
+PGh0bWw+PGJvZHk+PHRhYmxlPjx0cj48dGQ+T3JpZ2luPC90ZD48dGQ+RGVzdDwvdGQ+PHRkPkVx
+dWlwPC90ZD48dGQ+UmF0ZTwvdGQ+PHRkPkZTQzwvdGQ+PC90cj48dHI+PHRkPkNoaWNhZ288L3Rk
+Pjx0ZD5EYWxsYXM8L3RkPjx0ZD5WYW48L3RkPjx0ZD4yNDAwPC90ZD48dGQ+MTIlPC90ZD48L3Ry
+Pjx0cj48dGQ+Q2hpY2FnbzwvdGQ+PHRkPkRhbGxhczwvdGQ+PHRkPlZhbjwvdGQ+PHRkPjI1NTA8
+L3RkPjx0ZD4xNCU8L3RkPjwvdHI+PC90YWJsZT48L2JvZHk+PC9odG1sPg==
+
+--===============4615780094869494092==--

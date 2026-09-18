@@ -1,0 +1,146 @@
+CarrierID,LegalName,MCNumber,DOTNumber,SCAC,Phone,Email,Status
+1,JB Hunt,023401,80806,JBHT,555-854-2824,,Active
+2,J.B. Hunt,023401,80806,,555-225-5506,,Active
+3,JBHT,023401,80806,JBHT,555-450-4657,,Active
+4,J B Hunt Transport,023401,80806,,555-342-2679,,Active
+5,JB Hunt Transport Services,023401,80806,,555-892-2424,,Active
+6,Swift Transportation,129914,54283,SWFT,555-804-7912,,Active
+7,Swift Trans,129914,54283,,555-232-1488,,Active
+8,Swift,129914,54283,,555-295-4582,,Active
+9,SWIFT TRANSPORTATION,129914,54283,,555-438-9279,,Active
+10,Werner Enterprises,139889,265752,WERN,555-816-1434,,Active
+11,Werner,139889,265752,,555-774-4257,,Active
+12,WERN,139889,265752,WERN,555-865-7873,,Active
+13,Schneider National,133655,241829,SCHN,555-425-8359,,Active
+14,Schneider,133655,241829,,555-803-5557,,Active
+15,SCHN,133655,241829,SCHN,555-206-3615,,Active
+16,Schneider National Carriers,133655,241829,,555-632-6574,,Active
+17,Knight Transportation,191142,428823,KNX,555-484-3547,,Active
+18,Knight-Swift,191142,428823,,555-420-6514,,Active
+19,Knight,191142,428823,,555-304-2519,,Active
+20,Knight Trans,191142,428823,,555-589-2584,,Active
+21,Old Dominion,107915,83858,ODFL,555-567-6635,,Active
+22,ODFL,107915,83858,ODFL,555-818-5333,,Active
+23,Old Dominion Freight Line,107915,83858,,555-244-8527,,Active
+24,XPO Logistics,357167,300020,XPOL,555-749-3045,,Active
+25,XPO,357167,300020,,555-587-2291,,Active
+26,XPO Logistics Inc,357167,300020,,555-765-5803,,Active
+27,Landstar,166960,701764,LSTR,555-843-6925,,Active
+28,Landstar Ranger,166960,701764,,555-791-4150,,Active
+29,LANDSTAR,166960,701764,,555-271-1750,,Active
+30,CRST,149225,90343,CRST,555-877-4733,,Active
+31,CRST Expedited,149225,90343,,555-496-2307,,Active
+32,C.R.S.T.,149225,90343,,555-438-2654,,Active
+33,Prime Inc,133805,37072,PRME,555-589-5554,,Active
+34,Prime,133805,37072,,555-664-6977,,Active
+35,Prime Incorporated,133805,37072,,555-366-7065,,Active
+36,Shaffer Trucking,352572,930659,,555-780-2290,,Active
+37,Mercer Transportation,867460,519597,,555-270-9727,,Active
+38,Roehl Tank,234628,701798,,555-686-3705,,Active
+39,Hub Group Carrier,653306,924812,,555-821-7932,,Active
+40,Venture Logistics,665492,801952,,555-405-6107,,Inactive
+41,TransAm Trucking,804314,691446,,555-582-8177,,Do Not Use
+42,Oakley Transport,573417,136882,,555-453-4681,,Active
+43,PAM Transport,454508,32056,,555-802-4770,,Do Not Use
+44,J&R Schugel,330914,17540,,555-272-1964,,Active
+45,National Carriers,170674,959401,,555-232-6413,,Active
+46,Anderson Trucking Service,639131,259565,,555-485-8953,,Active
+47,Blackhawk Transport,665427,148739,,555-784-8744,,Active
+48,Ziegler Trucking,922733,505948,,555-616-4119,,Active
+49,Echo Global Carrier,201639,700993,,555-641-6804,,Inactive
+50,Roehl Transport,531071,499710,,555-255-2612,,Active
+51,TForce Freight,522179,773587,,555-547-2790,,Active
+52,Midwest Motor Express,300896,209448,,555-749-8350,,Active
+53,Midland Transport,542374,202401,,555-485-8579,,Active
+54,Greatwide Dedicated,179046,474656,,555-763-2604,,Active
+55,USA Truck,783823,576847,,555-215-2528,,Active
+56,Southeastern Silk,274389,436156,,555-697-8886,,Active
+57,Melton Truck Lines,520521,956279,,555-260-3697,,Inactive
+58,Keystone Freight,102260,419386,,555-471-8454,,Active
+59,Peninsula Truck Lines,543555,740429,,555-769-8973,,Active
+60,Averitt Express,299122,321120,,555-422-1958,,Do Not Use
+61,Tyson Fresh Logistics,871476,578532,,555-262-6138,,Active
+62,Estes Express,152578,622554,,555-688-9238,,Do Not Use
+63,Oak Harbor Freight,265080,69642,,555-720-2312,,Active
+64,Best Overnite Express,171849,633939,,555-269-4853,,Inactive
+65,Yowell Transportation,225710,997335,,555-783-5033,,Do Not Use
+66,TFI International,723398,51672,,555-834-2343,,Inactive
+67,Boyd Bros,789305,622024,,555-778-9565,,Active
+68,G&P Trucking,373432,224181,,555-885-6147,,Active
+69,Jared Transport,378517,425011,,555-334-5915,,Inactive
+70,KATSexpress,431535,984146,,555-274-1152,,Inactive
+71,Decker Truck Line,751332,600341,,555-302-2200,,Do Not Use
+72,Dohrn Transfer,323508,540458,,555-471-3170,,Active
+73,Roadrunner,172132,931981,,555-450-7054,,Active
+74,John Christner Trucking,265409,469469,,555-756-5956,,Do Not Use
+75,NFI Industries,946305,695743,,555-741-1128,,Do Not Use
+76,C.R. England,413921,987017,,555-879-2697,,Active
+77,Circle Logistics Carrier,377312,131035,,555-309-3546,,Active
+78,Milan Express,395442,644210,,555-415-6617,,Active
+79,Holland,820892,675046,,555-470-9280,,Inactive
+80,Xpress Global Systems,363319,959314,,555-252-2512,,Inactive
+81,Paschall Truck Lines,969634,300120,,555-245-1058,,Active
+82,Wabash National Carrier,908577,147174,,555-852-5291,,Active
+83,LME Inc,877236,473298,,555-764-8007,,Do Not Use
+84,Universal Logistics,110139,127308,,555-277-3442,,Do Not Use
+85,Empire Express,137778,885136,,555-578-3426,,Inactive
+86,R+L Carriers,233636,53860,,555-515-6974,,Active
+87,Dupre Logistics,475190,230281,,555-898-5088,,Active
+88,Saia,470858,828011,,555-773-7658,,Do Not Use
+89,Reddaway,885884,172060,,555-442-3662,,Active
+90,North Star Transport,532322,35990,,555-383-6442,,Inactive
+91,Interstate Van Lines,941204,712448,,555-454-5371,,Active
+92,Interstate Distributor,925622,745343,,555-310-7267,,Active
+93,Marten Transport,593554,243238,,555-404-8541,,Active
+94,Cowan Systems,420015,870394,,555-433-4652,,Active
+95,System Transport,792094,212511,,555-608-6378,,Active
+96,Hill Brothers,172792,820891,,555-485-6753,,Do Not Use
+97,AAA Cooper,519093,722526,,555-749-6425,,Active
+98,Ploeger Farms Transport,220944,929641,,555-467-3925,,Do Not Use
+99,Maertens Transportation,378361,50115,,555-311-8119,,Active
+100,Daseke,863934,834629,,555-521-8149,,Do Not Use
+101,Hogan Transports,636265,131263,,555-594-4114,,Active
+102,Quality Carriers,146542,753215,,555-646-1027,,Do Not Use
+103,Paper Transport,945687,574607,,555-886-4228,,Active
+104,KLLM Transport,552248,83372,,555-880-6409,,Do Not Use
+105,Forward Air,429164,705612,,555-327-5920,,Do Not Use
+106,Covenant Transport,424308,709287,,555-618-6344,,Inactive
+107,New Penn,831076,320016,,555-767-3085,,Active
+108,Maverick Transportation,540869,707229,,555-588-3851,,Do Not Use
+109,Epes Transport,696750,325568,,555-615-1006,,Active
+110,Fremont Contract Carriers,400850,230392,,555-640-6279,,Inactive
+111,Gordon Trucking,563246,473638,,555-891-4501,,Do Not Use
+112,Lakeville Motor Express,596171,842291,,555-373-2389,,Active
+113,Ward Transport,640490,706101,,555-848-6491,,Active
+114,New England Motor Freight,958179,797625,,555-440-6085,,Active
+115,Western Express,945742,218802,,555-350-1400,,Active
+116,Central Transport,356736,508216,,555-825-2193,,Inactive
+117,TMC Transportation,534572,939181,,555-844-4185,,Inactive
+118,Grammer Industries,618392,429066,,555-449-3417,,Active
+119,Midwest Coast Transport,887443,912237,,555-309-7965,,Active
+120,Sutton Transport,284430,853170,,555-730-8611,,Active
+121,Pinnacle Freight,684482,271303,,555-324-8478,,Active
+122,Apex Transit,940346,497213,,555-883-9702,,Do Not Use
+123,PGT Trucking,724377,342711,,555-653-9270,,Inactive
+124,YRC Freight,970914,960906,,555-761-8305,,Active
+125,Bluegrace Contract,879779,913342,,555-686-8373,,Active
+126,K&B Transportation,888295,269249,,555-852-5543,,Do Not Use
+127,Bennett Motor Express,608136,667193,,555-444-5499,,Inactive
+128,Southeastern Freight Lines,181247,758206,,555-492-4841,,Active
+129,Dart Transit,452161,345239,,555-753-2320,,Active
+130,Celadon,258157,252495,,555-592-3503,,Active
+131,Stevens Transport,167348,445020,,555-617-6421,,Do Not Use
+132,Heartland Express,588557,445970,,555-263-4388,,Inactive
+133,Ozark Motor Lines,508396,958791,,555-798-1320,,Do Not Use
+134,C.H. Robinson Carrier,498858,510149,,555-206-6763,,Active
+135,Pride Transport,890075,418930,,555-629-9818,,Do Not Use
+136,Hirschbach Motor Lines,938722,642556,,555-425-8999,,Active
+137,UPS Freight Contract,386193,467007,,555-697-1475,,Inactive
+138,Pitt Ohio,452457,711364,,555-895-7624,,Active
+139,FedEx Freight Contract,981334,500094,,555-330-9751,,Active
+140,Dayton Freight,513160,630644,,555-777-1444,,Active
+141,Crete Carrier,773971,459433,,555-338-8564,,Active
+142,Lynden Transport,152727,282793,,555-588-6363,,Active
+143,Mesilla Valley Transportation,576786,352722,,555-545-7211,,Active
+144,A. Duie Pyle,888539,882335,,555-631-5133,,Active
+145,US Xpress,593152,30324,,555-752-1853,,Active
