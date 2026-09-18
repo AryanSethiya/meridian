@@ -342,8 +342,14 @@ def to_markdown(packet: ActionPacket) -> str:
                 f"- Model: `{packet.usage.model}`",
                 f"- Latency: {packet.usage.latency_ms} ms",
                 f"- Tokens: in={packet.usage.input_tokens} out={packet.usage.output_tokens}",
+                f"- Estimated model cost (USD): "
+                f"in={packet.usage.estimated_input_cost_usd} "
+                f"out={packet.usage.estimated_output_cost_usd} "
+                f"total={packet.usage.estimated_total_cost_usd}",
             ]
         )
+        if packet.usage.pricing_note:
+            lines.append(f"- {packet.usage.pricing_note}")
 
     lines.append("")
     return "\n".join(lines)

@@ -9,6 +9,7 @@ from typing import Any
 
 from meridian_claims.models import Classification, ModelUsage
 from meridian_claims.pii_gate import PIIGateError, PIIGateReport, PIILexicon, prepare_text_payload
+from meridian_claims.pricing import load_pricing
 
 SYSTEM_PROMPT = """You are an ops assistant for Meridian Freight, a freight broker.
 You help coordinators triage inbound claims emails. You never send email yourself.
@@ -130,12 +131,36 @@ def classify_and_draft(
     if "claim_type" not in data and "draft_reply" not in data:
         raise ModelResponseError("Model JSON missing claim_type and draft_reply")
 
-    usage = ModelUsage(
-        input_tokens=getattr(resp.usage, "input_tokens", 0) or 0,
-        output_tokens=getattr(resp.usage, "output_tokens", 0) or 0,
-        latency_ms=latency_ms,
-        model=model,
-    )
+    # Use Anthropic-reported usage only — never invent token counts.
+    raw_usage = getattr(resp, "usage", None)
+    in_tok = getattr(raw_usage, "input_tokens", None) if raw_usage is not None else None
+    out_tok = getattr(raw_usage, "output_tokens", None) if raw_usage is not None else None
+    if in_tok is None and out_tok is None:
+        cost = load_pricing().estimate(None, None)
+        usage = ModelUsage(
+            input_tokens=0,
+            output_tokens=0,
+            latency_ms=latency_ms,
+            model=model,
+            estimated_input_cost_usd=None,
+            estimated_output_cost_usd=None,
+            estimated_total_cost_usd=None,
+            pricing_note=str(cost.get("note") or ""),
+        )
+    else:
+        in_i = int(in_tok or 0)
+        out_i = int(out_tok or 0)
+        cost = load_pricing().estimate(in_i, out_i)
+        usage = ModelUsage(
+            input_tokens=in_i,
+            output_tokens=out_i,
+            latency_ms=latency_ms,
+            model=model,
+            estimated_input_cost_usd=cost["estimated_input_cost_usd"],
+            estimated_output_cost_usd=cost["estimated_output_cost_usd"],
+            estimated_total_cost_usd=cost["estimated_total_cost_usd"],
+            pricing_note=str(cost.get("note") or ""),
+        )
     return data, usage, report, user_message
 
 

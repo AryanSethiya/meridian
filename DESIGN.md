@@ -58,7 +58,7 @@ Packet `analysis` separates: FreightPro facts (with source/snapshot freshness) �
 
 | Weeks | Deliverable |
 |---|---|
-| 1–2 | Claims slice (**this repo**): `.eml` → packet, HITL draft, read-only FreightPro, safety gates above |
+| 1–2 | Claims slice (**this repo**): `.eml` → packet, HITL draft, read-only FreightPro, safety gates above. Stretch demos in-repo: all-60 behavioral eval, estimated cost/latency, local review UI (no send) — not production readiness. |
 | 3–4 | Graph watch on `claims@`; thin accept/edit/reject queue; wrong-load logging with Marcus |
 | 5–6 | Optional HITL **tracking** status drafts; optional HITL **quote assist** — still no unsupervised send |
 

@@ -39,9 +39,17 @@ The CLI reads the key from the environment only (does not auto-load `.env`).
 ### Optional checks
 
 ```bash
-python -m meridian_claims eval --dry-run   # known-sample load-resolution regression (8 claims@)
-pytest -q                                 # unit tests; no API key required
+python -m meridian_claims eval --dry-run          # known-sample claims@ regression (8 fixtures)
+python -m meridian_claims eval --all --dry-run    # all 60 emails; writes output/eval_all.{json,md}
+pytest -q                                         # unit tests; no API key required
+python -m meridian_claims review                  # local coordinator UI at http://127.0.0.1:8765/
 ```
+
+**Eval modes:** `--dry-run` skips Anthropic (no API key). Without `--dry-run`, live eval invokes model calls when the pipeline reaches the model boundary (`ANTHROPIC_API_KEY` required). `--all` is a **behavioral** run over every sample `.eml`; only the eight `EXPECTED_LOADS` fixtures have ground-truth load labels (known-sample regression, not a production accuracy estimate).
+
+**Cost / latency:** each packet’s `decision` and `usage` record processing duration (`perf_counter`), whether a model call occurred, Anthropic token usage when returned, and **estimated** model cost from configurable rates (`MERIDIAN_PRICE_INPUT_PER_MTOK` / `MERIDIAN_PRICE_OUTPUT_PER_MTOK`). Costs are estimates, not invoices.
+
+**Review UI:** presentation-only over `output/*.json`. Accept/Reject updates browser `localStorage` only — **does not send email**, call models, or modify ActionPackets.
 
 ---
 
@@ -115,7 +123,9 @@ requirements.txt
 | `analysis.py` | Separated facts / unknowns / AI / draft |
 | `pii_gate.py` | Outbound redaction + fail-closed residual scan |
 | `agent.py` | Anthropic classify + draft |
-| `eval.py` | Known-sample claims@ load-resolution regression (not a prod accuracy metric) |
+| `eval.py` | Known-sample claims@ regression + optional all-60 behavioral harness |
+| `pricing.py` | Configurable estimated model cost from Anthropic token usage |
+| `review_server.py` / `review_ui/` | Minimal local coordinator review UI (no send) |
 
 ---
 

@@ -61,6 +61,11 @@ class ModelUsage:
     output_tokens: int = 0
     latency_ms: int = 0
     model: str = ""
+    # Estimated USD from configured rates × Anthropic-reported tokens (not an invoice).
+    estimated_input_cost_usd: float | None = None
+    estimated_output_cost_usd: float | None = None
+    estimated_total_cost_usd: float | None = None
+    pricing_note: str = ""
 
 
 @dataclass

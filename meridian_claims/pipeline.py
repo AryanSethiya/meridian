@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import re
 import time
 from pathlib import Path
@@ -89,7 +90,13 @@ def process_email(
     t0 = time.perf_counter()
     eml_path = Path(eml_path)
     repo_root = Path(__file__).resolve().parent.parent
-    out_root = Path(output_dir) if output_dir else repo_root / "output"
+    env_out = os.environ.get("MERIDIAN_OUTPUT_DIR", "").strip()
+    if output_dir is not None:
+        out_root = Path(output_dir)
+    elif env_out:
+        out_root = Path(env_out)
+    else:
+        out_root = repo_root / "output"
     attach_dir = out_root / "attachments" / eml_path.stem
 
     parsed = parse_eml(eml_path, attachment_dir=attach_dir)
@@ -592,6 +599,7 @@ def process_email(
         draft_reply=draft,
         processing_duration_ms=duration_ms,
         llm_error=llm_error,
+        usage=usage,
     )
 
     packet = ActionPacket(
