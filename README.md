@@ -39,7 +39,7 @@ The CLI reads the key from the environment only (does not auto-load `.env`).
 ### Optional checks
 
 ```bash
-python -m meridian_claims eval --dry-run   # all 8 claims@ emails; load-resolution table
+python -m meridian_claims eval --dry-run   # known-sample load-resolution regression (8 claims@)
 pytest -q                                 # unit tests; no API key required
 ```
 
@@ -60,7 +60,7 @@ Example CLI line (dry-run):
 [035] damage | resolve=resolved/LoadNumber | load=MF-10487 | pod=text | needs_human=True
 ```
 
-Example eval table (dry-run): **8/8** expected load matches on sample `claims@` mail.
+Example eval table (dry-run): **8/8** matches against a **hardcoded expected-load map** for the eight sample `claims@` emails. Treat that as a **known-sample regression check** (did we break resolution on these fixtures?), **not** a production accuracy estimate. It does not measure draft quality, live Anthropic behavior, or unseen mail.
 
 ---
 
@@ -68,15 +68,29 @@ Example eval table (dry-run): **8/8** expected load matches on sample `claims@` 
 
 The `analysis` object separates sources on purpose:
 
-1. **FreightPro facts** (read-only snapshot)  
-2. **Email facts** (extracted IDs / mentions)  
+1. **FreightPro facts** (read-only snapshot + source/freshness metadata)  
+2. **Email facts** (extracted IDs / mentions; secondary intents / forward flags when present)  
 3. **POD facts** (or explicit unknown)  
 4. **Comparisons / discrepancies** (deterministic)  
 5. **Unknowns** (null + why a human is needed)  
 6. **LLM interpretation** (suggestion only)  
 7. **Draft response** (`auto_send: false`)
 
+Also on the packet: **attachment inventory** (selected POD vs present-not-processed) and a **decision** audit sidecar.
+
 `needs_human` is always true on this claims path. Nothing is sent.
+
+---
+
+## Safety behaviors in this slice (deterministic)
+
+- Sender ↔ shipper ContactEmail/domain corroboration (`matched` / `conflict` / `unavailable`); carrier mention alone does not overturn LoadNumber  
+- Model payload gets `sender_corroboration`, not raw From/To addresses  
+- Draft liability language filter + invented dollar-amount block  
+- Multi-intent (claims + tracking/invoice/quote) → escalate; secondary request not executed  
+- Forwarded/third-party markers → fail-closed Anthropic skip; envelope From only for shipper trust  
+- POD text quality gate (garbage OCR → unreadable, no invented POD facts)  
+- Multi-POD candidates → no silent pick; escalate  
 
 ---
 
@@ -94,18 +108,20 @@ requirements.txt
 | Module | Role |
 |---|---|
 | `pipeline.py` | End-to-end orchestration |
-| `resolve_load.py` | MF/PO/BOL/PRO → FreightPro |
-| `pod.py` | PDF text / blank-page detect; vision blocked by default |
+| `resolve_load.py` | MF/PO/BOL/PRO → FreightPro + shipper corroboration |
+| `pod.py` | PDF text / quality / blank-page; attachment inventory; vision blocked by default |
+| `evidence.py` | Discrepancies + draft money/liability sanitize |
+| `forward_mail.py` | Forward markers + fail-closed policy |
 | `analysis.py` | Separated facts / unknowns / AI / draft |
 | `pii_gate.py` | Outbound redaction + fail-closed residual scan |
 | `agent.py` | Anthropic classify + draft |
-| `eval.py` | Claims@ harness |
+| `eval.py` | Known-sample claims@ load-resolution regression (not a prod accuracy metric) |
 
 ---
 
 ## Constraints (honest)
 
-- FreightPro access in this repo is the **provided CSV snapshot** (dated **2026-08-26**), treated as read-only.  
+- FreightPro access in this repo is the **provided CSV snapshot** (dated **2026-08-26**), treated as read-only. Packets label Status as **recorded**, not live tracking; ~14h reporting lag is called out. **Per-field `as_of` timestamps are not in the export** and are not invented.  
 - DriverName/DriverPhone are Legal PII. Text payloads are redacted and scanned before Anthropic; **this is leakage mitigation, not a DPA**.  
 - POD **image** vision is **off** unless `MERIDIAN_ALLOW_POD_VISION=1` (pixels cannot be safely redacted).  
 - Default model: `claude-sonnet-4-5-20250929` (override with `ANTHROPIC_MODEL`).  

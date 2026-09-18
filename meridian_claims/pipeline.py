@@ -119,15 +119,16 @@ def process_email(
             raw_rows.append(row)
     lexicon = build_lexicon_from_rows(*raw_rows)
 
-    # Carrier mention from email free text (e.g. JBHT)
+    # Carrier mention from email free text via FreightPro (SCAC → MC → LegalName).
     mention_hit = db.find_carrier_mention(blob)
     email_mention = None
-    for token in ("JBHT", "JB HUNT", "J.B. HUNT", "J B HUNT"):
-        if token in blob.upper().replace(".", ""):
-            email_mention = token
-            break
-    if mention_hit and not email_mention:
-        email_mention = mention_hit.get("LegalName")
+    if mention_hit:
+        email_mention = (
+            (mention_hit.get("SCAC") or "").strip()
+            or (mention_hit.get("MCNumber") or "").strip()
+            or (mention_hit.get("LegalName") or "").strip()
+            or None
+        )
 
     carrier = CarrierInfo(
         legal_name=(resolution.load or {}).get("carrier_legal_name")
