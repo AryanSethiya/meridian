@@ -508,3 +508,33 @@ def test_showcase_035_jbht_resolves_via_freightpro():
     assert packet.carrier.email_mention in ("JBHT", "JB Hunt", "JBHT") or (
         packet.carrier.email_mention and "Hunt" in packet.carrier.email_mention
     ) or packet.carrier.scac == "JBHT"
+
+
+def test_e2e_conflicting_identifiers_not_authoritative_for_action(tmp_path: Path):
+    """MF-10487 + PO-4500032 conflict: best guess may remain, automation gate fails."""
+    eml = tmp_path / "id_conflict.eml"
+    eml.write_text(
+        "From: shipping@prairiegraincooper.example\n"
+        "To: claims@meridianfreight.example\n"
+        "Subject: Claim MF-10487 / PO-4500032\n"
+        "Date: Mon, 24 Aug 2026 22:00:00 -0500\n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=utf-8\n"
+        "\n"
+        "Filing a damage claim. Load MF-10487. Also referencing PO-4500032.\n",
+        encoding="utf-8",
+    )
+    packet = process_email(
+        eml,
+        data_dir=DATA,
+        output_dir=tmp_path / "out",
+        use_llm=False,
+        use_vision=False,
+    )
+    assert packet.resolution.status == "ambiguous"
+    assert packet.resolution.load is not None
+    assert packet.resolution.load["LoadNumber"] == "MF-10487"
+    assert packet.needs_human is True
+    assert packet.resolution.is_authoritative_for_action() is False
+    assert packet.analysis["draft_response"]["auto_send"] is False
+

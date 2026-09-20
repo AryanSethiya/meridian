@@ -54,6 +54,17 @@ class Resolution:
     # Sender vs FreightPro shipper ContactEmail/domain: matched | conflict | unavailable
     shipper_corroboration: str = "unavailable"
 
+    def is_authoritative_for_action(self) -> bool:
+        """Precondition for any future automated action that treats the load as authoritative.
+
+        ``resolved`` is authoritative. ``ambiguous`` may still retain a best-guess
+        ``load`` for coordinator context, but that candidate is not authoritative.
+        ``unresolved`` has no authoritative load. This prototype has no outbound
+        send or FreightPro write path; the gate exists so those cannot be added
+        without an explicit ``status == "resolved"`` check.
+        """
+        return self.status == "resolved"
+
 
 @dataclass
 class ModelUsage:

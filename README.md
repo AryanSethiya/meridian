@@ -45,7 +45,9 @@ pytest -q                                         # unit tests; no API key requi
 python -m meridian_claims review                  # local coordinator UI at http://127.0.0.1:8765/
 ```
 
-**Eval modes:** `--dry-run` skips Anthropic (no API key). Without `--dry-run`, live eval invokes model calls when the pipeline reaches the model boundary (`ANTHROPIC_API_KEY` required). `--all` is a **behavioral** run over every sample `.eml`; only the eight `EXPECTED_LOADS` fixtures have ground-truth load labels (known-sample regression, not a production accuracy estimate).
+**Eval modes:** `--dry-run` skips Anthropic (no API key). Without `--dry-run`, live eval invokes model calls when the pipeline reaches the model boundary (`ANTHROPIC_API_KEY` required). `--all` is a **behavioral** run over every sample `.eml` (does it process without crashing / does HITL stay on?); it is **not** an accuracy benchmark. Only the eight `EXPECTED_LOADS` fixtures have ground-truth load labels.
+
+**About the 8/8 result:** The 8/8 result is a known-sample regression check against the eight labeled claims fixtures supplied with the assignment. It is not a statistically meaningful production accuracy estimate. It does not measure draft quality, live Anthropic behavior, or unseen mail.
 
 **Cost / latency:** each packet’s `decision` and `usage` record processing duration (`perf_counter`), whether a model call occurred, Anthropic token usage when returned, and **estimated** model cost from configurable rates (`MERIDIAN_PRICE_INPUT_PER_MTOK` / `MERIDIAN_PRICE_OUTPUT_PER_MTOK`). Costs are estimates, not invoices.
 
@@ -68,7 +70,7 @@ Example CLI line (dry-run):
 [035] damage | resolve=resolved/LoadNumber | load=MF-10487 | pod=text | needs_human=True
 ```
 
-Example eval table (dry-run): **8/8** matches against a **hardcoded expected-load map** for the eight sample `claims@` emails. Treat that as a **known-sample regression check** (did we break resolution on these fixtures?), **not** a production accuracy estimate. It does not measure draft quality, live Anthropic behavior, or unseen mail.
+Example eval table (dry-run): **8/8** matches against a **hardcoded expected-load map** for the eight sample `claims@` emails. **The 8/8 result is a known-sample regression check against the eight labeled claims fixtures supplied with the assignment. It is not a statistically meaningful production accuracy estimate.** It does not measure draft quality, live Anthropic behavior, or unseen mail.
 
 ---
 

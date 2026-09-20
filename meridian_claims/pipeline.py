@@ -207,7 +207,9 @@ def process_email(
         needs_human_reasons.append(
             "Multiple load numbers cited — split or confirm which claim to open."
         )
-    if resolution.status != "resolved":
+    # Ambiguous/unresolved loads may still carry a best-guess for HITL context,
+    # but only status=="resolved" is authoritative for any future automation.
+    if not resolution.is_authoritative_for_action():
         needs_human_reasons.append(
             f"Load identity {resolution.status}: {resolution.reason}"
         )

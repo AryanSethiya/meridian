@@ -98,6 +98,10 @@ Association is evaluated against labeled historical claims. The current 8/8 fixt
 
 If wrong-load rate is non-zero, we tighten — we do not expand automation.
 
+### Production automation gate
+
+This prototype does **not** enable outbound auto-send or FreightPro writes. Before introducing those capabilities, Meridian should establish a labeled validation set, measure wrong-load and false-send rates, and validate PII/DPA requirements. Any future automated action that treats a load as authoritative must require `resolution.status == "resolved"` (`Resolution.is_authoritative_for_action()`). An `ambiguous` best-guess load retained for coordinator context is **not** authoritative.
+
 ---
 
 ## What we need from each of you

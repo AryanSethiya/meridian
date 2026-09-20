@@ -42,3 +42,6 @@ Thumbs.db
 
 # Cursor / local agent scratch (if present)
 .cursor/
+
+# Local interviewer demos (not part of assignment fixture set)
+demos/
