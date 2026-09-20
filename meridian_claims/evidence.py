@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 from typing import Any, Iterable
 
+from meridian_claims.analysis import classify_pod_exceptions_noted
 from meridian_claims.models import Identifiers, PodResult
 from meridian_claims.resolve_load import extract_identifiers
 
@@ -219,8 +220,7 @@ def damage_vs_clean_pod(email_text: str, pod: PodResult, load: dict | None) -> l
             "(clean POD on file — verify exceptions)."
         )
     if pod.mode == "text" and pod.excerpt and alleges_loss:
-        low = pod.excerpt.lower()
-        if "no exception" in low or "seals intact" in low:
+        if classify_pod_exceptions_noted(pod.excerpt) is False:
             discs.append(
                 "POD text reports clean delivery / no exceptions, "
                 "but the email alleges loss or damage."

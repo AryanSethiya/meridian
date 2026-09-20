@@ -129,6 +129,63 @@ def build_email_facts(
     }
 
 
+# Narrow field/phrase patterns — do not treat bare "shortage"/"damage"/"exception"
+# tokens as exceptions when the labeled value is none/0/clean.
+_POD_CLEAN_PHRASES = (
+    re.compile(r"\bseals\s+intact\b", re.IGNORECASE),
+    re.compile(r"\breceived\s+in\s+full\b", re.IGNORECASE),
+    re.compile(r"\bno\s+exceptions?\b", re.IGNORECASE),
+)
+_POD_FIELD_CLEAN = (
+    re.compile(
+        r"\bexceptions?\s*:\s*(?:none|n/?a|nil|0)\b",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"\b(?:visible\s+)?damage\s*:\s*(?:none|n/?a|nil|0|no)\b",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"\bshortage\s*:\s*0(?:\s*(?:cases?|pcs?|pieces?))?\b",
+        re.IGNORECASE,
+    ),
+)
+_POD_FIELD_EXCEPTION = (
+    re.compile(
+        r"\bshortage\s*:\s*[1-9]\d*(?:\s*(?:cases?|pcs?|pieces?))?\b",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"\bexceptions?\s*:\s*(?!(?:none|n/?a|nil|0)\b)\S+",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"\b(?:visible\s+)?damage\s*:\s*(?!(?:none|n/?a|nil|0|no)\b)\S+",
+        re.IGNORECASE,
+    ),
+)
+
+
+def classify_pod_exceptions_noted(excerpt: str) -> bool | None:
+    """Deterministic POD exception flag from extracted text.
+
+    Returns:
+      False — explicit clean / zero / none markers
+      True  — explicit non-zero shortage or non-none exception/damage value
+      None  — wording too ambiguous to decide
+    """
+    if not excerpt or not excerpt.strip():
+        return None
+    # Positive exception values win over clean labels if both appear.
+    if any(p.search(excerpt) for p in _POD_FIELD_EXCEPTION):
+        return True
+    if any(p.search(excerpt) for p in _POD_FIELD_CLEAN) or any(
+        p.search(excerpt) for p in _POD_CLEAN_PHRASES
+    ):
+        return False
+    return None
+
+
 def build_pod_facts(pod: PodResult) -> dict[str, Any]:
     """POD-sourced facts only. Unreadable/missing → explicit nulls + reason."""
     base: dict[str, Any] = {
@@ -161,13 +218,10 @@ def build_pod_facts(pod: PodResult) -> dict[str, Any]:
         return base
 
     ids = extract_identifiers(pod.excerpt).identifiers
-    low = pod.excerpt.lower()
-    exceptions_noted: bool | None = None
-    if "no exception" in low or "seals intact" in low:
-        exceptions_noted = False
+    exceptions_noted = classify_pod_exceptions_noted(pod.excerpt)
+    if exceptions_noted is False:
         condition = "clean / no exceptions noted (per POD text)"
-    elif "damage" in low or "exception" in low or "shortage" in low:
-        exceptions_noted = True
+    elif exceptions_noted is True:
         condition = "exceptions or damage language present in POD text"
     else:
         condition = "condition not clearly stated in extracted text"
