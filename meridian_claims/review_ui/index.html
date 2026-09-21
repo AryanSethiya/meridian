@@ -16,6 +16,7 @@
 
   <div class="safety" role="status">
     Human review required • No outbound email is sent by this demo.
+    <span id="liveBanner" class="live-banner hidden"></span>
   </div>
 
   <div class="layout">
@@ -24,13 +25,37 @@
         <h2>Claims Queue</h2>
         <button type="button" id="refreshBtn" class="btn ghost">Refresh</button>
       </div>
+
+      <div class="live-panel">
+        <div class="live-title">Live process</div>
+        <label class="check-row">
+          <input type="checkbox" id="dryRunToggle" />
+          Dry-run (skip Anthropic)
+        </label>
+        <label class="field-label" for="apiKeyInput">Anthropic API key</label>
+        <input
+          type="password"
+          id="apiKeyInput"
+          class="api-key"
+          placeholder="Leave blank to use env / .env"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <div id="apiKeyHint" class="muted small">Checking server env…</div>
+        <div class="live-row">
+          <select id="emailSelect" aria-label="Sample email to process"></select>
+          <button type="button" id="processBtn" class="btn primary">Process</button>
+        </div>
+        <div id="liveStatus" class="muted small">LLM on by default. Process a sample email to run the pipeline live.</div>
+      </div>
+
       <div id="queueStatus" class="muted small"></div>
       <ul id="queue" class="queue"></ul>
     </aside>
 
     <main class="panel" id="detail">
       <div class="empty-state" id="emptyState">
-        Select a claim from the queue. Packets are loaded from <code>output/</code>.
+        Select a claim from the queue, or Process a sample email live.
       </div>
       <div id="detailContent" class="hidden"></div>
     </main>

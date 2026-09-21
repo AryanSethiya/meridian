@@ -159,9 +159,16 @@ html, body {
 .section.facts { border-left: 3px solid var(--fact); }
 .section.disc { border-left: 3px solid var(--warn); }
 .section.unk { border-left: 3px solid #6b7280; }
+.section.eval { border-left: 3px solid #2f5f6b; }
 .section.ai { border-left: 3px solid var(--ai); background: var(--ai-bg); }
 .section.draft { border-left: 3px solid var(--accent); }
 .section.review { border-left: 3px solid var(--danger); }
+
+.q-eval {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #2f5f6b;
+}
 
 .source-tag {
   display: inline-block;
@@ -252,6 +259,86 @@ textarea.draft {
 .btn.ghost {
   padding: 4px 8px;
   font-size: 12px;
+}
+
+.live-panel {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px;
+  margin: 8px 0 12px;
+  background: #f4f7f6;
+}
+
+.live-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.field-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+input.api-key {
+  width: 100%;
+  font: inherit;
+  font-size: 12px;
+  font-family: var(--mono);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px 8px;
+  background: #fff;
+  margin-bottom: 6px;
+}
+
+.live-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.live-row select {
+  width: 100%;
+  font: inherit;
+  font-size: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px 8px;
+  background: #fff;
+}
+
+.live-banner {
+  display: block;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.live-banner.busy { color: var(--warn); }
+.live-banner.ok { color: var(--ok); }
+.live-banner.err { color: var(--danger); }
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 .toast {

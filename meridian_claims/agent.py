@@ -2,14 +2,23 @@
 
 from __future__ import annotations
 
+import contextvars
 import json
 import os
 import time
-from typing import Any
+from contextlib import contextmanager
+from typing import Any, Iterator
 
 from meridian_claims.models import Classification, ModelUsage
 from meridian_claims.pii_gate import PIIGateError, PIIGateReport, PIILexicon, prepare_text_payload
 from meridian_claims.pricing import load_pricing
+
+# Optional per-request override (review UI). Prefer this over mutating process env
+# so ThreadingHTTPServer requests do not race on os.environ.
+_api_key_override: contextvars.ContextVar[str | None] = contextvars.ContextVar(
+    "meridian_anthropic_api_key_override",
+    default=None,
+)
 
 SYSTEM_PROMPT = """You are an ops assistant for Meridian Freight, a freight broker.
 You help coordinators triage inbound claims emails. You never send email yourself.
@@ -60,16 +69,43 @@ class ModelResponseError(RuntimeError):
     """Raised when the model returns unusable output or the API fails."""
 
 
-def require_api_key() -> str:
+def resolve_api_key() -> str | None:
+    """Return override (if set) else ANTHROPIC_API_KEY from the environment."""
+    override = _api_key_override.get()
+    if override and override.strip():
+        return override.strip()
     key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    return key or None
+
+
+def require_api_key() -> str:
+    key = resolve_api_key()
     if not key:
         raise MissingAPIKeyError(
-            "ANTHROPIC_API_KEY is not set. Set it either:\n"
+            "ANTHROPIC_API_KEY is not set. Provide it in the review UI, or set it either:\n"
             "  1) export ANTHROPIC_API_KEY=sk-ant-...   (shell — wins if both set)\n"
             "  2) put ANTHROPIC_API_KEY=... in a repo-root .env file\n"
             "Then retry."
         )
     return key
+
+
+@contextmanager
+def temporary_api_key(api_key: str | None) -> Iterator[None]:
+    """
+    Apply a request-scoped API key for the current thread/async context.
+
+    Empty/None leaves env / existing override unchanged.
+    Never logs or returns the key.
+    """
+    if not api_key or not str(api_key).strip():
+        yield
+        return
+    token = _api_key_override.set(str(api_key).strip())
+    try:
+        yield
+    finally:
+        _api_key_override.reset(token)
 
 
 def classify_and_draft(

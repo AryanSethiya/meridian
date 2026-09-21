@@ -85,7 +85,8 @@ def build_parser() -> argparse.ArgumentParser:
         "review",
         help=(
             "Serve the minimal coordinator review UI (local only). "
-            "Loads ActionPacket JSON from output/. Does not send email or call models."
+            "Browse output/ packets and optionally run the pipeline live on sample "
+            ".eml files. Does not send outbound email."
         ),
     )
     review_p.add_argument(
@@ -99,6 +100,12 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         default=None,
         help="Directory of ActionPacket JSON files (default: ./output)",
+    )
+    review_p.add_argument(
+        "--data-dir",
+        type=Path,
+        default=None,
+        help="Path to data/ (default: ./data)",
     )
     review_p.add_argument(
         "--host",
@@ -147,6 +154,7 @@ def main(argv: list[str] | None = None) -> int:
             host=args.host,
             port=args.port,
             output_dir=args.output_dir,
+            data_dir=args.data_dir,
         )
 
     parser.print_help()
