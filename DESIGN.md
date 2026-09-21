@@ -68,7 +68,7 @@ Module-by-module map (internal): see [`MODULES.md`](MODULES.md).
 
 | Weeks | Deliverable |
 |---|---|
-| 1–2 | Claims slice (**this repo**): `.eml` → packet, HITL draft, read-only FreightPro, safety gates above. Stretch demos in-repo: all-60 behavioral eval, estimated cost/latency, local review UI (optional live re-process; no send) — not production readiness. |
+| 1–2 | Claims slice (**this repo**): `.eml` → packet, HITL draft, read-only FreightPro, safety gates above. Stretch demos in-repo: all-sample behavioral eval, estimated cost/latency, local review UI (optional live re-process; latency/tokens; no send) — not production readiness. |
 | 3–4 | Graph watch on `claims@`; thin accept/edit/reject queue; wrong-load logging with Marcus |
 | 5–6 | Optional HITL **tracking** status drafts; optional HITL **quote assist** — still no unsupervised send |
 
@@ -78,7 +78,7 @@ Module-by-module map (internal): see [`MODULES.md`](MODULES.md).
 
 ## Human-in-the-loop, PII, read-only, stale data
 
-- **HITL:** `needs_human` is required for claims. Drafts are suggestions. Coordinators send (or not) from their mail client / a future review queue — not this CLI.  
+- **HITL:** `needs_human` is required for claims. Drafts are suggestions. Coordinators review via mail client or the local demo review UI (`python -m meridian_claims review`) — this product **never auto-sends**.  
 - **PII:** DriverName/DriverPhone are Legal PII. Text payloads are redacted and scanned before Anthropic; residual known PII fails closed. Forwarded mail fail-closes the model call when third-party PII cannot be guaranteed. POD **vision is off by default**. Production Anthropic use still needs a **Legal-approved DPA**.  
 - **Read-only:** FreightPro is replica/export only until change board allows writes (6–8 weeks).  
 - **Stale data:** Status/PODReceived are **recorded as of the snapshot** (2026-08-26; ~14h lag called out). Disputed conditions escalate rather than “trust the flag.”

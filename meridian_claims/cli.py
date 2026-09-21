@@ -60,7 +60,7 @@ def build_parser() -> argparse.ArgumentParser:
         "eval",
         help=(
             "Evaluation harness. Default: known-sample claims@ regression. "
-            "Use --all for behavioral run over all 60 emails."
+            "Use --all for behavioral run over all sample emails."
         ),
     )
     eval_p.add_argument("--data-dir", type=Path, default=None)
@@ -75,7 +75,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--all",
         action="store_true",
         help=(
-            "Process all 60 sample .eml files through the existing pipeline and "
+            "Process all sample .eml files through the existing pipeline and "
             "write output/eval_all.json + output/eval_all.md. "
             "Without --dry-run this makes Anthropic calls when the model path runs."
         ),

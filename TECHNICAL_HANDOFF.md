@@ -30,7 +30,7 @@ Aligned with current `meridian_claims/` code. Client plan: [`DESIGN.md`](DESIGN.
 | `redact.py` / `pii_gate.py` | Mask + outbound residual scan |
 | `agent.py` | Anthropic classify+draft (+ request-scoped API key override) |
 | `analysis.py` / `observability.py` / `pricing.py` | Fact buckets, decision audit, estimated $ |
-| `eval.py` | 8-fixture regression + optional all-60 behavioral |
+| `eval.py` | 8-fixture regression + optional all-sample behavioral |
 | `review_server.py` + `review_ui/` | Local review UI; optional live re-process; no send |
 | `models.py` / `render.py` | Packet schema + JSON/MD writers |
 
@@ -121,7 +121,7 @@ Automation gate: only `resolution.status == "resolved"` is authoritative for fut
 
 - `needs_human` always true on claims path  
 - CLI packets + local **review UI** (`python -m meridian_claims review`)  
-- UI can list packets, show latency/tokens, **re-run pipeline** (live or dry-run)  
+- UI can list packets, show latency/tokens, **re-run pipeline** (LLM default; dry-run optional; UI or env API key)  
 - Accept/Reject → browser `localStorage` only  
 - **Auto-send: MISSING** (correct) — nothing is emailed
 
@@ -129,9 +129,9 @@ Automation gate: only `resolution.status == "resolved"` is authoritative for fut
 
 ## 9. Tests + eval
 
-- Unit tests: resolve, redact, PII boundary (mocked Anthropic), forwards, multi-intent, observability, analysis, review helpers, cost fields  
+- Unit tests (`pytest -q`): resolve, redact, PII boundary (mocked Anthropic), forwards, multi-intent, observability, analysis layout, review helpers, cost fields (~94 tests)  
 - `eval --dry-run`: 8 `EXPECTED_LOADS` fixtures — **known-sample regression, not production accuracy**  
-- `eval --all`: behavioral (crash/HITL), not accuracy  
+- `eval --all`: every file in `data/emails/` — behavioral (crash/HITL), not accuracy  
 
 ---
 
@@ -156,7 +156,7 @@ Automation gate: only `resolution.status == "resolved"` is authoritative for fut
 
 | Doc | Match? |
 |---|---|
-| README / DESIGN / NOTES / MODULES | Match current slice |
+| README / DESIGN / NOTES / MODULES / TECHNICAL_HANDOFF | Match current slice (live review re-process, all-sample eval) |
 | Weeks 3–6 Graph / production queue | Roadmap only — **MISSING** in code (intentional) |
 
 ---

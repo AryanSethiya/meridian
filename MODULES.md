@@ -26,10 +26,11 @@ flowchart TD
   PIPE --> MOD["models.py"]
   EVAL["eval.py"] --> PIPE
   REV["review_server.py + review_ui/"] --> OUT["output/*.json"]
+  REV -->|"POST /api/process (optional)"| PIPE
   REN --> OUT
 ```
 
-**Idea:** deterministic work first (parse → resolve → POD → compare → redact), then optional LLM, then a human-review packet. Nothing auto-sends.
+**Idea:** deterministic work first (parse → resolve → POD → compare → redact), then optional LLM, then a human-review packet. Nothing auto-sends. The review UI can re-run the same pipeline live.
 
 ---
 
@@ -159,7 +160,7 @@ flowchart LR
 | `analysis.py` | Separate freightpro / email / pod / comparisons / unknowns / AI / draft |
 | `pricing.py` | Estimated $ from tokens × env rates |
 
-**`agent.py`** — Requires `ANTHROPIC_API_KEY`. System prompt: don’t invent facts, don’t approve/deny claims. Returns JSON interpretation fields.
+**`agent.py`** — Requires `ANTHROPIC_API_KEY` (env / `.env`, or review-UI request override via `temporary_api_key`). System prompt: don’t invent facts, don’t approve/deny claims. Returns JSON interpretation fields.
 
 **`analysis.py`** — Filing cabinet for the packet:
 
@@ -187,9 +188,9 @@ Also scrub invented MF/PO/BOL from model prose via `validate_llm_against_known_f
 | `models.py` | Dataclasses: `ActionPacket`, `Resolution`, `PodResult`, … → `to_dict()` |
 | `render.py` | Write `*.json`, `*.md`, `*.decision.json`; CLI summary |
 | `observability.py` | PII-safe decision/audit record |
-| `eval.py` | 8-claim fixture regression + optional all-60 behavioral run |
-| `review_server.py` | Local HTTP server for review UI |
-| `review_ui/` | Static HTML/JS/CSS over `output/*.json` (no send) |
+| `eval.py` | 8-claim fixture regression + optional all-sample behavioral run |
+| `review_server.py` | Local HTTP server for review UI (+ `/api/process`, `/api/config`) |
+| `review_ui/` | Static HTML/JS/CSS; browse packets; optional live Process / Re-run (no send) |
 
 ```mermaid
 flowchart TD
@@ -198,14 +199,17 @@ flowchart TD
   REN --> M["output/ID.md"]
   REN --> D["output/ID.decision.json"]
   J --> UI["review_ui via review_server"]
+  UI -->|"optional re-process"| PIPE2["pipeline.process_email"]
+  PIPE2 --> AP
   EVAL["eval.py"] -->|"process_email × N"| AP
 ```
 
 **`eval.py`**
 - Default: 8 `claims@` emails vs `EXPECTED_LOADS` → known-sample **8/8** regression (not production accuracy).
-- `--all`: all 60 sample emails behavioral run.
+- `--all`: every sample `.eml` under `data/emails/` (assignment set plus any local demos) — **behavioral**, not accuracy.
 
-**`review_server.py` + `review_ui/`** — `python -m meridian_claims review` → browse packets at `127.0.0.1:8765`. Read-only; never emails or calls models.
+**`review_server.py` + `review_ui/`** — `python -m meridian_claims review` → `http://127.0.0.1:8765/`.  
+Browse `output/*.json`, show latency/tokens, **Process / Re-run** (LLM by default; Dry-run skips Anthropic). API key: paste in UI or use server env / `.env`. Accept/Reject = `localStorage` only. **Never sends email.**
 
 ---
 
@@ -243,5 +247,5 @@ flowchart TD
 | Schema | `models.py` |
 | Write files | `render.py` |
 | Audit + $ | `observability.py`, `pricing.py` |
-| Regression / all-60 | `eval.py` |
-| Local review UI | `review_server.py`, `review_ui/` |
+| Regression / all-sample eval | `eval.py` |
+| Local review UI (+ live re-process) | `review_server.py`, `review_ui/` |

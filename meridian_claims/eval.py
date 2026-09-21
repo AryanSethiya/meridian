@@ -1,4 +1,4 @@
-"""Eval harness: known-sample claims@ regression + optional all-60 behavioral run."""
+"""Eval harness: known-sample claims@ regression + optional all-sample behavioral run."""
 
 from __future__ import annotations
 
