@@ -51,6 +51,8 @@ pytest -q                                         # unit tests; no API key requi
 python -m meridian_claims review                  # local coordinator UI at http://127.0.0.1:8765/
 ```
 
+**Review UI port:** `review` binds `127.0.0.1:8765` and keeps it until you stop the process (**Ctrl+C**). Starting it again while that process is still running fails with `Address already in use`. Free the port (`lsof -ti :8765 | xargs kill`) or use another one (`python -m meridian_claims review --port 8766`).
+
 **Eval modes:** `--dry-run` skips Anthropic (no API key). Without `--dry-run`, live eval invokes model calls when the pipeline reaches the model boundary (`ANTHROPIC_API_KEY` required). `--all` is a **behavioral** run over every sample `.eml` under `data/emails/` (assignment corpus plus any local demo emails such as `061`/`062`); it is **not** an accuracy benchmark. Only the eight `EXPECTED_LOADS` fixtures have ground-truth load labels.
 
 **About the 8/8 result:** The 8/8 result is a known-sample regression check against the eight labeled claims fixtures supplied with the assignment. It is not a statistically meaningful production accuracy estimate. It does not measure draft quality, live Anthropic behavior, or unseen mail.
