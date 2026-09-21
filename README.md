@@ -15,7 +15,9 @@ From the repo root (Python 3.10+):
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
-export ANTHROPIC_API_KEY=sk-ant-...
+# API key — either works (shell wins if both are set):
+export ANTHROPIC_API_KEY=sk-ant-...          # Option A: shell
+# or: put ANTHROPIC_API_KEY=... in .env      # Option B: gitignored .env (see .env.example)
 python -m meridian_claims process data/emails/035.eml
 ```
 
@@ -34,7 +36,7 @@ python -m meridian_claims process data/emails/035.eml --dry-run
 ```
 
 Live `process` without `ANTHROPIC_API_KEY` exits **2** with a clear message.  
-The CLI reads the key from the environment only (does not auto-load `.env`).
+Put the key in a gitignored `.env` (see `.env.example`) or `export ANTHROPIC_API_KEY=...`. The CLI loads `.env` if present; an already-exported shell variable wins.
 
 ### Optional checks
 
@@ -137,4 +139,4 @@ requirements.txt
 - DriverName/DriverPhone are Legal PII. Text payloads are redacted and scanned before Anthropic; **this is leakage mitigation, not a DPA**.  
 - POD **image** vision is **off** unless `MERIDIAN_ALLOW_POD_VISION=1` (pixels cannot be safely redacted).  
 - Default model: `claude-sonnet-4-5-20250929` (override with `ANTHROPIC_MODEL`).  
-- Do not commit API keys. `.env` is gitignored; `.env.example` is a template only.
+- Do not commit API keys. `.env` is gitignored; `.env.example` is a template. The CLI loads `.env` from the repo root if present.

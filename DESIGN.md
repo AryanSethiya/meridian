@@ -36,12 +36,20 @@ We build a **claims intake + POD↔FreightPro triage assistant**: email in → r
 
 ## Architecture (working slice — what this repo does)
 
-```text
-.eml → parse → IDs → FreightPro lookup → shipper corroboration
-     → attachment inventory → POD text/quality/blank
-     → forward + multi-intent checks → PII gate
-     → Anthropic (classify + draft) or fail-closed / dry-run fallback
-     → action packet (analysis + decision) → human review (no send)
+```mermaid
+flowchart TD
+  A[".eml inbound"] --> B["Parse email + attachments"]
+  B --> C["Extract MF / PO / BOL / PRO"]
+  C --> D["FreightPro lookup + shipper corroboration"]
+  D --> E["Attachment inventory → POD text / quality / blank"]
+  E --> F["Forward + multi-intent checks"]
+  F --> G["PII redact + outbound gate"]
+  G --> H{"Model allowed?"}
+  H -->|yes| I["Anthropic: classify + draft"]
+  H -->|dry-run / fail-closed| J["Heuristic + fallback draft"]
+  I --> K["Action packet: analysis + decision"]
+  J --> K
+  K --> L["Human review — no auto-send"]
 ```
 
 **Deterministic first:** load resolution, sender/shipper corroboration, POD quality, attachment selection, discrepancies, unknowns, draft money/liability sanitize, forward fail-closed, multi-intent escalate.  
@@ -49,6 +57,8 @@ We build a **claims intake + POD↔FreightPro triage assistant**: email in → r
 **Never auto-sends. Never writes FreightPro. Never executes secondary tracking/invoice/quote asks.**
 
 Packet `analysis` separates: FreightPro facts (with source/snapshot freshness) · email facts · POD facts · discrepancies · unknowns · AI suggestion · draft · why HITL. Attachments are inventoried (selected vs present-not-processed).
+
+Module-by-module map (internal): see [`MODULES.md`](MODULES.md).
 
 ---
 

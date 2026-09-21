@@ -64,8 +64,10 @@ def require_api_key() -> str:
     key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
     if not key:
         raise MissingAPIKeyError(
-            "ANTHROPIC_API_KEY is not set. Export your Anthropic API key and retry.\n"
-            "Example: export ANTHROPIC_API_KEY=sk-ant-..."
+            "ANTHROPIC_API_KEY is not set. Set it either:\n"
+            "  1) export ANTHROPIC_API_KEY=sk-ant-...   (shell — wins if both set)\n"
+            "  2) put ANTHROPIC_API_KEY=... in a repo-root .env file\n"
+            "Then retry."
         )
     return key
 

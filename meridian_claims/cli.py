@@ -3,11 +3,27 @@
 from __future__ import annotations
 
 import argparse
+import os
 import sys
 from pathlib import Path
 
 from meridian_claims.eval import run_eval, run_eval_all
 from meridian_claims.pipeline import run_process_cli
+
+
+def _load_dotenv(path: Path) -> None:
+    """Load KEY=VALUE from a local .env if present. Does not override existing env."""
+    if not path.is_file():
+        return
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, val = line.partition("=")
+        key = key.strip()
+        val = val.strip().strip("'").strip('"')
+        if key and key not in os.environ:
+            os.environ[key] = val
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -93,6 +109,8 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
+    # Optional local secrets file (gitignored). Shell export still wins.
+    _load_dotenv(Path(__file__).resolve().parent.parent / ".env")
     parser = build_parser()
     args = parser.parse_args(argv)
 
