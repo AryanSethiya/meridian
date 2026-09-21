@@ -16,12 +16,14 @@ Client plan: [DESIGN.md](DESIGN.md) · Reviewer notes: [NOTES.md](NOTES.md) · D
 From the repo root (Python 3.10+):
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+python3 -m venv .venv && source .venv/bin/activate && python -m pip install -r requirements.txt
 # API key — either works (shell wins if both are set):
 export ANTHROPIC_API_KEY=sk-ant-...          # Option A: shell
-# or: put ANTHROPIC_API_KEY=... in .env      # Option B: gitignored .env (see .env.example)
+# or: put ANTHROPIC_API_KEY=... in a gitignored .env (see .env.example)
 python -m meridian_claims process data/emails/035.eml
 ```
+
+If `pip` is missing after activate, always use `python -m pip` (as above). Then retry the `process` command.
 
 **Expected result:** prints a one-line summary and writes:
 
