@@ -26,7 +26,7 @@ I can explain and change every module live without depending on chat history.
 - FreightPro source/snapshot freshness on facts (no invented per-field `as_of`)  
 - POD text quality gate; model payload uses `sender_corroboration` (no raw From/To)  
 
-**Stretch note:** the brief says pick **at most one** optional stretch. After the core slice was solid I added thin wrappers for all four (all-60 behavioral eval, model-boundary PII tests, estimated cost/latency, local review UI with no send). They share the existing pipeline/ActionPacket — no second architecture. In the Loom I will demo **one**.
+**Stretch note:** the brief says pick **at most one** optional stretch. After the core slice was solid I added thin wrappers for all four (all-60 behavioral eval, model-boundary PII tests, estimated cost/latency, local review UI with optional live re-process and no send). They share the existing pipeline/ActionPacket — no second architecture. Walkthrough: [YouTube video](https://www.youtube.com/watch?v=Dpa6lfQ7p_g) (I demo **one** stretch path there).
 
 ## What I would build next (still not done)
 

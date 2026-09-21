@@ -351,7 +351,7 @@ def run_eval_all(
 
     wall_ms = int((time.perf_counter() - wall_t0) * 1000)
     summary = {
-        "title": "ALL 60 EMAIL EVALUATION",
+        "title": "ALL-SAMPLE EMAIL EVALUATION",
         "mode": mode,
         "note": (
             "Behavioral run over all sample .eml files via the existing pipeline. "
@@ -404,7 +404,7 @@ def run_eval_all(
     md_path.write_text(_render_eval_all_md(summary, labeled), encoding="utf-8")
 
     print("-" * 72)
-    print(f"ALL 60 EMAIL EVALUATION ({mode})")
+    print(f"ALL-SAMPLE EMAIL EVALUATION ({mode})")
     print(f"  total={summary['total_emails']} processed={summary['processed']} "
           f"failed={summary['failed']} escalated={summary['escalated']}")
     print(f"  model_calls={summary['model_calls']} "
@@ -435,7 +435,7 @@ def _render_eval_all_md(summary: dict[str, Any], labeled: dict[str, Any]) -> str
         return str(v)
 
     lines = [
-        "# ALL 60 EMAIL EVALUATION",
+        "# ALL-SAMPLE EMAIL EVALUATION",
         "",
         f"**Mode:** `{summary['mode']}`  ",
         f"**Note:** {summary['note']}",
@@ -491,7 +491,7 @@ def _render_eval_all_md(summary: dict[str, Any], labeled: dict[str, Any]) -> str
             "",
             "## UNLABELED / BEHAVIORAL RESULTS",
             "",
-            "All 60 emails were processed through the existing pipeline. Emails outside "
+            f"All {summary['total_emails']} sample emails were processed through the existing pipeline. Emails outside "
             "EXPECTED_LOADS have **no ground-truth load label** in this harness.",
             "",
             "### By inbox",

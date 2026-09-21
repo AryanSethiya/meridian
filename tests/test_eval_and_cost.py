@@ -73,8 +73,10 @@ def test_eval_all_dry_run_writes_reports(tmp_path: Path):
     assert code == 0
     payload = json.loads((reports / "eval_all.json").read_text(encoding="utf-8"))
     summary = payload["summary"]
-    assert summary["total_emails"] == 60
-    assert summary["processed"] + summary["failed"] == 60 or summary["processed"] == 60
+    n_emails = len(list((DATA / "emails").glob("*.eml")))
+    assert n_emails >= 60
+    assert summary["total_emails"] == n_emails
+    assert summary["processed"] + summary["failed"] == n_emails or summary["processed"] == n_emails
     assert summary["mode"] == "dry_run"
     assert summary["model_calls"] == 0
     assert "known_labeled_results" in summary
@@ -84,7 +86,7 @@ def test_eval_all_dry_run_writes_reports(tmp_path: Path):
     md = (reports / "eval_all.md").read_text(encoding="utf-8")
     assert "KNOWN LABELED RESULTS" in md
     assert "UNLABELED / BEHAVIORAL RESULTS" in md
-    assert "ALL 60 EMAIL EVALUATION" in md
+    assert "EMAIL EVALUATION" in md
     # At least some packets written
     assert any(out_packets.glob("*.json"))
 

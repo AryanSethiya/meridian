@@ -5,7 +5,9 @@ Inbound `claims@` email → FreightPro lookup + POD compare → **coordinator ac
 
 **What this is not:** production inbox automation, auto-send, FreightPro writes, or 90% automation.
 
-Client plan: [DESIGN.md](DESIGN.md) · Reviewer notes: [NOTES.md](NOTES.md) · Data dictionary: [data.md](data.md)
+Client plan: [DESIGN.md](DESIGN.md) · Reviewer notes: [NOTES.md](NOTES.md) · Data dictionary: [data.md](data.md) · Technical handoff: [TECHNICAL_HANDOFF.md](TECHNICAL_HANDOFF.md)
+
+**Walkthrough video:** [YouTube — design + end-to-end slice](https://www.youtube.com/watch?v=Dpa6lfQ7p_g)
 
 ---
 
@@ -53,7 +55,7 @@ python -m meridian_claims review                  # local coordinator UI at http
 
 **Cost / latency:** each packet’s `decision` and `usage` record processing duration (`perf_counter`), whether a model call occurred, Anthropic token usage when returned, and **estimated** model cost from configurable rates (`MERIDIAN_PRICE_INPUT_PER_MTOK` / `MERIDIAN_PRICE_OUTPUT_PER_MTOK`). Costs are estimates, not invoices.
 
-**Review UI:** presentation-only over `output/*.json`. Accept/Reject updates browser `localStorage` only — **does not send email**, call models, or modify ActionPackets.
+**Review UI:** browse `output/*.json`, show latency/tokens, and optionally **Process / Re-run** the pipeline (LLM by default; Dry-run checkbox skips Anthropic). Paste an API key in the UI or leave blank to use server env / `.env`. Accept/Reject updates browser `localStorage` only — **does not send email** and does not rewrite packets except when you explicitly Process.
 
 ---
 
@@ -65,6 +67,7 @@ python -m meridian_claims review                  # local coordinator UI at http
 | `data/emails/036.eml` | Shortage; blank/placeholder POD → `blank_page`, escalate |
 | `data/emails/041.eml` | No load number; resolve via PO → `MF-10032` |
 | `data/emails/042.eml` | Resolve via BOL → `MF-10034` |
+| `data/emails/058.eml` | Forward + driver PII + multi-MF → model fail-closed / ambiguous |
 
 Example CLI line (dry-run):
 
@@ -114,6 +117,7 @@ data/                sample emails, attachments, FreightPro CSVs
 tests/               unit tests
 DESIGN.md            client design (≤3 pages)
 NOTES.md             reviewer notes (≤1 page)
+TECHNICAL_HANDOFF.md interviewer-oriented code map
 requirements.txt
 ```
 
@@ -129,7 +133,7 @@ requirements.txt
 | `agent.py` | Anthropic classify + draft |
 | `eval.py` | Known-sample claims@ regression + optional all-60 behavioral harness |
 | `pricing.py` | Configurable estimated model cost from Anthropic token usage |
-| `review_server.py` / `review_ui/` | Minimal local coordinator review UI (no send) |
+| `review_server.py` / `review_ui/` | Local coordinator review UI (optional live re-process; no send) |
 
 ---
 
